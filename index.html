@@ -11,6 +11,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -19,7 +22,7 @@
   <body id="home">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
-      <section class="container">
+      <div class="container">
         <a class="navbar-brand" href="#">Abengkris</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,7 +43,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </div>
     </nav>
     <!-- Akhir Navbar -->
 
@@ -48,7 +51,7 @@
     <section class="jumbotron text-center">
       <img src="img/2019-05-06 05.46.22 1.jpg" alt="Bambang Kristianto" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Abengkris</h1>
-      <p class="lead">Pecandu kopi hitam, dan mencintaimu.</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -68,10 +71,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab doloribus consequuntur perspiciatis dolores veniam voluptatem enim nobis quibusdam natus distinctio.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia recusandae suscipit adipisci perferendis vitae rem minus quas, porro similique voluptatem unde, corrupti nesciunt natus quod?</p>
           </div>
         </div>
@@ -96,7 +99,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/projects/1.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -104,7 +107,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
               <img src="img/projects/2.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -112,7 +115,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/projects/3.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -120,7 +123,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/projects/4.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -128,7 +131,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
               <img src="img/projects/4.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -147,11 +150,75 @@
     </section>
     <!-- Akhir Projects -->
 
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/1.png" alt="Gambar 1" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/2.png" alt="Gambar 2" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/3.png" alt="Gambar 3" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/4.png" alt="Gambar 4" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/5.png" alt="Gambar 5" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/6.png" alt="Gambar 6" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/7.png" alt="Gambar 7" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/8.png" alt="Gambar 8" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/9.png" alt="Gambar 9" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/10.png" alt="Gambar 10" class="img-fluid gallery-img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Gallery -->
+
     <!-- Contact -->
     <section id="contact">
       <div class="container">
-        <div class="row">
-          <div class="col text-center mb-3">
+        <div class="row text-center mb-3">
+          <div class="col">
             <h2>Contact Me</h2>
           </div>
         </div>
@@ -195,11 +262,35 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-5">
-      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/abengkriss" class="text-white fw-bold">Abengkris</a></p>
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.abengkris.com" class="text-white fw-bold">Abengkris</a></p>
     </footer>
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+      AOS.init({
+        once: true,
+        duration: 2000,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Pecandu kopi hitam, dan mencintaimu." });
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0 });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbwUdL2W0YwrO55wWPSqky934-kzbifd4q8ErMbCxdQQGMmzpwbLQmbBEQjg-7w3cOAN/exec";
