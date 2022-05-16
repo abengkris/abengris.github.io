@@ -21,7 +21,7 @@
   </head>
   <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Abengkris</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,12 +49,12 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/2019-05-06 05.46.22 1.jpg" alt="Bambang Kristianto" width="200" class="rounded-circle img-thumbnail" />
+      <img src="img/2019-05-06 05.46.22 1.jpg" alt="Abengkris" width="200" class="rounded-circle" />
       <h1 class="display-4">Abengkris</h1>
       <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#ffffff"
+          fill="#CC9544"
           fill-opacity="1"
           d="M0,96L60,117.3C120,139,240,181,360,170.7C480,160,600,96,720,112C840,128,960,224,1080,224C1200,224,1320,128,1380,80L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
         ></path>
@@ -81,7 +81,7 @@
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#e2edff"
+          fill="#603601"
           fill-opacity="1"
           d="M0,160L60,176C120,192,240,224,360,202.7C480,181,600,107,720,106.7C840,107,960,181,1080,218.7C1200,256,1320,256,1380,256L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
         ></path>
@@ -140,9 +140,41 @@
           </div>
         </div>
       </div>
+      <section id="my-guitar">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>My Guitar</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="guitar-box">
+                <h4 class="guitar-name">Guitar 01</h4>
+                <img src="img/gitar/1.png" alt="Guitar 01" class="guitar-img" />
+                <a href="#" class="btn btn-light guitar-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="guitar-box">
+                <h4 class="guitar-name">Guitar 02</h4>
+                <img src="img/gitar/2.png" alt="Guitar 02" class="guitar-img" />
+                <a href="#" class="btn btn-light guitar-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="guitar-box">
+                <h4 class="guitar-name">Guitar 03</h4>
+                <img src="img/gitar/3.png" alt="Guitar 03" class="guitar-img" />
+                <a href="#" class="btn btn-light guitar-detail-button">Show Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#ffffff"
+          fill="#CC9544"
           fill-opacity="1"
           d="M0,256L60,250.7C120,245,240,235,360,218.7C480,203,600,181,720,192C840,203,960,245,1080,266.7C1200,288,1320,288,1380,288L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
         ></path>
@@ -151,7 +183,7 @@
     <!-- Akhir Projects -->
 
     <!-- Gallery -->
-    <section id="gallery">
+    <!--- <section id="gallery">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
@@ -211,7 +243,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Akhir Gallery -->
 
     <!-- Contact -->
@@ -225,12 +257,12 @@
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-              <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
+              <strong>Thank you!</strong> Your message has been send to me.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <form name="submit-to-google-sheet">
               <div class="mb-3">
-                <label for="name" class="form-label">Nama Lengkap</label>
+                <label for="name" class="form-label">Full Name</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
               <div class="mb-3">
@@ -238,13 +270,13 @@
                 <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
               </div>
               <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
+                <label for="pesan" class="form-label">Message</label>
                 <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
-              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <button type="submit" class="btn btn-kirim">Send</button>
+              <button class="btn btn-loading d-none" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                Loading...
+                Please wait...
               </button>
             </form>
           </div>
@@ -252,7 +284,7 @@
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#0d6efd"
+          fill="#1C0A00"
           fill-opacity="1"
           d="M0,160L48,176C96,192,192,224,288,234.7C384,245,480,235,576,218.7C672,203,768,181,864,170.7C960,160,1056,160,1152,149.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -261,8 +293,14 @@
     <!-- Akhir Contact -->
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center pb-5">
-      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.abengkris.com" class="text-white fw-bold">Abengkris</a></p>
+    <footer class="text-white text-center pb-5">
+      <p>
+        &copy;
+        <script>
+          document.write(new Date().getUTCFullYear());
+        </script>
+        Abengkris | All Right Reserved.<br />Created with <i class="bi bi-cup-fill"></i> and <i class="bi bi-heart-fill"></i> for universe.
+      </p>
     </footer>
     <!-- Akhir Footer -->
 
@@ -317,6 +355,15 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".guitar-box"), {
+        max: 30,
+        speed: 1000,
+        glare: true,
       });
     </script>
   </body>
