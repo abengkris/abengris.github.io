@@ -1,5 +1,5 @@
 {
-  "minSendable": 1000,
+  "minSendable": 5,
   "maxSendable": 500000000,
   "commentAllowed": 150,
   "tag": "payRequest",
