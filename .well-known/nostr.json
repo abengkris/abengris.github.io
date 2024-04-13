@@ -5,6 +5,10 @@
     "about": "Author, blogger, web3 enthusiast, Bitcoiner.",
     "lud16": "ln@btc.abengkris.com",
     "display_name": "Abengkris",
+	  "twitter": [
+			"abengkriss",
+			"1777573305157075030"
+		],
     "picture": "https://cdn.zebedee.io/uploads/35f3602d-a9dd-43a6-a2d5-0c63d314049e_6c6ae2eb-e850-43e2-89fd-13815ff7e6ca.png",
     "banner": "https://nostrcheck.me/media/07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6/1aebbc4e347dbafd01d60f64bbff4d8fd7f785bcbb24bac85db3c9601e7e80d2.webp",
     "website": "https://www.abengkris.com",
@@ -19,11 +23,6 @@
     [
       "alt",
       "User profile for Abengkris"
-    ],
-	  [
-		  "i",
-		  "twitter:abengkriss",
-		  "1777573305157075030"
-	  ]
+    ]
   ]
 }
