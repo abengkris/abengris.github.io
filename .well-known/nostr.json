@@ -1,28 +1,8 @@
 {
-  "content": {
-    "name": "Abengkris",
-    "nip05": "abeng@nsec.app",
-    "about": "Author, blogger, web3 enthusiast, Bitcoiner.",
-    "lud16": "ln@btc.abengkris.com",
-    "display_name": "Abengkris",
-	  "twitter": [
-			"abengkriss",
-			"1777573305157075030"
-		],
-    "picture": "https://cdn.zebedee.io/uploads/35f3602d-a9dd-43a6-a2d5-0c63d314049e_6c6ae2eb-e850-43e2-89fd-13815ff7e6ca.png",
-    "banner": "https://nostrcheck.me/media/07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6/1aebbc4e347dbafd01d60f64bbff4d8fd7f785bcbb24bac85db3c9601e7e80d2.webp",
-    "website": "https://www.abengkris.com",
-    "lud06": "lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxtmxx9jnzwf5xvcz6vphvyuz6dp3vvcj6wp3v56z6cf5v4skgdmy8q6xvdp4pwm3zy"
+  "names": {
+    "abeng": "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6"
   },
-  "created_at": 1713034693,
-  "id": "5096d894bf93db4b4da3ad15ee6da4c42f0bf076119a157e59c38f1bb9974ac4",
-  "kind": "0",
-  "pubkey": "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6",
-  "sig": "150a49a5061a059dbcb50e3b0d173dbc89b20024a9bb59cd547630faa58566f7e418840756b777a99e260e7167b32b1d1addcbb6c009ebf37a90a7deef62b48a",
-  "tags": [
-    [
-      "alt",
-      "User profile for Abengkris"
-    ]
-  ]
+	"relays": {
+    "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6": [ "wss://relay.mostr.pub", "wss://nostr.zbd.gg", "wss://bitcoiner.social"]
+  }
 }
