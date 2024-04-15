@@ -4,8 +4,8 @@ $(function() {
     // Initialize i18n
     var i18n = $.i18n();
   
-    // Get selected language from localStorage or default to English
-    var lang = localStorage.getItem('selectedLanguage') || 'en';
+    // Get selected language from localStorage or default to Indonesian
+    var lang = localStorage.getItem('selectedLanguage') || 'id';
   
     // Set locale
     i18n.locale = lang;
@@ -55,7 +55,7 @@ $(function() {
     // Language switcher
     var languages = [
       { code: 'en', name: 'English' },
-      { code: 'fr', name: 'French' }
+      { code: 'id', name: 'Indonesian' }
     ];
   
     // Create select element
