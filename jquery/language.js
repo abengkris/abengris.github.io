@@ -54,8 +54,8 @@ $(function() {
   
     // Language switcher
     var languages = [
-      { code: 'en', name: 'English' },
-      { code: 'id', name: 'Indonesian' }
+      { code: 'id', name: 'Indonesian' },
+      { code: 'en', name: 'English' }
     ];
   
     // Create select element
