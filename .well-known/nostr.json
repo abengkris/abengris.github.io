@@ -1,8 +1,8 @@
 {
   "names": {
-    "abeng": "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6"
+    "_": "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6"
   },
 	"relays": {
-    "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6": [ "wss://relay.mostr.pub", "wss://nostr.zbd.gg", "wss://bitcoiner.social"]
+    "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6": [ "wss://relay.nostr.band", "wss://nostr.zbd.gg", "wss://bitcoiner.social", "wss://relay.nostr.band/all", "wss://relay.damus.io", "wss://nos.lol", "wss://relay.current.fyi"]
   }
 }
