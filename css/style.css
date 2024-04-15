@@ -1052,9 +1052,9 @@ a.cbdc, a.gold{
 
 }
 
-.bounty p{
+/* .bounty p{
 
-}
+} */
 
 p.bounty-small{
   font-family: "proxima-nova", sans-serif;
@@ -1163,9 +1163,9 @@ p.bounty-details{
   float: left;
 }
 
-  .small-box:hover{
-      /** transform: scale(1.05); **/
-  }
+  /* .small-box:hover{
+      transform: scale(1.05);
+  } */
 
 @media (max-width:700px){
    .small-box, .wallet-box{
@@ -1237,9 +1237,9 @@ p.bounty-details{
   text-align: center;
 }
 
-.vs-container{
+/* .vs-container{
 
-}
+} */
 
 .cbdc-box{
   margin: auto;
@@ -1729,9 +1729,9 @@ h3.biz-h3{
   display: none;
 }
 
-.expanded {
+/* .expanded {
 
-}
+} */
 
 .expanded .additional-text {
   display: block;
