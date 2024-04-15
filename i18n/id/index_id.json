@@ -127,5 +127,9 @@
 	"home_link_author_lightning_address": "LightningAddress.com",
 	"home_link_author_arman_the_parman": "Arman The Parman",
 	"home_link_author_21_days_of_bitcoin": "21 Days of Bitcoin",
-	"home_link_author_strike": "Strike"
+	"home_link_author_strike": "Strike",
+    "common_footer_follow_first_half": "Ikuti kami di Nostr dengan mencari",
+    "common_footer_follow_second_half": "di semua Nostr klien",
+    "common_footer_what_is_nostr": "Apa itu Nostr?",
+    "common_footer_email_us": "Email kami"
 }
