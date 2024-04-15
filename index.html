@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
 
         <meta charset="utf-8">
@@ -9,39 +8,54 @@
         <title>Bitcoin membangun dunia yang lebih baik.</title>
         <meta name="description" content="Bitcoin adalah teknologi yang disalahpahami yang sedang membangun dunia yang lebih baik. Bitcoin telah melindungi hak asasi manusia, menyelamatkan masyarakat dari inflasi tinggi, mendukung petani lokal, mengurangi emisi dari pengeboran minyak, dan masih banyak lagi.">
 
+        <!-- Hreflang tags for Indonesian -->
+        <link rel="alternate" hreflang="id" href="/">
+        <!-- Hreflang tags for English -->
+        <link rel="alternate" hreflang="en" href="/">
+
         <!--Meta image for sharing-->
         <meta property="og:title" content="Bitcoin membangun dunia yang lebih baik." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://btc.abengkris.com" />
-        <meta property="og:image" content="https://bitcoin.rocks/img/meta/meta-home-v4.png" />
+        <meta property="og:url" content="/" />
+        <meta property="og:image" content="/img/meta/meta-home-v4.png" />
 
         <!--Privacy focused analytics, does not track IP addresses-->
         <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 
+        <!-- Source code for i18n translations -->
+        <script src="jquery/jquery.min.js"></script>
+        <script src="jquery/jquery.i18n/src/jquery.i18n.js"></script>
+        <script src="jquery/jquery.i18n/src/jquery.i18n.messagestore.js"></script>
+        <script src="jquery/jquery.i18n/src/jquery.i18n.fallbacks.js"></script>
+        <script src="jquery/jquery.i18n/src/jquery.i18n.parser.js"></script>
+        <script src="jquery/jquery.i18n/src/jquery.i18n.emitter.js"></script>
+        <script src="jquery/jquery.i18n/src/jquery.i18n.language.js"></script>
+        <script src="jquery/language.js"></script>
+
         <!--Favicons for all devices-->
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://bitcoin.rocks/img/favicons/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://bitcoin.rocks/img/favicons/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://bitcoin.rocks/img/favicons/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://bitcoin.rocks/img/favicons/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://bitcoin.rocks/img/favicons/apple-touch-icon-60x60.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://bitcoin.rocks/img/favicons/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://bitcoin.rocks/img/favicons/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://bitcoin.rocks/img/favicons/apple-touch-icon-152x152.png" />
-        <link rel="icon" type="image/png" href="https://bitcoin.rocks/img/favicons/favicon-196x196.png" sizes="196x196" />
-        <link rel="icon" type="image/png" href="https://bitcoin.rocks/img/favicons/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/png" href="https://bitcoin.rocks/img/favicons/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="https://bitcoin.rocks/img/favicons/favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="https://bitcoin.rocks/img/favicons/favicon-128.png" sizes="128x128" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="img/favicons/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="img/favicons/favicon-128.png" sizes="128x128" />
         <meta name="application-name" content="&nbsp;"/>
         <meta name="msapplication-TileColor" content="#FFFFFF" />
-        <meta name="msapplication-TileImage" content="https://bitcoin.rocks/img/favicons/mstile-144x144.png" />
-        <meta name="msapplication-square70x70logo" content="https://bitcoin.rocks/img/favicons/mstile-70x70.png" />
-        <meta name="msapplication-square150x150logo" content="https://bitcoin.rocks/img/favicons/mstile-150x150.png" />
-        <meta name="msapplication-wide310x150logo" content="https://bitcoin.rocks/img/favicons/mstile-310x150.png" />
-        <meta name="msapplication-square310x310logo" content="https://bitcoin.rocks/img/favicons/mstile-310x310.png" />
+        <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="img/favicons/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="img/favicons/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="img/favicons/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="img/favicons/mstile-310x310.png" />
 
         <!--Main stylesheet + typekit for fonts-->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css?9">
         <link rel="stylesheet" href="https://use.typekit.net/ful2oqu.css">
 
         <!--Code for jump buttons at top of page to auto-scroll to content-->
@@ -50,7 +64,7 @@
               var section = document.getElementById(sectionId);
               var rect = section.getBoundingClientRect();
               var sectionPosition = rect.top + window.pageYOffset;
-              var offset = 35; // Fixed offset for both desktop and mobile devices
+              var offset = 80; // Fixed offset for both desktop and mobile devices
               window.scroll({
                 behavior: 'smooth',
                 top: sectionPosition - offset
@@ -60,60 +74,42 @@
 
     </head>
     <body>
-
         <div class="container-main">
             <div class="container-inner">
-                <center><a href="/"><img src="https://bitcoin.rocks/img/rocks-logo-color.png" class="home-logo"/></a></center>
+                <center><a href="/"><img src="img/rocks-logo-color.png" class="home-logo"/></a></center>
             </div><!--/container-inner-->
 
                 <div class="text-box home-intro">
                     <div class="container-inner" id="intro-container">
 
-                        <p>Bitcoin adalah teknologi yang disalahpahami yang sedang membangun dunia yang lebih baik. Bitcoin telah melindungi hak asasi manusia, menyelamatkan masyarakat dari inflasi tinggi, mendukung petani lokal, mengurangi emisi dari pengeboran minyak, dan masih banyak lagi.</p>
+                        <p data-i18n="home_intro"></p>
 
                     </div><!--/container-inner-->
                 </div><!--text-box-->
 
+
+
                 <div class="container-jump">
-                    <button class="jump jump-money" onclick="scrollToSection('money')">UANG</button>
-
-                    <button class="jump jump-salary" onclick="scrollToSection('salary')">GAJI KAMU</button>
-
-                    <button class="jump jump-freedom" onclick="scrollToSection('freedom')">KEBEBASAN</button>
-
-                    <button class="jump jump-human-rights" onclick="scrollToSection('human-rights')">HAK ASASI</button>
-
-                    <button class="jump jump-equality" onclick="scrollToSection('equality')">KESETARAAN</button>
-
-                    <button class="jump jump-property-rights" onclick="scrollToSection('property-rights')">HAK PROPERTI</button>
-
-                    <button class="jump jump-affordable-housing" onclick="scrollToSection('affordable-housing')">RUMAH</button>
-
-                    <button class="jump jump-business" onclick="scrollToSection('business')">BISNIS</button>
-
-                    <button class="jump jump-crowdfunding" onclick="scrollToSection('crowdfunding')">PENGGALANGAN DANA</button>
-
-                    <button class="jump jump-energy" onclick="scrollToSection('energy')">ENERGI</button>
-
-                    <button class="jump jump-environment" onclick="scrollToSection('environment')">LINGKUNGAN</button>
-
-                    <button class="jump jump-food" onclick="scrollToSection('food')">MAKANAN</button>
-
-                    <button class="jump jump-art" onclick="scrollToSection('art')">SENI</button>
-
-                    <button class="jump jump-politics" onclick="scrollToSection('politics')">POLITIK</button>
-
-                    <button class="jump jump-war" onclick="scrollToSection('war')">PERANG</button>
-
-                    <button class="jump jump-coding" onclick="scrollToSection('coding')">PENGKODEAN</button>
-
-                  <!--  <button class="jump jump-ai" onclick="scrollToSection('ai')">AI</button> -->
-
-                    <button class="jump jump-ln" onclick="scrollToSection('ln')">PEMBAYARAN</button>
-
-                    <button class="jump jump-self-custody" onclick="scrollToSection('self-custody')">KUSTODI MANDIRI</button>
-
-                    <button class="jump jump-get-started" onclick="scrollToSection('get-started')">KAMU</button>
+                    <button class="jump jump-money" onclick="scrollToSection('money')" data-i18n="home_btn_money"></button>
+                    <button class="jump jump-salary" onclick="scrollToSection('salary')" data-i18n="home_btn_salary"></button>
+                    <button class="jump jump-freedom" onclick="scrollToSection('freedom')" data-i18n="home_btn_freedom"></button>
+                    <button class="jump jump-human-rights" onclick="scrollToSection('human-rights')" data-i18n="home_btn_human_rights"></button>
+                    <button class="jump jump-equality" onclick="scrollToSection('equality')" data-i18n="home_btn_equality"></button>
+                    <button class="jump jump-property-rights" onclick="scrollToSection('property-rights')" data-i18n="home_btn_property_rights"></button>
+                    <button class="jump jump-housing" onclick="scrollToSection('housing')" data-i18n="home_btn_housing"></button>
+                    <button class="jump jump-business" onclick="scrollToSection('business')" data-i18n="home_btn_business"></button>
+                    <button class="jump jump-crowdfunding" onclick="scrollToSection('crowdfunding')" data-i18n="home_btn_crowdfunding"></button>
+                    <button class="jump jump-energy" onclick="scrollToSection('energy')" data-i18n="home_btn_energy"></button>
+                    <button class="jump jump-environment" onclick="scrollToSection('environment')" data-i18n="home_btn_environment"></button>
+                    <button class="jump jump-food" onclick="scrollToSection('food')" data-i18n="home_btn_food"></button>
+                    <button class="jump jump-art" onclick="scrollToSection('art')" data-i18n="home_btn_art"></button>
+                    <button class="jump jump-politics" onclick="scrollToSection('politics')" data-i18n="home_btn_politics"></button>
+                    <button class="jump jump-war" onclick="scrollToSection('war')" data-i18n="home_btn_war"></button>
+                    <button class="jump jump-coding" onclick="scrollToSection('coding')" data-i18n="home_btn_coding"></button>
+                    <!--  <button class="jump jump-ai" onclick="scrollToSection('ai')" data-i18n="home_btn_ai"></button> -->
+                    <button class="jump jump-payments" onclick="scrollToSection('payments')" data-i18n="home_btn_payments"></button>
+                    <button class="jump jump-self-custody" onclick="scrollToSection('self-custody')" data-i18n="home_btn_self_custody"></button>
+                    <button class="jump jump-get-started" onclick="scrollToSection('get-started')" data-i18n="home_btn_you"></button>
                 </div><!--/container-jump-->
 
 
@@ -122,18 +118,19 @@
 <!-- MONEY -->
 
 
-            <div class="break" style="margin-top:110px;"></div>
+            <div class="break-micro"></div>
 
 
                 <a href="/inflation">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="money">BITCOIN ADALAH<br /><span class="money">MATA UANG YANG LEBIH BAIK</span></h3>
+                            <h3 id="money" data-i18n="home_section_bitcoin_is"></h3>
+                            <h3 class="second-line money" data-i18n="home_btn_money"></h3>
 
                             <div class="item first">
-                                <h4>Bitcoin Tidak Mengenal Inflasi</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_inflation"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -146,9 +143,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin Tidak Memiliki Bank Runs</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_bank_runs"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -156,14 +153,14 @@
                 </a>
 
 
-                <a href="/bitcoin-vs-gold">
+                <a href="https://bitcoin.rocks/bitcoin-vs-gold">
                     <div class="text-box middle">
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin vs Emas</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_gold"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -175,74 +172,44 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin vs Kripto</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">Hard Money Show</div>
+                                <h4 data-i18n="home_link_title_crypto"></h4>
+                                <div class="type" data-i18n="home_link_type_video"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
-
-
-                <!--<a href="https://medium.com/zoidcoin-network/cash-fiat-currency-vs-bitcoin-3eb0dd13a0a4" target="_blank">
-                    <div class="text-box middle">
-                        <div class="container-inner">
-
-                            <div class="item">
-                                <h4>Fiat Currency vs. Bitcoin</h4>
-                                <div class="type">ARTICLE</div>
-                                <div class="author">Stefan Balut</div>
-                                <div class="clear"></div>
-                            </div><!--/item-->
-                        <!--</div><!--/container-inner-->
-                    <!--</div><!--/text-box-->
-                <!--</a>-->
-
 
                 <a href="/cbdc">
                     <div class="text-box bottom">
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin vs CBDCs</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_cbdc"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
 
-
-                <!--<a href="https://www.youtube.com/watch?v=keOEUbHGp6g" target="_blank">
-                    <div class="text-box bottom">
-                        <div class="container-inner">
-
-                            <div class="item">
-                                <h4>Bitcoin Makes a Better World</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">Bitcoin Magazine</div>
-                                <div class="clear"></div>
-                            <!--</div><!--/item-->
-                        <!--</div><!--/container-inner-->
-                    <!--</div><!--/text-box-->
-                <!--</a>-->
-
 <!-- YOUR SALARY -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="/compound-inflation-calculator">
                     <div class="text-box solo">
                         <div class="container-inner">
-                            <h3 id="salary">BITCOIN &amp;<br /><span class="salary">GAJI KAMU</span></h3>
+                          <h3 id="salary" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line salary" data-i18n="home_btn_salary"></h3>
 
                             <div class="item first">
-                                <h4>Cari tahu berapa banyak gaji kamu yang perlu dinaikkan untuk mengimbangi inflasi.</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">Kalkulator Inflasi Majemuk</div>
+                                <h4 data-i18n="home_link_title_your_salary_1"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_cic"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -253,20 +220,21 @@
 <!-- FREEDOM -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://time.com/5486673/bitcoin-venezuela-authoritarian/" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="freedom">BITCOIN &amp;<br /><span class="freedom">KEBEBASAN</span></h3>
+                          <h3 id="freedom" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line freedom" data-i18n="home_btn_freedom"></h3>
 
                             <div class="item first">
-                                <h4>Mengapa Bitcoin Penting untuk Kebebasan</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">TIME Magazine</div>
+                                <h4 data-i18n="home_link_title_freedom_1"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_time_magazine"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
-                        </div><!--/container-inner--> 
+                        </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
 
@@ -275,9 +243,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin menawarkan kebebasan dari represi politik</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Fortune</div>
+                                <h4 data-i18n="home_link_title_freedom_2"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_fortune"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -287,17 +255,18 @@
 <!-- HUMAN RIGHTS -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://anitaposch.com/bitcoin-enforces-human-rights" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="human-rights">BITCOIN &amp;<br /><span class="human-rights">HAK ASASI</span></h3>
+                          <h3 id="human-rights" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line human-rights" data-i18n="home_btn_human_rights"></h3>
 
                             <div class="item first">
-                                <h4>Bagaimana Bitcoin Menegakkan Hak Asasi Manusia</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Anita Posch</div>
+                                <h4 data-i18n="home_link_title_human_rights_1"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_anita_posch"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -309,38 +278,23 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Revolusi Senyap Bitcoin di Afrika</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">YouTube</div>
+                                <h4 data-i18n="home_link_title_human_rights_2"></h4>
+                                <div class="type" data-i18n="home_link_type_video"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
-
-
-                <!--<a href="https://www.youtube.com/watch?v=FjvSqaGhKQI" target="_blank">
-                    <div class="text-box middle">
-                        <div class="container-inner">
-
-                            <div class="item">
-                                <h4>How Bitcoin can help bank 87% of the world's population</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">Human Rights Foundation</div>
-                                <div class="clear"></div>
-                            </div><!--/item-->
-                        <!--</div><!--/container-inner-->
-                    <!--</div><!--/text-box-->
-                <!--</a>-->
 
                 <a href="https://www.youtube.com/watch?v=xLYYh4aPXAM" target="_blank">
                     <div class="text-box bottom">
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin melindungi hak asasi manusia di seluruh dunia</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">YouTube</div>
+                                <h4 data-i18n="home_link_title_human_rights_3"></h4>
+                                <div class="type" data-i18n="home_link_type_video"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -348,23 +302,21 @@
                 </a>
 
 
-
-
-
 <!-- EQUALITY -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://www.youtube.com/watch?v=P8vlzaDSNY0" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="equality">BITCOIN &amp;<br /><span class="equality">KESETARAAN</span></h3>
+                          <h3 id="equality" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line equality" data-i18n="home_btn_equality"></h3>
 
                             <div class="item first">
-                                <h4>Bitcoin membawa harapan &amp; peluang bagi warga Afrika Selatan</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">The Aubservation</div>
+                                <h4 data-i18n="home_link_title_equality_1"></h4>
+                                <div class="type" data-i18n="home_link_type_video"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -376,9 +328,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bagaimana Bitcoin dapat menjadi <i>"game changer"</i> bagi warga kulit hitam Amerika</h4>
-                                <div class="type">PODCAST</div>
-                                <div class="author">Isaiah Jackson</div>
+                                <h4 data-i18n="home_link_title_equality_2"></h4>
+                                <div class="type" data-i18n="home_link_type_podcast"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -391,17 +343,18 @@
 <!-- PROPERTY RIGHTS -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://www.youtube.com/watch?v=mP0f2s39GDs" target="_blank">
                     <div class="text-box solo">
                         <div class="container-inner">
-                            <h3 id="property-rights">BITCOIN &amp;<br /><span class="property-rights">HAK PROPERTI</span></h3>
+                          <h3 id="property-rights" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line property-rights" data-i18n="home_btn_property_rights"></h3>
 
                             <div class="item first">
-                                <h4>Bitcoin merupakan Bentuk Properti yang Sempurna</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">The Bitcoin Layer</div>
+                                <h4 data-i18n="home_link_title_property_rights_1"></h4>
+                                <div class="type" data-i18n="home_link_type_video"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -415,17 +368,18 @@
 <!-- AFFORDABLE HOUSING -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://www.youtube.com/watch?v=OU494py-G8Y" target="_blank">
                     <div class="text-box solo">
                         <div class="container-inner">
-                            <h3 id="affordable-housing">BITCOIN &amp;<br /><span class="affordable-housing">RUMAH</span></h3>
+                          <h3 id="housing" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line housing" data-i18n="home_btn_housing"></h3>
 
                             <div class="item first">
-                                <h4>Bagaimana Bitcoin Akan Membuat Harga Rumah Kembali Terjangkau</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">YouTube</div>
+                                <h4 data-i18n="home_link_title_housing_1"></h4>
+                                <div class="type" data-i18n="home_link_type_video"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -436,69 +390,31 @@
 <!-- BUSINESS -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
-                <a href="/business">
+                <a href="https://bitcoin.rocks/business/">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="business">BITCOIN &amp;<br /><span class="business">BISNIS</span></h3>
+                          <h3 id="business" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line business" data-i18n="home_btn_business"></h3>
 
                             <div class="item first">
-                                <h4>Pelajari mengapa Bitcoin bermanfaat untuk bisnis</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_business_1"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
 
-                <!--<a href="https://bitcoin.rocks/business/wallets" target="_blank">
-                    <div class="text-box middle">
-                        <div class="container-inner">
-                            <div class="item">
-                                <h4>Get a Bitcoin wallet to accept Bitcoin payments</h4>
-                                <div class="type">GUIDE</div>
-                                <div class="author">bitcoin.rocks</div>
-                                <div class="clear"></div>
-                            </div><!--/item-->
-                       <!-- </div><!--/container-inner-->
-                   <!-- </div><!--/text-box-->
-               <!-- </a>
-
-                <a href="https://bitcoin.rocks/business/maps">
-                    <div class="text-box middle">
-                        <div class="container-inner">
-                            <div class="item">
-                                <h4>Get listed on Bitcoin merchant maps</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">bitcoin.rocks</div>
-                                <div class="clear"></div>
-                            </div><!--/item-->
-                     <!--   </div><!--/container-inner-->
-                 <!--   </div><!--/text-box-->
-              <!--  </a>
-
-                <a href="https://bitcoin.rocks/business/stickers">
-                    <div class="text-box middle">
-                        <div class="container-inner">
-                            <div class="item">
-                                <h4>Free "Bitcoin Accepted Here" stickers</h4>
-                                <div class="type">STICKERS</div>
-                                <div class="author">bitcoin.rocks</div>
-                                <div class="clear"></div>
-                          </div><!--/item-->
-                       <!--   </div><!--/container-inner-->
-                <!--    </div><!--/text-box-->
-          <!--      </a>  -->
-
-                <a href="/business/kit">
+                <a href="https://bitcoin.rocks/business/kit">
                     <div class="text-box bottom">
                         <div class="container-inner">
                             <div class="item">
-                                <h4>Untuk bisnis lokal yang menerima Bitcoin</h4>
-                                <div class="type">BISNIS KIT</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_business_2"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -509,17 +425,18 @@
 <!-- CROWDFUNDING -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://qz.com/africa/1922466/how-bitcoin-powered-nigerias-endsars-protests" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                                <h3 id="crowdfunding">BITCOIN &amp;<br /><span class="crowdfunding">PENGGALANGAN DANA</span></h3>
+                          <h3 id="crowdfunding" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line crowdfunding" data-i18n="home_btn_crowdfunding"></h3>
 
                             <div class="item first">
-                                <h4>Bagaimana Bitcoin memicu protes terbesar di Nigeria dalam satu generasi</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Quartz</div>
+                                <h4 data-i18n="home_link_title_crowdfunding_1"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_quartz"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -531,9 +448,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Protes Pengemudi Truk Kanada mengumpulkan uang dalam bentuk Bitcoin setelah GoFundMe memblokir donasi</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Yahoo Finance</div>
+                                <h4 data-i18n="home_link_title_crowdfunding_2"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_yahoo_finance"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -545,9 +462,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Berpartisipasilah dalam ide-ide yang mengubah dunia menggunakan Bitcoin</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">Geyser</div>
+                                <h4 data-i18n="home_link_title_crowdfunding_3"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_geyser"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -558,17 +475,18 @@
 <!-- ENERGY -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
-                <a href="/news/energy/bitcoin-mining-stabilizes-texas-power-grid.html">
+                <a href="https://bitcoin.rocks/news/energy/bitcoin-mining-stabilizes-texas-power-grid.html">
                     <div class="text-box top">
                         <div class="container-inner">
-                                <h3 id="energy">BITCOIN &amp;<br /><span class="energy">ENERGI</span></h3>
+                          <h3 id="energy" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line energy" data-i18n="home_btn_energy"></h3>
 
                             <div class="item first">
-                                <h4>Bagaimana Bitcoin menstabilkan Jaringan Listrik Texas</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">YouTube</div>
+                                <h4 data-i18n="home_link_title_energy_1"></h4>
+                                <div class="type" data-i18n="home_link_type_video"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
 
                             </div><!--/item-->
@@ -582,9 +500,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Mengapa Bitcoin menggunakan energi?</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">BitcoinUses.Energy</div>
+                                <h4 data-i18n="home_link_title_energy_2"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_uses_energy"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -597,9 +515,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Penggunaan energi Bitcoin bukanlah sebuah masalah. Berikut alasannya.</h4>
-                                <div class="type">DATA</div>
-                                <div class="author">Lyn Alden</div>
+                                <h4 data-i18n="home_link_title_energy_3"></h4>
+                                <div class="type" data-i18n="home_link_type_data"></div>
+                                <div class="author" data-i18n="home_link_author_lyn_alden"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -611,9 +529,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Penambangan Bitcoin membantu menstabilkan jaringan energi melalui Respon Permintaan</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Forbes</div>
+                                <h4 data-i18n="home_link_title_energy_4"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_forbes"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -625,9 +543,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Penambang Bitcoin membawa pembangkit listrik tenaga air ke komunitas pedesaan Afrika</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">CoinDesk</div>
+                                <h4 data-i18n="home_link_title_energy_5"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_coindesk"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -635,22 +553,21 @@
                 </a>
 
 
-
-
 <!-- ENVIRONMENT -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://batcoinz.com/quantifying-the-potential-impact-of-bitcoin-mining-on-global-methane-emissions/" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                                <h3 id="environment">BITCOIN &amp;<br /><span class="environment">LINGKUNGAN</span></h3>
+                          <h3 id="environment" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line environment" data-i18n="home_btn_environment"></h3>
 
                             <div class="item first">
-                                <h4>Bagaimana penambangan Bitcoin mengurangi emisi metana global</h4>
-                                <div class="type">RISET</div>
-                                <div class="author">Daniel Batten</div>
+                                <h4 data-i18n="home_link_title_environment_1"></h4>
+                                <div class="type" data-i18n="home_link_type_research"></div>
+                                <div class="author" data-i18n="home_link_author_daniel_batten"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -662,9 +579,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bagaimana penambangan Bitcoin menyelamatkan Taman Nasional</h4>
-                                <div class="type">KISAH</div>
-                                <div class="author">MIT Technology Review</div>
+                                <h4 data-i18n="home_link_title_environment_2"></h4>
+                                <div class="type" data-i18n="home_link_type_story"></div>
+                                <div class="author" data-i18n="home_link_author_mit_technology_review"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -676,9 +593,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin adalah industri paling ramah lingkungan di dunia!</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">BitcoinIs.Green</div>
+                                <h4 data-i18n="home_link_title_environment_3"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_is_green"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -690,47 +607,44 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Penambangan Bitcoin mencegah gas alam yang menyala mencemari atmosfer</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Texas A&amp;M University</div>
+                                <h4 data-i18n="home_link_title_environment_4"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_texas_am_university"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
-
-
-
 
 
 <!-- THE FOOD SUPPLY -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
-                <a href="https://saifedean.com/fiatfood/" target="_blank">
+                <a href="https://www.youtube.com/watch?v=Q2JrqsFDok0" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="food">BITCOIN &amp;<br /><span class="food">PASOKAN MAKANAN</span></h3>
+                          <h3 id="food" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line food" data-i18n="home_btn_food"></h3>
 
                             <div class="item first">
-                                <h4>Bagaimana Uang Fiat berdampak buruk bagi Pangan, Pertanian, dan Tanah Bumi</h4>
-                                <div class="type">RINGKASAN BUKU</div>
-                                <div class="author">Saifedean Ammous</div>
+                                <h4 data-i18n="home_link_title_food_1"></h4>
+                                <div class="type" data-i18n="home_link_type_video"></div>
+                                <div class="author" data-i18n="home_link_author_youtube"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
 
-                <a href="https://www.youtube.com/watch?v=Q2JrqsFDok0" target="_blank">
+                <a href="https://saifedean.com/fiatfood/" target="_blank">
                     <div class="text-box bottom">
                         <div class="container-inner">
-
                             <div class="item">
-                                <h4>Bagaimana Inflasi Mempengaruhi Harga Pangan</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">YouTube</div>
+                                <h4 data-i18n="home_link_title_food_2"></h4>
+                                <div class="type" data-i18n="home_link_type_book_excerpt"></div>
+                                <div class="author" data-i18n="home_link_author_saifedean_ammous"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -744,17 +658,18 @@
 <!-- ARTISTS -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="/stickers">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="art">BITCOIN &amp;<br /><span class="art">SENI</span></h3>
+                          <h3 id="art" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line art" data-i18n="home_btn_art"></h3>
 
                             <div class="item first">
-                                <h4>Bergabunglah dengan Prakarsa Stiker Bitcoin kami</h4>
-                                <div class="type">SENI JALANAN</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_art_1"></h4>
+                                <div class="type" data-i18n="home_link_type_street_art"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -766,9 +681,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Kirimkan Kartu Pos Bitcoin kepada seseorang yang kamu kenal</h4>
-                                <div class="type">OUTREACH</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_art_2"></h4>
+                                <div class="type" data-i18n="home_link_type_outreach"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -779,17 +694,18 @@
 <!-- POLITICS -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://bitcoinmagazine.com/culture/bitcoins-existence-is-a-political-paradox" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="politics">BITCOIN &amp;<br /><span class="politics">POLITIK</span></h3>
+                          <h3 id="politics" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line politics" data-i18n="home_btn_politics"></h3>
 
                             <div class="item first">
-                                <h4>Bitcoin merupakan Paradoks Politik</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Andrew Keir</div>
+                                <h4 data-i18n="home_link_title_politics_1"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_magazine"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -801,9 +717,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Kamu bisa Menggunakan Hak Suaramu Untuk Memilih Uang yang Lebih Baik</h4>
-                                <div class="type">KAMPANYE</div>
-                                <div class="author">voteforbetter.money</div>
+                                <h4 data-i18n="home_link_title_politics_2"></h4>
+                                <div class="type" data-i18n="home_link_type_campaign"></div>
+                                <div class="author" data-i18n="home_link_author_vfbm"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -814,17 +730,18 @@
 <!-- WAR -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://medium.com/@MishaGuttentag/how-bitcoin-could-end-endless-war-and-other-big-ideas-from-the-bitcoin-standard-9ec3626fd962" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="war">BITCOIN &amp;<br /><span class="war">PERANG</span></h3>
+                          <h3 id="war" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line war" data-i18n="home_btn_war"></h3>
 
                             <div class="item first">
-                                <h4>Bagaimana Bitcoin bisa mengakhiri perang yang tak pernah usai</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Misha Guttentag</div>
+                                <h4 data-i18n="home_link_title_war_1"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_misha_guttentag"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -837,9 +754,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin &amp; Veteran: Keselarasan Alami</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Wes Lippman</div>
+                                <h4 data-i18n="home_link_title_war_2"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_wes_lippman"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -851,9 +768,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bagaimana Bitcoin Membantu Warga Sipil Lolos dari Perang di Sudan</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Forbes</div>
+                                <h4 data-i18n="home_link_title_war_3"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_forbes"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -861,23 +778,21 @@
                 </a>
 
 
-
-
-
 <!-- CODING -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://trybitcoin.satsie.dev/" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="coding">BITCOIN &amp;<br /><span class="coding">PENGKODEAN</span></h3>
+                          <h3 id="coding" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line coding" data-i18n="home_btn_coding"></h3>
 
                             <div class="item first">
-                                <h4>Sebuah Tutorial Interaktif tentang Sisi Teknis Bitcoin</h4>
-                                <div class="type">SOFTWARE</div>
-                                <div class="author">Satsie</div>
+                                <h4 data-i18n="home_link_title_coding_1"></h4>
+                                <div class="type" data-i18n="home_link_type_software"></div>
+                                <div class="author" data-i18n="home_link_author_satsie"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -889,9 +804,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>bitcoinSwitch: melakukan retrofit pada perangkat apa pun untuk menerima Bitcoin</h4>
-                                <div class="type">HARDWARE</div>
-                                <div class="author">MakerBits</div>
+                                <h4 data-i18n="home_link_title_coding_2"></h4>
+                                <div class="type" data-i18n="home_link_type_hardware"></div>
+                                <div class="author" data-i18n="home_link_author_makerbits"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -899,22 +814,21 @@
                 </a>
 
 
+<!-- PAYMENTS -->
 
 
-<!-- THE LIGHTNING NETWORK -->
-
-
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://www.swanbitcoin.com/a-look-at-the-lightning-network/" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="ln">BITCOIN &AMP;<br /><span class="ln">PEMBAYARAN</span></h3>
+                          <h3 id="payments" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line payments" data-i18n="home_btn_payments"></h3>
 
                             <div class="item first">
-                                <h4>Sekilas tentang Lightning Network (Pembayaran Bitcoin Instan)</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Lyn Alden</div>
+                                <h4 data-i18n="home_link_title_payments_1"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_lyn_alden"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -926,9 +840,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bagaimana Bitcoin &amp; Lightning Network mengaktifkan Podcasting 2.0</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Kevin Rooke</div>
+                                <h4 data-i18n="home_link_title_payments_2"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_kevin_rooke"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -940,9 +854,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Dompet Bitcoin El Salvador dapat menghemat biaya pengiriman uang sebesar $400 juta per tahun bagi masyarakat El Salvador</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Morgan Chittum, Blockworks</div>
+                                <h4 data-i18n="home_link_title_payments_3"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_blockworks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -954,9 +868,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Bitcoin Layer 2: Lightning Network</h4>
-                                <div class="type">RISET</div>
-                                <div class="author">MIT Media Lab</div>
+                                <h4 data-i18n="home_link_title_payments_4"></h4>
+                                <div class="type" data-i18n="home_link_type_research"></div>
+                                <div class="author" data-i18n="home_link_author_mit_media_lab"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -968,9 +882,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Dapatkan Alamat Lightning kamu untuk menerima pembayaran Bitcoin instan</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">LightningAddress.com</div>
+                                <h4 data-i18n="home_link_title_payments_5"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_lightning_address"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -978,50 +892,21 @@
                 </a>
 
 
-                <!--<a href="https://satsback.com/" target="_blank">
-                    <div class="text-box middle">
-                        <div class="container-inner">
-
-                            <div class="item">
-                                <h4>Earn free bitcoin when you shop</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">Satsback.com</div>
-                                <div class="clear"></div>
-                            </div><!--/item-->
-                        <!--</div><!--/container-inner-->
-                    <!--</div><!--/text-box-->
-                <!--</a>-->
-
-
-                <!--<a href="https://www.youtube.com/shorts/9NXRUlavAUs" target="_blank">
-                    <div class="text-box bottom">
-                        <div class="container-inner">
-
-                            <div class="item">
-                                <h4>Bitcoin Lightning Network vs MasterCard (real world payment test)</h4>
-                                <div class="type">VIDEO</div>
-                                <div class="author">YouTube Shorts</div>
-                                <div class="clear"></div>
-                            </div><!--/item-->
-                        <!--</div><!--/container-inner-->
-                    <!--</div><!--/text-box-->
-                <!--</a>-->
-
-
 <!-- SELF-CUSTODY -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="/wallets">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="self-custody">BITCOIN &amp;<br /><span class="self-custody">KUSTODI MANDIRI</span></h3>
+                          <h3 id="self-custody" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line self-custody" data-i18n="home_btn_self_custody"></h3>
 
                             <div class="item first">
-                                <h4>Cara Aman Menyimpan Bitcoin Kamu</h4>
-                                <div class="type">PETUNJUK</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_self_custody_1"></h4>
+                                <div class="type" data-i18n="home_link_type_guide"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -1034,9 +919,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>6 Alasan Kenapa Kamu Harus Menarik Bitcoin Kamu dari Bursa</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Arman The Parman</div>
+                                <h4 data-i18n="home_link_title_self_custody_2"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_arman_the_parman"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -1049,9 +934,9 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Emas, Bitcoin, dan Kustodi Mandiri</h4>
-                                <div class="type">ARTIKEL</div>
-                                <div class="author">Lyn Alden</div>
+                                <h4 data-i18n="home_link_title_self_custody_3"></h4>
+                                <div class="type" data-i18n="home_link_type_article"></div>
+                                <div class="author" data-i18n="home_link_author_lyn_alden"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -1062,17 +947,18 @@
 <!-- GET STARTED -->
 
 
-            <div class="break"></div>
+            <div class="break-micro"></div>
 
                 <a href="https://mailchi.mp/b4a28e31041a/qd6tc53wb4" target="_blank">
                     <div class="text-box top">
                         <div class="container-inner">
-                            <h3 id="get-started">BITCOIN &amp;<br /><span class="get-started">KAMU (IYA, KAMU!)</span></h3>
+                          <h3 id="get-started" data-i18n="home_section_bitcoin_and"></h3>
+                          <h3 class="second-line get-started" data-i18n="home_btn_you"></h3>
 
                             <div class="item first">
-                                <h4>Pelajari dasar-dasar Bitcoin</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">21 Days of Bitcoin</div>
+                                <h4 data-i18n="home_link_title_get_started_1"></h4>
+                                <div class="type" data-i18n="home_link_type_email"></div>
+                                <div class="author" data-i18n="home_link_author_21_days_of_bitcoin"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
@@ -1084,46 +970,49 @@
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Buat Dompet Bitcoin pertama kamu</h4>
-                                <div class="type">PETUNJUK</div>
-                                <div class="author">btc.abengkris.com</div>
+                                <h4 data-i18n="home_link_title_get_started_2"></h4>
+                                <div class="type" data-i18n="home_link_type_guide"></div>
+                                <div class="author" data-i18n="home_link_author_bitcoin_rocks"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
 
-                <a href="https://river.com/" target="_blank">
+                <a href="https://strike.me" target="_blank">
                     <div class="text-box bottom">
                         <div class="container-inner">
 
                             <div class="item">
-                                <h4>Mulailah Menabung dalam Bitcoin Sekarang</h4>
-                                <div class="type">WEBSITE</div>
-                                <div class="author">River.com</div>
+                                <h4 data-i18n="home_link_title_get_started_3"></h4>
+                                <div class="type" data-i18n="home_link_type_website"></div>
+                                <div class="author" data-i18n="home_link_author_strike"></div>
                                 <div class="clear"></div>
                             </div><!--/item-->
                         </div><!--/container-inner-->
                     </div><!--/text-box-->
                 </a>
 
-                <center><div style="width: 350px; height:220px; background-color: inherit; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 20px; text-align: right; line-height:14px; block-size:220px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin-top: 60px;"><div style="height:200px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=single_v2&theme=dark&coin_id=859&pref_coin_id=1524" width="350px" height="199px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #5b606b; text-decoration:none; font-size:11px">Harga Bitcoin</a>&nbsp;oleh Coinlib&nbsp;</div></div></center>
-
 <!-- FOOTER -->
 
             <div class="footer">
-                <p>Ikuti di Nostr dengan mencari<br /><a href="https://njump.me/npub1q7g8dyxw8lkrp7eq38445cwpga2gcfzt4ptqtecn67v3e48qzhmqwgk6wr" class="footer-link" target="_blank">btc.abengkris.com</a> di semua klien Nostr.<br /><a href="/nostr/what-is-nostr" class="footer-link">Apa itu Nostr?</a>
-                <br /><br />
+                <p>
 
-                Email : <a href="mailto:hello.abengkris@gmail.com" class="footer-link">hello.abengkris@gmail.com</a>
+                <span data-i18n="common_footer_follow_first_half"></span>
+                <br /><a href="https://njump.me/npub1q7g8dyxw8lkrp7eq38445cwpga2gcfzt4ptqtecn67v3e48qzhmqwgk6wr" class="footer-link" target="_blank">btc.abengkris.com</a>&nbsp;<span data-i18n="common_footer_follow_second_half"></span>
+                <br /><a href="/nostr/what-is-nostr" class="footer-link"><span data-i18n="common_footer_what_is_nostr"></span></a>
+
+                <br /><br />
+                <span data-i18n="common_footer_email_us"></span>
+                <a href="mailto:hello.abengkris@gmail.com" class="footer-link">hello.abengkris@gmail.com</a>
+
+
                     <br /><br /><br />
                 </p>
             </div><!--/footer-->
 
 
         </div><!--/container-main-->
-
-      <!--<div class="bot-bar"><p>Bookmark this page to share when Bitcoin comes up in conversation.</p></div>-->
 
     </body>
 </html>
