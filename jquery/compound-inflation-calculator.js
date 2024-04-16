@@ -26,7 +26,16 @@ function calculateInflation(resultId, idPostfix) {
     // Validate user inputs
     if (currentSalary == '' || inflationRate == '' || years == '') {
         document.getElementById(resultId).innerHTML = $.i18n('common_error_message');
-    } else {
+    } else if ($.i18n('common_currency') == "rupiah") {
+            // Calculate inflation
+            var totalInflation = Math.pow((1 + (inflationRate / 100)), years);
+            var dollarSalary = (currentSalary * 1).toLocaleString("id-ID", { style: "currency", currency: "IDR" });
+            var newSalary = (currentSalary * totalInflation).toLocaleString("id-ID", { style: "currency", currency: "IDR" });
+    
+            // Display result in the specified result div
+            var yearText = (years == 1) ? $.i18n('common_year') : $.i18n('common_years');
+            document.getElementById(resultId).innerHTML = $.i18n('common_result_message_1') + "&nbsp;" + inflationRate + "%, " + $.i18n('common_result_message_2') + "&nbsp;" + dollarSalary + "&nbsp;" + $.i18n('common_result_message_3') + "&nbsp;" + newSalary + "&nbsp;" + $.i18n('common_result_message_in') + "&nbsp;" + years + " " + yearText + "&nbsp;" + $.i18n('common_result_message_4');
+        } else {
         // Calculate inflation
         var totalInflation = Math.pow((1 + (inflationRate / 100)), years);
         var dollarSalary = (currentSalary * 1).toLocaleString("en-US", { style: "currency", currency: "USD" });
