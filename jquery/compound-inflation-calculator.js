@@ -34,6 +34,6 @@ function calculateInflation(resultId, idPostfix) {
 
         // Display result in the specified result div
         var yearText = (years == 1) ? $.i18n('common_year') : $.i18n('common_years');
-        document.getElementById(resultId).innerHTML = $.i18n('common_result_message_1') + "&nbsp;" + inflationRate + "%, " + $.i18n('common_result_message_2') + dollarSalary + "&nbsp;" + $.i18n('common_result_message_3') + "&nbsp;" + newSalary + "&nbsp;" + $.i18n('common_result_message_in') + "&nbsp;" + years + " " + yearText + "&nbsp;" + $.i18n('common_result_message_4');
+        document.getElementById(resultId).innerHTML = $.i18n('common_result_message_1') + "&nbsp;" + inflationRate + "%, " + $.i18n('common_result_message_2') + "&nbsp;" + dollarSalary + "&nbsp;" + $.i18n('common_result_message_3') + "&nbsp;" + newSalary + "&nbsp;" + $.i18n('common_result_message_in') + "&nbsp;" + years + " " + yearText + "&nbsp;" + $.i18n('common_result_message_4');
     }
 }
