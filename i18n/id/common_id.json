@@ -66,7 +66,7 @@
 	"common_cic_intro_2": "Dengan Kalkulator Inflasi Majemuk kami, kamu dapat dengan mudah menghitung jumlah kenaikan gaji kamu untuk mempertahankan daya beli kamu dari waktu ke waktu.",
 	"common_cic_intro_3": "Cukup masukkan gaji kamu saat ini, tingkat inflasi, dan jumlah tahun yang ingin kamu hitung, dan kalkulator kami akan menunjukkan berapa gaji kamu yang dibutuhkan untuk mengimbangi inflasi.",
 	"common_current_salary": "Gaji saat ini",
-	"common_inflation_rate": "tingkat inflasi",
+	"common_inflation_rate": "tingkat inflasi (%)",
 	"common_year": "tahun",
 	"common_years": "tahun",
 	"common_result_starting_message": "Isi formulir di atas dan klik hitung.",
