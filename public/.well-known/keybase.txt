@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/abeng
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://abeng.xyz
+  * I am abeng (https://keybase.io/abeng) on keybase.
+  * I have a public key ASDt-eoqdDW0iPIY6KW-2GWqeCwW1iz4HBbO2kG-lZ-WJAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120edf9ea2a7435b488f218e8a5bed865aa782c16d62cf81c16ceda41be959f96240a",
+      "host": "keybase.io",
+      "kid": "0120edf9ea2a7435b488f218e8a5bed865aa782c16d62cf81c16ceda41be959f96240a",
+      "uid": "f98fe2e082901df0826d8a766a3b1619",
+      "username": "abeng"
+    },
+    "merkle_root": {
+      "ctime": 1731836433,
+      "hash": "cc0ed9caadcf5b178102491f2b9ccb733eb783b87a0374cdb5ef6626b7089cbe4ad730293ce3262337a52b1fa6581b23a7194c9c4815dabb1c1bef3cc580b07d",
+      "hash_meta": "7e68448b99bdd8e73ac180b3599e84e8b31e056c93e297e57144b67f8ba43381",
+      "seqno": 26304018
+    },
+    "service": {
+      "entropy": "k39nKklxrexZfyW1a3uUAX0u",
+      "hostname": "abeng.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.4.0"
+  },
+  "ctime": 1731836457,
+  "expire_in": 504576000,
+  "prev": "636a68ba73cda1c7e6da0efaf2fff2177a4ed215e1ec276696819e7fd8060408",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7fnqKnQ1tIjyGOilvthlqngsFtYs+BwWztpBvpWfliQKp3BheWxvYWTESpcCB8QgY2pounPNocfm2g768v/yF3pO0hXh7CdmloGef9gGBAjEICFCE37jwzsZIBju2WTDIDi0kL3b02JzIEbE/4ZxgTk0AgHCo3NpZ8RAo06GPRSqgr8jEJqBlvKPZIxxidh7FGxKbNwCje3ljmiDJE16p+ZZq36nqdtPVfwvqPz/hA5yrHmFnvMVsN62CqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGNP03qJtWOQc+9J9VwRkwfupJThjDLFYdvEzQLN1ln0o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/abeng
+
+==================================================================
