@@ -1,18 +1,19 @@
 {
-    "names": {
-        "_": "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6"
-    },
-    "relays": {
-        "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6": [
-            "wss://nostr.nostr.band",
-            "wss://relay.primal.net",
-            "wss://relay.damus.io",
-            "wss://relay.nostr.bg",
-            "wss://nos.lol",
-            "wss://relay.nsec.app",
-            "wss://nostr-01.yakihonne.com",
-            "wss://nostr-02.yakihonne.com",
-            "wss://nosdrive.app/relay"
-        ]
-    }
+  "names": {
+    "_": "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6",
+    "nostr": "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6"
+  },
+  "relays": {
+    "07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6": [
+      "wss://relay.nostr.band",
+      "wss://relay.primal.net",
+      "wss://relay.damus.io",
+      "wss://relay.nostr.bg",
+      "wss://nos.lol",
+      "wss://relay.nsec.app",
+      "wss://nostr-01.yakihonne.com",
+      "wss://nostr-02.yakihonne.com",
+      "wss://nosdrive.app/relay"
+    ]
+  }
 }

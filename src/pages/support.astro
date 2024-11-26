@@ -1,0 +1,59 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Container from '@/components/Container.astro'
+import Link from '@/components/Link.astro'
+import { SITE } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import { getImage } from 'astro:assets'
+import barcodeLightning from '../../public/abeng@blink.sv.png'
+
+const barcodeLn = await getImage({ src: barcodeLightning, width: 300 })
+---
+
+<Layout title="Support" description={SITE.DESCRIPTION}>
+  <Container class="flex flex-col gap-y-6">
+    <Breadcrumbs items={[{ label: 'Support', icon: 'lucide:zap' }]} />
+
+    <section>
+      <div class="min-w-full">
+        <h1 class="mb-4 text-3xl font-bold">Ways to Support Me</h1>
+        <p>
+          Pertama-tama: terima kasih atas dukungan Anda. Berkat orang-orang
+          seperti Anda, saya mampu melakukan apa yang saya lakukan. Semua karya
+          saya dirilis secara gratis di bawah lisensi terbuka dan permisif dan
+          diberikan berdasarkan nilai yang sepadan.
+        </p>
+        <h2 id="lightning">Lightning Support</h2>
+        <p>
+          Anda dapat mengirim sejumlah sats yang diinginkan ke <Link
+            href="lightning:sats@abeng.xyz"
+				title="Click to open your lightning wallet"
+            external
+            class="underline text-orange-500 hover:text-orange-400">sats@abeng.xyz</Link
+          >
+          atau scan barcode di bawah ini menggunakan lightning wallet Anda.
+        </p>
+        <div class="my-4 flex flex-col items-center justify-center">
+          <img
+            src={barcodeLn.src}
+            alt="Barcode lightning abeng@blink.sv"
+            {...barcodeLn.attributes}
+            class="mb-4 w-1/2"
+          />
+          <p class="text-center text-sm">
+            <span class="font-semibold"
+              >Having trouble scanning this QR code with your wallet?</span
+            > Some wallets do not support printed QR codes like this one. Scan with
+            the camera app on your phone to be taken to a webpage where you can create
+            a fresh invoice for paying from any Lightning wallet.
+          </p>
+        </div>
+        <p>
+          Artikel-artikel saya juga memiliki alamat lightning, jadi jika Anda
+          ingin mengirim beberapa sats ke artikel tertentu—Anda bisa
+          melakukannya!
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>
