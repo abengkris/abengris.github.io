@@ -61,12 +61,12 @@ export type NostrEvent = {
 
 export async function fetchLatestNote(
     publicKey: string
-): Promise<NostrEvent | null> {
+): Promise<NostrEvent> {
     const relay = await Relay.connect("wss://relay.nostr.band");
     console.log(`Connected to ${relay.url}`);
 
     // Return a Promise that resolves when the event is received
-    return new Promise<NostrEvent | null>((resolve, reject) => {
+    return new Promise<NostrEvent>((resolve, reject) => {
         const sub = relay.subscribe(
             [{ kinds: [1], authors: [publicKey], limit: 1 }],
             {
