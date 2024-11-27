@@ -13,6 +13,7 @@ import {
 import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
+import LatestNote from '@/components/LatestNote.astro';
 
 const blog = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
@@ -23,34 +24,7 @@ const blog = (await getCollection('blog'))
 <Layout title="Home" description={SITE.DESCRIPTION}>
   <Container class="flex flex-col gap-y-6">
     <section>
-      <Link
-        href="https://nostr.band/nevent1qvzqqqqqqypzqpusw6gvu0lvxrajpz0ttfsuz3653sjyh2zkqhn384uern2wq90kqy0hwumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnj7qg4waehxw309aex2mrp0yhxuum9vvhxzurs9uqzqhqpa6hdj8cjmngkgvyd70cjzg4pllj5prk3e9pfmer9typnglm8w22ufd"
-        external
-      >
-        <Card className="hover:bg-secondary/50">
-          <CardHeader>
-            <CardTitle className="text-3xl">Slow down,</CardTitle>
-            <CardDescription
-              ><span class="font-semibold">and be patient with life.</span
-              ></CardDescription
-            >
-          </CardHeader>
-          <CardContent>
-            <p class="mb-2 text-sm text-muted-foreground">
-              "If you are looking for wealth, somebody else is looking for
-              health. If you are looking for health, somebody else just died.
-              Each time a new mansion springs from the earth, a new grave is dug
-              below the earth. Each time you throw food into dust bin, someone
-              else is looking for remnant to eat. For each smile on the planet,
-              there's a drop of tear in another place on the planet. For each
-              celebration of childbirth, there are tears of burial. Each time
-              you urinate or drink water, remember, someone is using pipe for
-              the same purpose. So, always be thankful. Think of the goodness
-              you have, rather than the vanities you long for." — Human, Earth.
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
+      <LatestNote />
     </section>
     <section class="flex flex-col gap-y-4">
       <h2 class="text-2xl font-bold">Latest posts</h2>

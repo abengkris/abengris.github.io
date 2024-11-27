@@ -1,0 +1,60 @@
+---
+import { fetchLatestNote, formatDate, getNevent } from '@/lib/utils';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from '@/components/ui/card'
+import Link from '@/components/Link.astro'
+
+const publicKey = '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6';
+let latestNote = null;
+let errorMessage: string | null = null;
+
+try {
+  console.log('Fetching latest note...');
+  latestNote = await fetchLatestNote(publicKey);
+  console.log('latestNote: ', latestNote)
+
+  if (!latestNote) {
+    errorMessage = 'No notes found for this public key.';
+  } else if (!latestNote.content) {
+    errorMessage = 'Note content is empty.';
+  } else {
+  
+    console.log('Fetched latest note:', latestNote);
+  }
+} catch (error) {
+  console.error('Error fetching latest note:', error);
+  errorMessage = 'An error occurred while fetching the latest note.';
+}
+
+const date = new Date(latestNote.created_at * 1000);
+  const formattedDate = formatDate(date);
+  
+  const eventId = latestNote.id;
+const nevent = getNevent(eventId);
+
+console.log('Nevent:', nevent);
+---
+
+<Link
+        href=`https://nostr.band/${nevent}`
+        external
+      >
+        <Card className="hover:bg-secondary/50">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">Latest note</CardTitle>
+            
+          </CardHeader>
+          <CardContent>
+            <p class="mb-2 text-sm">
+              {errorMessage || latestNote?.content || 'No notes available.'}
+            </p>
+          </CardContent>
+          <CardFooter ><span class="text-xs text-muted-foreground">{formattedDate}</span></CardFooter>
+        </Card>
+      </Link>
