@@ -10,14 +10,13 @@ import {
 import Link from '@/components/Link.astro'
 
 const publicKey = '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6';
-let latestNote = NostrEvent | null;
-let errorMessage: string | null = null;
+let latestNote = NostrEvent;
+let errorMessage: string;
 
 try {
   latestNote = await fetchLatestNote(publicKey);
 } catch (error) {
   console.error('Error fetching latest note:', error);
-  latestNote = null;
 }
 
 const date = new Date(latestNote.created_at * 1000);
@@ -42,7 +41,7 @@ console.log('Nevent:', nevent);
           </CardHeader>
           <CardContent>
             <p class="mb-2 text-sm">
-              {errorMessage || latestNote?.content || 'No notes available.'}
+              {errorMessage || latestNote.content || 'No notes available.'}
             </p>
           </CardContent>
           <CardFooter ><span class="text-xs text-muted-foreground">{formattedDate}</span></CardFooter>
