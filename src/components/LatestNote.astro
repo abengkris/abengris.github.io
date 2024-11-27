@@ -14,27 +14,16 @@ let latestNote = NostrEvent | null;
 let errorMessage: string | null = null;
 
 try {
-  console.log('Fetching latest note...');
   latestNote = await fetchLatestNote(publicKey);
-  console.log('latestNote: ', latestNote)
-
-  if (!latestNote) {
-    errorMessage = 'No notes found for this public key.';
-  } else if (!latestNote.content) {
-    errorMessage = 'Note content is empty.';
-  } else {
-  
-    console.log('Fetched latest note:', latestNote);
-  }
 } catch (error) {
   console.error('Error fetching latest note:', error);
-  errorMessage = 'An error occurred while fetching the latest note.';
+  latestNote = null;
 }
 
 const date = new Date(latestNote.created_at * 1000);
   const formattedDate = formatDate(date);
   
-  const eventId = latestNote?.id;
+  const eventId = latestNote.id;
 const nevent = getNevent(eventId);
 
 console.log('Nevent:', nevent);
