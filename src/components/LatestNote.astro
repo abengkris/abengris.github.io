@@ -19,10 +19,10 @@ try {
   console.error('Error fetching latest note:', error);
 }
 
-const date = new Date(latestNote.created_at * 1000);
+const date = latestNote ? new Date(latestNote.created_at * 1000) : 'No date';
   const formattedDate = formatDate(date);
   
-  const eventId = latestNote.id;
+  const eventId = latestNote ? latestNote.id : 'No event';
 const nevent = getNevent(eventId);
 
 console.log('Nevent:', nevent);
