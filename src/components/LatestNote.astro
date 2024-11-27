@@ -1,5 +1,6 @@
 ---
-import { fetchLatestNote, formatDate, getNevent, NostrEvent } from '@/lib/utils';
+import { fetchLatestNote, formatDate, getNevent } from '@/lib/utils';
+import type { NostrEvent } from '@/lib/utils';
 import {
   Card,
   CardContent,
@@ -10,17 +11,17 @@ import {
 import Link from '@/components/Link.astro'
 
 const publicKey = '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6';
-let latestNote = NostrEvent;
-let errorMessage: string;
+let latestNote: NostrEvent | null = null;
+let errorMessage: string | null = null;
 
 try {
   latestNote = await fetchLatestNote(publicKey);
 } catch (error) {
-  console.error('Error fetching latest note:', error);
+  errorMessage = 'Failed to fetch the latest note.';
 }
 
-const date = latestNote ? new Date(latestNote.created_at * 1000) : 'No date';
-  const formattedDate = formatDate(date);
+const date = latestNote ? new Date(latestNote.created_at * 1000) : null;
+const formattedDate = date ? formatDate(date) : 'No date';
   
   const eventId = latestNote ? latestNote.id : 'No event';
 const nevent = getNevent(eventId);
@@ -41,7 +42,7 @@ console.log('Nevent:', nevent);
           </CardHeader>
           <CardContent>
             <p class="mb-2 text-sm">
-              {errorMessage || latestNote.content || 'No notes available.'}
+              {errorMessage || (latestNote?.content ?? 'No notes available.')}
             </p>
           </CardContent>
           <CardFooter ><span class="text-xs text-muted-foreground">{formattedDate}</span></CardFooter>

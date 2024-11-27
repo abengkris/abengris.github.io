@@ -34,7 +34,7 @@ const getSocialLink = ({ href, label }: SocialLink) => ({
   {
     links.map((link) => {
       const { href, ariaLabel, iconName } = getSocialLink(link)
-      const isCustomIcon = iconName.startsWith('custom:')
+      
       return (
         <li>
           <Link
