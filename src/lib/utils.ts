@@ -1,3 +1,4 @@
+export const prerender = false;
 import { getEntry } from "astro:content";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -11,7 +12,7 @@ export function cn(...inputs: ClassValue[]) {
 export function formatDate(date: Date) {
     return Intl.DateTimeFormat("id-ID", {
         year: "numeric",
-        month: "long",
+        month: "short",
         day: "numeric"
     }).format(date);
 }

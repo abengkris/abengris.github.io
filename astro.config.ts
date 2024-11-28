@@ -19,9 +19,12 @@ import sectionize from '@hbsnow/rehype-sectionize'
 
 import icon from 'astro-icon'
 
+import vercel from '@astrojs/vercel/serverless';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://abeng.xyz',
+
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -31,6 +34,7 @@ export default defineConfig({
     react(),
     icon(),
   ],
+
   markdown: {
     syntaxHighlight: false,
     rehypePlugins: [
@@ -65,11 +69,16 @@ export default defineConfig({
     ],
     remarkPlugins: [remarkToc, remarkMath, remarkEmoji],
   },
+
   server: {
     port: 1234,
     host: true,
   },
+
   devToolbar: {
     enabled: false,
   },
+
+  output: 'server',
+  adapter: vercel(),
 })

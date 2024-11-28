@@ -10,6 +10,8 @@ import {
   CardFooter,
 } from '@/components/ui/card'
 import Link from '@/components/Link.astro'
+import { Button } from '@/components/ui/button'
+import { Icon } from 'astro-icon/components'
 
 const publicKey = '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6';
 let latestNote: NostrEvent | null = null;
@@ -30,15 +32,13 @@ const nevent = getNevent(eventId);
 console.log('Nevent:', nevent);
 ---
 
-<Link
-        href=`https://nostr.band/${nevent}`
-        external
-      >
+<div>
         {latestNote ? (
         <>
-          <Card className="hover:bg-secondary/50">
+          <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold">Latest note</CardTitle>
+            <CardTitle className="font-bold flex flex-wrap items-center -mb-4 -mt-3">
+              <Icon name="nostr" class="size-16 -ml-5" /> Nostr note</CardTitle>
             
           </CardHeader>
           <CardContent>
@@ -46,8 +46,17 @@ console.log('Nevent:', nevent);
               {errorMessage || (latestNote?.content ?? 'No notes available.')}
             </p>
           </CardContent>
-          <CardFooter ><span class="text-xs text-muted-foreground">{formattedDate}</span></CardFooter>
+          <CardFooter ><span class="text-xs text-muted-foreground mr-2">{formattedDate}</span> <Button variant="ghost">
+<Link
+        href=`https://zapper.nostrapps.org/zap?id=${nevent}&type=zap`
+        external
+      >&#x26A1; Zap</Link></Button> <Button variant="ghost">
+<Link
+        href=`https://nostr.band/${nevent}`
+        external
+      >Open&#10139;</Link></Button></CardFooter>
+            
         </Card>
         </>
         ) : ( <p>No latest note available.</p>)}
-      </Link>
+      </div>
