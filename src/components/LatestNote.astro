@@ -15,7 +15,9 @@ import { Icon } from 'astro-icon/components';
 const publicKey = '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6';
 let latestNote: NostrEvent | null = null;
 let errorMessage: string | null = null;
-const baseUrl = 'https://abeng.xyz';
+const prodUrl = 'https://abeng.xyz';
+const localUrl = 'http://localhost:1234';
+const baseUrl = import.meta.env.PROD ? prodUrl : localUrl;
 
 // Fetch data from API
 try {
@@ -32,10 +34,10 @@ try {
   console.log(error)
 }
 
-const date = latestNote ? new Date(latestNote.created_at * 1000) : null;
+const date = latestNote?.created_at ? new Date(latestNote.created_at * 1000) : null;
 const formattedDate = date ? formatDate(date) : 'No date';
-const eventId = latestNote ? latestNote.id : 'No event';
-const nevent = eventId ? getNevent(eventId) : 'No even id';
+const eventId = latestNote?.id || 'No event';
+const nevent = eventId !== 'No event' ? getNevent(eventId) : null;
 
 console.log('Nevent:', nevent);
 ---
