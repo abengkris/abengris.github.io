@@ -66,6 +66,9 @@ export const GET: APIRoute = async () => {
 
         return new Response(JSON.stringify({ latestNote, nevent }), {
             status: 200,
+            headers: {
+        "Content-Type": "application/json"
+      }
         });
     } catch (error) {
         return new Response(
