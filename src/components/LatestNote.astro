@@ -17,7 +17,7 @@ let latestNote: NostrEvent | null = null;
 let errorMessage: string | null = null;
 const prodUrl = 'https://abeng.xyz';
 const localUrl = 'http://localhost:1234';
-const baseUrl = import.meta.env.PROD ? prodUrl : localUrl;
+const baseUrl = prodUrl ? prodUrl : localUrl;
 
 // Fetch data from API
 try {
