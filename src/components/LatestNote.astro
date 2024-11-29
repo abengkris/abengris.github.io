@@ -20,7 +20,7 @@ let errorMessage: string | null = null;
 
 const prodUrl = "https://abeng.xyz";
 const localUrl = "http://localhost:1234";
-const baseUrl = import.meta.env.PUBLIC_PROD_URL ? prodUrl : localUrl;
+const baseUrl = process.env.PUBLIC_PROD_URL ? prodUrl : localUrl;
 
 // Fetch data from API
 try {
