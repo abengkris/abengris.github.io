@@ -2,6 +2,7 @@ export const prerender = false;
 import type { APIRoute } from "astro";
 import { nip19 } from "nostr-tools";
 import { Relay } from "nostr-tools/relay";
+import { config } from "dotenv";
 
 export type NostrEvent = {
     id: string;
@@ -13,7 +14,16 @@ export type NostrEvent = {
     sig: string;
 };
 
-async function fetchLatestNote(publicKey: string): Promise<NostrEvent> {
+config();
+
+// Function to fetch the latest note
+async function fetchLatestNote(): Promise<NostrEvent> {
+    const publicKey = process.env.PUBLIC_KEY;
+
+    if (!publicKey) {
+        throw new Error("PUBLIC_KEY is not defined in the .env file");
+    }
+
     const relay = await Relay.connect("wss://relay.nostr.band");
     console.log(`Connected to ${relay.url}`);
 
@@ -22,7 +32,7 @@ async function fetchLatestNote(publicKey: string): Promise<NostrEvent> {
             [{ kinds: [1], authors: [publicKey], limit: 1 }],
             {
                 onevent(event) {
-                    console.log("Got event:", event);
+                    
                     sub.close(); // Unsubscribe after receiving the event
                     relay.close(); // Close the connection
                     resolve(event); // Resolve the Promise with the received event
@@ -42,29 +52,20 @@ async function fetchLatestNote(publicKey: string): Promise<NostrEvent> {
     });
 }
 
+// Function to encode event ID into Nostr nevent format
 function getNevent(eventId: string): string {
     const nevent = nip19.noteEncode(eventId);
     return nevent;
 }
 
 // API handler
-export const GET: APIRoute = async ({ params, request }) => {
-    const url = new URL(request.url);
-    const publicKey = url.searchParams.get("publicKey");
-
-    if (!publicKey) {
-        return new Response(
-            JSON.stringify({ error: "Missing publicKey query parameter" }),
-            { status: 400 }
-        );
-    }
-
+export const GET: APIRoute = async () => {
     try {
-        const latestNote = await fetchLatestNote(publicKey);
+        const latestNote = await fetchLatestNote();
         const nevent = getNevent(latestNote.id);
 
         return new Response(JSON.stringify({ latestNote, nevent }), {
-            status: 200
+            status: 200,
         });
     } catch (error) {
         return new Response(

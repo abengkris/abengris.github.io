@@ -37,6 +37,7 @@
     "bootstrap-icons": "^1.11.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "lucide-react": "^0.441.0",
     "nostr-tools": "^2.10.4",
     "react": "^18.3.1",

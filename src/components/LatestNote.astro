@@ -11,27 +11,31 @@ import {
 import Link from '@/components/Link.astro';
 import { Button } from '@/components/ui/button';
 import { Icon } from 'astro-icon/components';
+import { config } from "dotenv";
 
-const publicKey = '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6';
+config();
+
 let latestNote: NostrEvent | null = null;
 let errorMessage: string | null = null;
-const prodUrl = 'https://abeng.xyz';
-const localUrl = 'http://localhost:1234';
+
+const prodUrl = "https://abeng.xyz";
+const localUrl = "http://localhost:1234";
 const baseUrl = import.meta.env.PUBLIC_PROD_URL ? prodUrl : localUrl;
 
 // Fetch data from API
 try {
-  const response = await fetch(`${baseUrl}/api/fetch-nostr-note?publicKey=${publicKey}`);
+  const response = await fetch(`${baseUrl}/api/fetch-nostr-note`);
   if (response.ok) {
     const data = await response.json();
     latestNote = data.latestNote;
-    console.log('latestNode: ', latestNote)
+    console.log("latestNote: ", latestNote);
   } else {
-    errorMessage = 'Failed to fetch the latest note. API returned an error.';
+    errorMessage = "Failed to fetch the latest note. API returned an error.";
+    console.error(errorMessage);
   }
 } catch (error) {
-  errorMessage = 'Failed to fetch the latest note. Please try again later.';
-  console.log(error)
+  errorMessage = "Failed to fetch the latest note. Please try again later.";
+  console.error(error);
 }
 
 const date = latestNote?.created_at ? new Date(latestNote.created_at * 1000) : null;
