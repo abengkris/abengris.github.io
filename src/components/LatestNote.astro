@@ -1,6 +1,6 @@
 ---
 import type { NostrEvent } from '@/lib/utils';
-import { getNevent } from '@/lib/utils';
+import { getNevent, formatDate } from '@/lib/utils';
 import {
   Card,
   CardContent,
@@ -33,7 +33,7 @@ try {
 }
 
 const date = latestNote ? new Date(latestNote.created_at * 1000) : null;
-const formattedDate = date ? date.toLocaleDateString() : 'No date';
+const formattedDate = date ? formatDate(date) : 'No date';
 const eventId = latestNote ? latestNote.id : 'No event';
 const nevent = getNevent(eventId);
 
