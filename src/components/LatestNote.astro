@@ -35,7 +35,7 @@ try {
 const date = latestNote ? new Date(latestNote.created_at * 1000) : null;
 const formattedDate = date ? formatDate(date) : 'No date';
 const eventId = latestNote ? latestNote.id : 'No event';
-const nevent = getNevent(eventId);
+const nevent = eventId ? getNevent(eventId) : 'No even id';
 
 console.log('Nevent:', nevent);
 ---
