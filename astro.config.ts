@@ -18,6 +18,8 @@ import remarkToc from 'remark-toc'
 import sectionize from '@hbsnow/rehype-sectionize'
 import icon from 'astro-icon'
 
+import vercel from '@astrojs/vercel/serverless';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://abeng.xyz',
@@ -76,5 +78,6 @@ export default defineConfig({
     enabled: false,
   },
 
-  
+  output: 'hybrid',
+  adapter: vercel(),
 })
