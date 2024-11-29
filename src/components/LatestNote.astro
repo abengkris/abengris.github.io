@@ -60,17 +60,13 @@ console.log('Nevent:', nevent);
           </p>
         </CardContent>
         <CardFooter>
-          <span class="text-xs text-muted-foreground mr-2">{formattedDate}</span> 
-          <Button variant="ghost">
-            <Link href={`https://zapper.nostrapps.org/zap?id=${nevent}&type=zap`} external>
-              &#x26A1; Zap
-            </Link>
-          </Button>
-          <Button variant="ghost">
-            <Link href={`https://nostr.band/${nevent}`} external>
-              Open&#10139;
-            </Link>
-          </Button>
+          <span class="text-xs text-muted-foreground mr-2">{formattedDate}</span>
+			 <Link href={`https://zapper.nostrapps.org/zap?id=${nevent}&type=zap`} external>
+          <Button variant="ghost">&#x26A1; Zap</Button>
+			 </Link>
+			 <Link href={`https://nostr.band/${nevent}`} external>
+          <Button variant="ghost">Open&#10139;</Link></Button>
+			 </Link>
         </CardFooter>
       </Card>
     </>
