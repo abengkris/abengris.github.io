@@ -63,13 +63,12 @@ export const GET: APIRoute = async ({ params, request }) => {
         const latestNote = await fetchLatestNote(publicKey);
         const nevent = getNevent(latestNote.id);
 
-        return new Response(
-            JSON.stringify({ latestNote, nevent }),
-            { status: 200 }
-        );
+        return new Response(JSON.stringify({ latestNote, nevent }), {
+            status: 200
+        });
     } catch (error) {
         return new Response(
-            JSON.stringify({ error: error.message }),
+            JSON.stringify({ error: (error as Error).message }),
             { status: 500 }
         );
     }
