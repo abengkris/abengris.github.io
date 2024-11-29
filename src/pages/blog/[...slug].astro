@@ -157,6 +157,19 @@ const authors = await parseAuthors(post.data.authors ?? [])
       <Content />
     </article>
 
+	 <div class="col-start-2 flex flex-col gap-4 sm:flex-row">
+	 <Button variant="outline">
+            <Link href={`https://zapper.nostrapps.org/zap?id=${post.data.nevent}&type=zap`} title='Value 4 value' external>
+              &#x26A1; Zap
+            </Link>
+          </Button>
+          <Button variant="outline">
+            <Link href={`https://yakihonne.com/article/${post.data.nevent}`} title='Open on Yakihonne.com' external>
+              Open on nostr&#10139;
+            </Link>
+          </Button>
+	 </div>
+
     <PostNavigation prevPost={prevPost} nextPost={nextPost} />
   </section>
 

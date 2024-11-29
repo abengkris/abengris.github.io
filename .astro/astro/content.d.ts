@@ -175,13 +175,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
-"the-state-of-static-blogs/index.mdx": {
-	id: "the-state-of-static-blogs/index.mdx";
-  slug: "the-state-of-static-blogs";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
 };
 "projects": {
 "project-a.md": {

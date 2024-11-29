@@ -17,6 +17,17 @@ export function formatDate(date: Date) {
     }).format(date);
 }
 
+export function formatDateNostr(date: Date) {
+    return Intl.DateTimeFormat("id-ID", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false // Format 24 jam
+    }).format(date);
+}
+
 export function readingTime(html: string) {
     const textOnly = html.replace(/<[^>]+>/g, "");
     const wordCount = textOnly.split(/\s+/).length;
