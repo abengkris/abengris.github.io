@@ -17,19 +17,19 @@ export function formatDate(date: Date) {
     }).format(date);
 }
 
-export function formatDateNostr(milliseconds) {
-  
-  const date = new Date(milliseconds *1000);
-  
-  const options = {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-    };
-    
-    return date.toLocaleString(undefined, options);
+export function formatDateNostr(milliseconds: number): string {
+  const date = new Date(milliseconds * 1000);
+
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  };
+
+  return date.toLocaleString(undefined, options);
 }
 
 export function readingTime(html: string) {
