@@ -37,7 +37,7 @@ try {
   console.error(error);
 }
 
-const date = latestNote?.created_at ? new Date(latestNote.created_at * 1000) : null;
+const date = latestNote?.created_at ? latestNote.created_at : null;
 const formattedDate = date ? formatDateNostr(date) : 'No date';
 const eventId = latestNote?.id || 'No event';
 const nevent = eventId !== 'No event' ? getNevent(eventId) : null;

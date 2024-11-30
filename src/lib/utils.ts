@@ -17,15 +17,23 @@ export function formatDate(date: Date) {
     }).format(date);
 }
 
-export function formatDateNostr(date: Date) {
-    return Intl.DateTimeFormat("id-ID", {
+export function formatDateNostr(milliseconds) {
+  
+  if (isNaN(milliseconds)) {
+    throw new Error("input not in number of milliseconds.");
+  }
+  
+  const date = new Date(milliseconds *1000);
+  
+  const options = {
         year: "numeric",
         month: "short",
         day: "numeric",
         hour: "2-digit",
         minute: "2-digit",
-        hour12: false // Format 24 jam
-    }).format(date);
+    };
+    
+    return date.toLocaleString(undefined, options);
 }
 
 export function readingTime(html: string) {
