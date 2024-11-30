@@ -19,10 +19,6 @@ export function formatDate(date: Date) {
 
 export function formatDateNostr(milliseconds) {
   
-  if (isNaN(milliseconds)) {
-    throw new Error("input not in number of milliseconds.");
-  }
-  
   const date = new Date(milliseconds *1000);
   
   const options = {
