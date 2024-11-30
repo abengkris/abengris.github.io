@@ -1,7 +1,7 @@
 ---
 export const prerender = false;
 import type { NostrEvent } from '@/lib/utils';
-import { getNevent, formatDateNostr } from '@/lib/utils';
+import { getNevent } from '@/lib/utils';
 import {
   Card,
   CardContent,
@@ -15,6 +15,21 @@ import { Icon } from 'astro-icon/components';
 import { config } from "dotenv";
 
 config();
+
+export function formatDateNostr(milliseconds: number): string {
+  const date = new Date(milliseconds * 1000);
+
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  };
+
+  return date.toLocaleString(undefined, options);
+}
 
 let latestNote: NostrEvent | null = null;
 let errorMessage: string | null = null;
