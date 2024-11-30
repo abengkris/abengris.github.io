@@ -17,19 +17,24 @@ export function formatDate(date: Date) {
     }).format(date);
 }
 
-export function formatDateNostr(milliseconds: number): string {
-  const date = new Date(milliseconds * 1000);
+export function formatDateNostr(timestamp: number, timeZone = "Asia/Jakarta"): string {
+    if (!timestamp || isNaN(timestamp)) {
+        console.error("Invalid timestamp provided:", timestamp);
+        return "Invalid date";
+    }
 
-  const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true,
-  };
+    const date = new Date(timestamp * 1000);
+    const options: Intl.DateTimeFormatOptions = {
+        timeZone,
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
+    };
 
-  return date.toLocaleString(undefined, options);
+    return date.toLocaleString(undefined, options);
 }
 
 export function readingTime(html: string) {
