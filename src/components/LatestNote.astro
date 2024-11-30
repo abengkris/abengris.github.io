@@ -51,7 +51,6 @@ try {
               // Jika URL adalah gambar
               return (
                 <img
-                  key={i}
                   src={part}
                   alt="Embedded Image from nostr"
                   class="w-full rounded-md mt-2"
@@ -62,7 +61,6 @@ try {
             // Jika URL bukan gambar
             return (
               <a
-                key={i}
                 href={part}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -82,7 +80,6 @@ try {
                   // Jika tag termasuk yang diizinkan
                   return (
                     <a
-                      key={`${i}-${j}`}
                       href={`/tags/${tag}`}
                       class="text-blue-600 underline"
                     >
@@ -93,12 +90,12 @@ try {
               }
 
               // Tampilkan teks biasa jika bukan hashtag yang diizinkan
-              return <span key={`${i}-${j}`}>{subPart}</span>;
+              return <span>{subPart}</span>;
             });
           }
 
           // Teks biasa jika tidak ada URL atau hashtag
-          return <span key={i}>{part}</span>;
+          return <span>{part}</span>;
         })}
       </Fragment>
     );
