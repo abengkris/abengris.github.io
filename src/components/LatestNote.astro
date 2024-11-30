@@ -40,9 +40,8 @@ try {
     const urlRegex = /(https?:\/\/[^\s]+)/g; // Regex untuk mendeteksi URL
     const allowedTags = ["bitcoin", "nostr"]; // Hashtag yang diizinkan
 
-    // Jika baris mengandung URL atau hashtag
     return (
-      <p key={index} class="block mb-2">
+      <Fragment key={index}>
         {line.split(urlRegex).map((part, i) => {
           if (urlRegex.test(part)) {
             // Deteksi URL
@@ -85,7 +84,7 @@ try {
                     <a
                       key={`${i}-${j}`}
                       href={`/tags/${tag}`}
-                      class="text-blue-600"
+                      class="text-blue-600 underline"
                     >
                       {subPart}
                     </a>
@@ -98,10 +97,10 @@ try {
             });
           }
 
-          // Jika teks biasa
+          // Teks biasa jika tidak ada URL atau hashtag
           return <span key={i}>{part}</span>;
         })}
-      </p>
+      </Fragment>
     );
   })}
 </CardContent>
