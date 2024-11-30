@@ -119,3 +119,25 @@ export function getNevent(eventId: string): string {
 
   return nevent;
 }
+
+export function formatContent(content: string): string {
+  console.log("Content to Format:", content);
+
+  if (!content) return "No content available.";
+
+  const lines = content.split("\n");
+  console.log("Lines:", lines);
+
+  return lines
+    .map((line) => {
+      if (line.startsWith("http")) {
+        if (line.match(/\.(jpg|jpeg|png|gif)$/i)) {
+          return `<img src="${line}" alt="Embedded Image" class="w-full rounded-md mt-2" />`;
+        } else {
+          return `<a href="${line}" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">${line}</a>`;
+        }
+      }
+      return `<span class="block mb-2">${line}</span>`;
+    })
+    .join("");
+}
