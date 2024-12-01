@@ -1,120 +1,140 @@
 ---
-export const prerender = false;
-import type { NostrEvent } from "@/lib/utils";
-import { getNevent, formatDateNostr, formatContent } from "@/lib/utils";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import Link from "@/components/Link.astro";
-import { Button } from "@/components/ui/button";
-import { Icon } from "astro-icon/components";
+export const prerender = false
+import Link from '@/components/Link.astro'
+import { Button } from '@/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import type { NostrEvent } from '@/lib/utils'
+import { getNevent } from '@/lib/utils'
+import { Icon } from 'astro-icon/components'
 
-const baseUrl = "https://abeng.xyz";
+const prodBaseUrl = 'https://abeng.xyz'
+const localBaseUrl = 'http://localhost:1234'
 
-let latestNote: NostrEvent | null = null;
-let errorMessage: string | null = null;
-let formatDate: string | null = null;
+const baseUrl =
+  process.env.NODE_ENV === 'production' ? prodBaseUrl : localBaseUrl
+console.log('Current NODE_ENV:', process.env.NODE_ENV)
+
+let latestNote: NostrEvent | null = null
+let errorMessage: string | null = null
+let formatDate: string | null = null
+const pubkey =
+  '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6'
 
 try {
-  const response = await fetch(`${baseUrl}/api/fetch-nostr-note`);
+  const response = await fetch(`${baseUrl}/api/latest-note?hexpubkey=${pubkey}`)
   if (response.ok) {
-    const data = await response.json();
-    latestNote = data.latestNote;
-    formatDate = formatDateNostr(data.latestNote.created_at);
+    const data = await response.json()
+    console.log('Data:', data)
+    latestNote = data.latestNote
+    formatDate = data.formattedDate
   } else {
-    errorMessage = "Failed to fetch the latest note. API returned an error.";
+    errorMessage = 'Failed to fetch the latest note. API returned an error.'
   }
 } catch (error) {
-  errorMessage = "Failed to fetch the latest note. Please try again later.";
+  errorMessage = 'Failed to fetch the latest note. Please try again later.'
 }
 ---
 
 <div>
-  {latestNote ? (
-    <Card>
-      <CardHeader>
-        <CardTitle className="font-bold flex flex-wrap items-center -mb-4 -mt-3">
-          <Icon name="nostr" class="size-16 -ml-5" /> Latest nostr note:
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-  {latestNote?.content.split("\n").map((line, index) => {
-    const urlRegex = /(https?:\/\/[^\s]+)/g; // Regex untuk mendeteksi URL
-    const allowedTags = ["bitcoin", "nostr"]; // Hashtag yang diizinkan
+  {
+    latestNote ? (
+      <Card>
+        <CardHeader>
+          <CardTitle className="font-bold flex flex-wrap items-center -mb-4 -mt-3">
+            <Icon name="nostr" class="-ml-5 size-16" /> Latest nostr note:
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          {latestNote?.content.split('\n').map((line, index) => {
+            const urlRegex = /(https?:\/\/[^\s]+)/g // Regex untuk mendeteksi URL
+            const allowedTags = ['bitcoin', 'nostr'] // Hashtag yang diizinkan
 
-    return (
-      <Fragment key={index}>
-        {line.split(urlRegex).map((part, i) => {
-          if (urlRegex.test(part)) {
-            // Deteksi URL
-            const shortenedUrl = part.length > 30 ? `${part.slice(0, 30)}...` : part;
-
-            if (part.match(/\.(jpg|jpeg|png|gif)$/i)) {
-              // Jika URL adalah gambar
-              return (
-                <img
-                  src={part}
-                  alt="Embedded Image from nostr"
-                  class="w-full rounded-md my-2"
-                />
-              );
-            }
-
-            // Jika URL bukan gambar
             return (
-              <a
-                href={part}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-blue-600 underline"
-              >
-                {shortenedUrl}
-              </a>
-            );
-          }
+              <Fragment key={index}>
+                {line.split(urlRegex).map((part, i) => {
+                  if (urlRegex.test(part)) {
+                    // Deteksi URL
+                    const shortenedUrl =
+                      part.length > 30 ? `${part.slice(0, 30)}...` : part
 
-          // Deteksi Hashtag
-          if (part.includes("#")) {
-            return part.split(/(#\w+)/g).map((subPart, j) => {
-              if (subPart.startsWith("#")) {
-                const tag = subPart.slice(1).toLowerCase(); // Ambil tag tanpa '#'
-                if (allowedTags.includes(tag)) {
-                  // Jika tag termasuk yang diizinkan
-                  return (
-                    <a
-                      href={`/tags/${tag}`}
-                      class="text-blue-600 underline"
-                    >
-                      {subPart}
-                    </a>
-                  );
-                }
-              }
+                    if (part.match(/\.(jpg|jpeg|png|gif)$/i)) {
+                      // Jika URL adalah gambar
+                      return (
+                        <img
+                          src={part}
+                          alt="Embedded Image from nostr"
+                          class="my-2 w-full rounded-md"
+                        />
+                      )
+                    }
 
-              // Tampilkan teks biasa jika bukan hashtag yang diizinkan
-              return <span>{subPart}</span>;
-            });
-          }
+                    // Jika URL bukan gambar
+                    return (
+                      <a
+                        href={part}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-blue-600 underline"
+                      >
+                        {shortenedUrl}
+                      </a>
+                    )
+                  }
 
-          // Teks biasa jika tidak ada URL atau hashtag
-          return <span>{part}</span>;
-        })}
-      </Fragment>
-    );
-  })}
-</CardContent>
-      <CardFooter>
-        <span class="text-xs text-muted-foreground mr-2">{formatDate}</span>
-        <Link
-          href={`https://zapper.nostrapps.org/zap?id=${getNevent(latestNote.id)}&type=zap`}
-          external
-        >
-          <Button variant="ghost">&#x26A1; Zap</Button>
-        </Link>
-        <Link href={`https://nostr.band/${getNevent(latestNote.id)}`} external>
-          <Button variant="ghost">Open&#10139;</Button>
-        </Link>
-      </CardFooter>
-    </Card>
-  ) : (
-    <p>{errorMessage || "No latest note available."}</p>
-  )}
+                  // Deteksi Hashtag
+                  if (part.includes('#')) {
+                    return part.split(/(#\w+)/g).map((subPart, j) => {
+                      if (subPart.startsWith('#')) {
+                        const tag = subPart.slice(1).toLowerCase() // Ambil tag tanpa '#'
+                        if (allowedTags.includes(tag)) {
+                          // Jika tag termasuk yang diizinkan
+                          return (
+                            <a
+                              href={`/tags/${tag}`}
+                              class="text-blue-600 underline"
+                            >
+                              {subPart}
+                            </a>
+                          )
+                        }
+                      }
+
+                      // Tampilkan teks biasa jika bukan hashtag yang diizinkan
+                      return <span>{subPart}</span>
+                    })
+                  }
+
+                  // Teks biasa jika tidak ada URL atau hashtag
+                  return <span>{part}</span>
+                })}
+              </Fragment>
+            )
+          })}
+        </CardContent>
+        <CardFooter>
+          <span class="mr-2 text-xs text-muted-foreground">{formatDate}</span>
+          <Link
+            href={`https://zapper.nostrapps.org/zap?id=${getNevent(latestNote.id)}&type=zap`}
+            external
+          >
+            <Button variant="ghost">&#x26A1; Zap</Button>
+          </Link>
+          <Link
+            href={`https://nostr.band/${getNevent(latestNote.id)}`}
+            external
+          >
+            <Button variant="ghost">Open&#10139;</Button>
+          </Link>
+        </CardFooter>
+      </Card>
+    ) : (
+      <p>{errorMessage || 'No latest note available.'}</p>
+    )
+  }
 </div>

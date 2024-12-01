@@ -2,9 +2,9 @@ export const prerender = false;
 import type { APIRoute } from "astro";
 import { nip19 } from "nostr-tools";
 import { Relay, useWebSocketImplementation } from "nostr-tools/relay";
-import { config } from "dotenv";
 import WebSocket from "ws";
 
+// Define the NostrEvent type
 export type NostrEvent = {
     id: string;
     pubkey: string;
@@ -15,17 +15,9 @@ export type NostrEvent = {
     sig: string;
 };
 
-config();
-
-async function fetchLatestNote(): Promise<NostrEvent> {
-    const publicKey = process.env.PUBLIC_KEY;
-
-    if (!publicKey) {
-        console.error("PUBLIC_KEY is not defined in the .env file");
-        throw new Error("PUBLIC_KEY is not defined in the .env file");
-    }
-
-    console.log("Using PUBLIC_KEY:", publicKey);
+// Helper function to fetch the latest note
+async function fetchLatestNote(hexPubKey: string): Promise<NostrEvent> {
+    console.log("Using provided HEX PUBLIC KEY:", hexPubKey);
 
     useWebSocketImplementation(WebSocket);
 
@@ -54,7 +46,7 @@ async function fetchLatestNote(): Promise<NostrEvent> {
 
     return new Promise<NostrEvent>((resolve, reject) => {
         const sub = connectedRelay.subscribe(
-            [{ kinds: [1], authors: [publicKey], limit: 1 }],
+            [{ kinds: [1], authors: [hexPubKey], limit: 1 }],
             {
                 onevent(event) {
                     console.log("Event received:", event);
@@ -74,19 +66,22 @@ async function fetchLatestNote(): Promise<NostrEvent> {
     });
 }
 
-// Function to encode event ID into Nostr nevent format
+// Helper function to encode event ID into Nostr nevent format
 function getNevent(eventId: string): string {
     console.log("Encoding Event ID:", eventId);
-
-    const nevent = nip19.noteEncode(eventId);
-
-    return nevent;
+    return nip19.noteEncode(eventId);
 }
 
-function formatDateNostr(milliseconds: number): string {
-    const date = new Date(milliseconds * 1000);
+// Helper function to format timestamps
+function formatDateNostr(timestamp: number, timeZone = "Asia/Jakarta"): string {
+    if (!timestamp || isNaN(timestamp)) {
+        console.error("Invalid timestamp provided:", timestamp);
+        return "Invalid date";
+    }
 
+    const date = new Date(timestamp * 1000);
     const options: Intl.DateTimeFormatOptions = {
+        timeZone,
         year: "numeric",
         month: "short",
         day: "numeric",
@@ -95,18 +90,28 @@ function formatDateNostr(milliseconds: number): string {
         hour12: true
     };
 
-    return date.toLocaleString(undefined, options);
+    return date.toLocaleString("id-ID", options);
 }
 
-// API handler with detailed debugging
-export const GET: APIRoute = async () => {
+// API Handler
+export const GET: APIRoute = async ({ url }) => {
     const jsonHeaders = { "Content-Type": "application/json" };
 
+    // Extract the hexpubkey parameter from the query string
+    const publicKey = url.searchParams.get("hexpubkey");
+
+    if (!publicKey) {
+        return new Response(
+            JSON.stringify({ status: 400, error: "Missing required parameter: hexpubkey" }),
+            { status: 400, headers: jsonHeaders }
+        );
+    }
+
     try {
-        console.log("API handler get Nostr latest note kind 1 started");
+        console.log("API handler get Nostr latest note started");
 
         // Fetch the latest note
-        const latestNote = await fetchLatestNote();
+        const latestNote = await fetchLatestNote(publicKey);
         console.log("Fetched Latest Note:", latestNote);
 
         // Encode note ID to nevent
@@ -140,10 +145,7 @@ export const GET: APIRoute = async () => {
                 : "An unexpected error occurred.";
 
         return new Response(JSON.stringify({ error: message }), {
-            status:
-                error instanceof Error && error.message.includes("PUBLIC_KEY")
-                    ? 400 // Bad Request
-                    : 500, // Internal Server Error
+            status: 500,
             headers: jsonHeaders
         });
     }

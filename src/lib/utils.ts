@@ -34,7 +34,7 @@ export function formatDateNostr(timestamp: number, timeZone = "Asia/Jakarta"): s
         hour12: true
     };
 
-    return date.toLocaleString(undefined, options);
+    return date.toLocaleString("id-ID", options);
 }
 
 export function readingTime(html: string) {
