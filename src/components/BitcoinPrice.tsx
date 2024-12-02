@@ -82,21 +82,21 @@ const BitcoinPrice = () => {
         <p className="text-xs">Loading Bitcoin price...</p>
       ) : (
         <>
-          <div id="btc" title="Bitcoin price (Indodax)">
+          <div id="btc" title="Harga Bitcoin saat ini (sumber data: Indodax)">
             {price.toLocaleString("id-ID", {
               style: "currency",
               currency: "IDR",
             })}
           </div>
-          <div
-            id="price-change"
+          <div>
+            <span id="price-change"
             className={`text-center  ${
               change >= 0 ? "text-green-500" : "text-red-500"
-            }`}
-          >
+            }`}>
             {change >= 0
               ? `+${change.toFixed(2)}%`
               : `${change.toFixed(2)}%`}
+              </span> <span className="text-muted-foreground">24 jam</span>
           </div>
         </>
       )}
