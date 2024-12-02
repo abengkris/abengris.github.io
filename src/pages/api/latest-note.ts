@@ -17,7 +17,7 @@ export type NostrEvent = {
 
 // Helper function to fetch the latest note
 async function fetchLatestNote(hexPubKey: string): Promise<NostrEvent> {
-    console.log("Using provided HEX PUBLIC KEY:", hexPubKey);
+    // console.log("Using provided HEX PUBLIC KEY:", hexPubKey);
 
     useWebSocketImplementation(WebSocket);
 
@@ -108,7 +108,7 @@ export const GET: APIRoute = async ({ url }) => {
     }
 
     try {
-        console.log("API handler get Nostr latest note started");
+        // console.log("API handler get Nostr latest note started");
 
         // Fetch the latest note
         const latestNote = await fetchLatestNote(publicKey);
@@ -122,11 +122,8 @@ export const GET: APIRoute = async ({ url }) => {
         const formattedDate = formatDateNostr(latestNote.created_at);
         console.log("Formatted Date:", formattedDate);
 
-        console.log("Data being returned:", {
-            latestNote,
-            nevent,
-            formattedDate
-        });
+        console.log("Data being returned:", {latestNote, nevent, formattedDate}
+        );
 
         // Return successful response
         return new Response(
