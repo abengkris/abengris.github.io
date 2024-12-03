@@ -14,13 +14,13 @@ const fetchOHLC = async () => {
   const tf = "1"; // 1 second time frame
   const url = `https://indodax.com/tradingview/history_v2?from=${from}&symbol=${symbol}&tf=${tf}&to=${to}`;
 
-  console.log("Fetching data from URL:", url);  // Log URL untuk memastikan API yang benar dipanggil
+  // console.log("Fetching data from URL:", url);  // Log URL untuk memastikan API yang benar dipanggil
 
   try {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log("Fetched data:", data);  // Log data yang diterima dari API
+    // console.log("Fetched data:", data);  // Log data yang diterima dari API
 
     if (!data || data.length === 0) {
       console.warn("No data available from API");
@@ -37,9 +37,9 @@ const fetchOHLC = async () => {
 
     const changePercent = ((currentPrice - previousPrice) / previousPrice) * 100;
 
-    console.log("Current Price:", currentPrice);  // Log harga saat ini
-    console.log("Previous Price:", previousPrice);  // Log harga sebelumnya
-    console.log("Price Change Percentage:", changePercent);  // Log persentase perubahan harga
+    // console.log("Current Price:", currentPrice);  // Log harga saat ini
+    // console.log("Previous Price:", previousPrice);  // Log harga sebelumnya
+    // console.log("Price Change Percentage:", changePercent);  // Log persentase perubahan harga
 
     return { currentPrice, changePercent };
   } catch (error) {
@@ -55,14 +55,14 @@ const BitcoinPrice = () => {
 
   useEffect(() => {
     const updatePrice = async () => {
-      console.log("Fetching new price data...");
+      // console.log("Fetching new price data...");
 
       const { currentPrice, changePercent } = await fetchOHLC();
-      console.log("Received data:", { currentPrice, changePercent });
+      // console.log("Received data:", { currentPrice, changePercent });
 
       // Pastikan harga yang diterima valid
       if (currentPrice > 0 && changePercent !== undefined) {
-        console.log("Updating state with:", { currentPrice, changePercent });
+        // console.log("Updating state with:", { currentPrice, changePercent });
         setPrice(currentPrice);
         setChange(changePercent);
       } else {
@@ -79,13 +79,13 @@ const BitcoinPrice = () => {
     };
   }, []);
 
-  console.log("Rendering price:", price);  // Log harga yang sedang di-render
-  console.log("Rendering change:", change);  // Log perubahan harga yang sedang di-render
+  // console.log("Rendering price:", price);  // Log harga yang sedang di-render
+  // console.log("Rendering change:", change);  // Log perubahan harga yang sedang di-render
 
   return (
     <div className="justify-items-center mb-3 text-xs">
       {price === 0 ? (
-        <p className="text-xs">Loading Bitcoin price...</p>
+        <p className="text-xs">Memuat harga Bitcoin...</p>
       ) : (
         <>
 		  <TooltipProvider>

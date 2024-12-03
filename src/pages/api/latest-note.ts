@@ -42,14 +42,14 @@ async function fetchLatestNote(hexPubKey: string): Promise<NostrEvent> {
         throw new Error("Failed to connect to all relays.");
     }
 
-    console.log(`Connected to Relay at: ${connectedRelay.url}`);
+    // console.log(`Connected to Relay at: ${connectedRelay.url}`);
 
     return new Promise<NostrEvent>((resolve, reject) => {
         const sub = connectedRelay.subscribe(
             [{ kinds: [1], authors: [hexPubKey], limit: 1 }],
             {
                 onevent(event) {
-                    console.log("Event received:", event);
+                    // console.log("Event received:", event);
                     sub.close();
                     connectedRelay.close();
                     resolve(event);
@@ -58,7 +58,7 @@ async function fetchLatestNote(hexPubKey: string): Promise<NostrEvent> {
         );
 
         setTimeout(() => {
-            console.log("Timeout! That's all I got, Dev.");
+            // console.log("Timeout! That's all I got, Dev.");
             sub.close();
             connectedRelay.close();
             reject(new Error("Request aborted due to timeout"));
@@ -68,7 +68,7 @@ async function fetchLatestNote(hexPubKey: string): Promise<NostrEvent> {
 
 // Helper function to encode event ID into Nostr nevent format
 function getNevent(eventId: string): string {
-    console.log("Encoding Event ID:", eventId);
+    // console.log("Encoding Event ID:", eventId);
     return nip19.noteEncode(eventId);
 }
 
@@ -112,18 +112,17 @@ export const GET: APIRoute = async ({ url }) => {
 
         // Fetch the latest note
         const latestNote = await fetchLatestNote(publicKey);
-        console.log("Fetched Latest Note:", latestNote);
+        // console.log("Fetched Latest Note:", latestNote);
 
         // Encode note ID to nevent
         const nevent = getNevent(latestNote.id);
-        console.log("Encoded Nevent:", nevent);
+        // console.log("Encoded Nevent:", nevent);
 
         // Format the created_at timestamp
         const formattedDate = formatDateNostr(latestNote.created_at);
-        console.log("Formatted Date:", formattedDate);
+        // console.log("Formatted Date:", formattedDate);
 
-        console.log("Data being returned:", {latestNote, nevent, formattedDate}
-        );
+        // console.log("Data being returned:", {latestNote, nevent, formattedDate});
 
         // Return successful response
         return new Response(
