@@ -157,14 +157,14 @@ declare module 'astro:content' {
   slug: "abeng";
   body: string;
   collection: "authors";
-  data: any
+  data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 "enscribe.md": {
 	id: "enscribe.md";
   slug: "enscribe";
   body: string;
   collection: "authors";
-  data: any
+  data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 };
 "blog": {
@@ -173,14 +173,14 @@ declare module 'astro:content' {
   slug: "bagaimana-satoshi-nakamoto-memikirkan-bitcoin";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "kegunaan-dan-manfaat-pgp-pretty-good-privacy/index.mdx": {
 	id: "kegunaan-dan-manfaat-pgp-pretty-good-privacy/index.mdx";
   slug: "kegunaan-dan-manfaat-pgp-pretty-good-privacy";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 };
 "projects": {
@@ -189,21 +189,21 @@ declare module 'astro:content' {
   slug: "project-a";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "project-b.md": {
 	id: "project-b.md";
   slug: "project-b";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "project-c.md": {
 	id: "project-c.md";
   slug: "project-c";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 };
 
@@ -215,5 +215,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }

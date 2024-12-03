@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 // Fungsi untuk mengambil data OHLC
 const fetchOHLC = async () => {
@@ -82,7 +88,10 @@ const BitcoinPrice = () => {
         <p className="text-xs">Loading Bitcoin price...</p>
       ) : (
         <>
-          <div id="btc" title="Harga Bitcoin saat ini (sumber data: Indodax)">
+		  <TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger>
+	 <div id="btc">
             {price.toLocaleString("id-ID", {
               style: "currency",
               currency: "IDR",
@@ -90,6 +99,12 @@ const BitcoinPrice = () => {
               maximumFractionDigits: 0,
             })}
           </div>
+	 </TooltipTrigger>
+    <TooltipContent>
+      <p className="text-inherit text-xs">Harga Bitcoin saat ini (sumber data: Indodax)</p>
+    </TooltipContent>
+  </Tooltip>
+</TooltipProvider>
           <div>
             <span id="price-change"
             className={`text-center  ${
