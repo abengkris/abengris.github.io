@@ -44,7 +44,7 @@ function buildToc(headings: Heading[]): Heading[] {
   <summary
     class="flex cursor-pointer items-center justify-between text-xl font-semibold"
   >
-    Table of Contents
+    Daftar isi
     <Icon
       name="lucide:chevron-down"
       class="size-5 transition-transform group-open:rotate-180"
@@ -73,7 +73,7 @@ function buildToc(headings: Heading[]): Heading[] {
         id="toc-container"
       >
         <li>
-          <h2 class="mb-2 text-lg font-semibold">Table of Contents</h2>
+          <h2 class="mb-2 text-lg font-semibold">Daftar isi</h2>
         </li>
         {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
       </ul>

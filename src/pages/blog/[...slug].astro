@@ -75,18 +75,18 @@ const authors = await parseAuthors(post.data.authors ?? [])
           alt={post.data.title}
           width={1200}
           height={630}
-          class="col-span-full mx-auto w-full max-w-[1000px] object-cover"
+          class="col-span-full mx-auto w-full max-w-[1000px] object-cover rounded-lg"
         />
       )
     }
-    <section class="col-start-2 flex flex-col gap-y-6 text-center">
+    <section class="col-start-2 flex flex-col gap-y-6">
       <div class="flex flex-col gap-y-4">
-        <h1 class="text-4xl font-bold leading-tight sm:text-5xl">
+        <h1 class="text-4xl font-bold leading-tight sm:text-3xl">
           {post.data.title}
         </h1>
 
         <div
-          class="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground"
+          class="flex flex-wrap gap-2 text-sm text-muted-foreground"
         >
           {
             authors.length > 0 && (
@@ -125,7 +125,8 @@ const authors = await parseAuthors(post.data.authors ?? [])
             <span>{readingTime(post.body)}</span>
           </div>
         </div>
-        <div class="flex flex-wrap justify-center gap-2">
+        <div class="flex flex-wrap gap-2">
+		  Tags: 
           {
             post.data.tags && post.data.tags.length > 0 ? (
               post.data.tags.map((tag) => (
@@ -157,13 +158,17 @@ const authors = await parseAuthors(post.data.authors ?? [])
       <Content />
     </article>
 
-	 <div class="col-start-2 flex flex-col gap-4 sm:flex-row">
-	   <Link href={`https://zapper.nostrapps.org/zap?id=${post.data.nevent}&type=zap`} title='Value 4 value' external>
+	 <div class="col-start-2 flex flex-col gap-4 sm:flex-col">
+	   <div>
+		<Link href={`https://zapper.nostrapps.org/zap?id=${post.data.nevent}&type=zap`} title='Value 4 value' external>
 	     <Button variant="outline">&#x26A1; Zap</Button>
 	   </Link>
+		</div>
+		<div>
 		<Link href={`https://yakihonne.com/article/${post.data.nevent}`} title='Open on Yakihonne.com' external>
         <Button variant="outline">Open on nostr&#10139;</Button>
 		</Link>
+		</div>
 	 </div>
 
     <PostNavigation prevPost={prevPost} nextPost={nextPost} />
