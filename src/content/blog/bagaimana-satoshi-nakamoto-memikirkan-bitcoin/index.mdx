@@ -1,0 +1,414 @@
+---
+title: 'Bagaimana Satoshi Nakamoto Memikirkan Bitcoin?'
+description: 'Mengungkap pemikiran Satoshi Nakamoto di balik penciptaan Bitcoin dan visinya untuk masa depan keuangan digital.'
+date: 2024-11-5
+tags: ['bitcoin']
+image: './bitcoin-thumb.png'
+authors: ['abeng']
+draft: false
+nevent: 'naddr1qvzqqqr4gupzqpusw6gvu0lvxrajpz0ttfsuz3653sjyh2zkqhn384uern2wq90kqq2kuejpg3ryzvr8dehz66nxwguhx3rnfpyz6w75yyl'
+---
+
+Dhruv Bansal, CSO dan Co-Founder Unchained mengeksplorasi prinsip-prinsip dan sejarah yang mengarah pada penciptaan Bitcoin dan mengajukan pertanyaan: "Apa yang telah dilakukan Satoshi"?
+
+Bitcoin sering dibandingkan dengan internet pada tahun 1990an, namun saya yakin analogi yang lebih baik adalah dengan telegraf pada tahun 1840an.[^1]
+
+Telegraf adalah teknologi pertama yang mengirimkan data yang dikodekan dengan kecepatan mendekati cahaya dalam jarak jauh. Ini menandai lahirnya industri telekomunikasi. Internet, meskipun skalanya lebih besar, kontennya lebih kaya, dan _many-to-many_, bukan _one-to-one_, pada dasarnya masih merupakan teknologi telekomunikasi.
+
+Baik telegraf maupun internet bergantung pada model bisnis di mana perusahaan mengerahkan modal untuk membangun jaringan fisik dan kemudian membebankan biaya kepada pengguna untuk mengirim pesan melalui jaringan ini. Jaringan AT&T secara historis mengirimkan telegram, panggilan telepon, paket TCP/IP, pesan teks, dan sekarang TikTok.
+
+Transformasi masyarakat melalui telekomunikasi telah menghasilkan kebebasan yang lebih besar namun juga sentralisasi yang lebih besar. Internet telah meningkatkan jangkauan jutaan pembuat konten dan usaha kecil, namun juga memperkuat jangkauan perusahaan, otoritas pusat, dan lembaga lain yang memiliki posisi yang cukup baik untuk memantau dan memanipulasi aktivitas online.
+
+Namun Bitcoin bukanlah akhir dari transformasi apa pun—ini adalah awal dari sebuah transformasi. Seperti halnya telekomunikasi, Bitcoin akan mengubah kebiasaan umat manusia dan kehidupan sehari-harinya. Memprediksi seluruh cakupan perubahan saat ini sama dengan membayangkan internet saat hidup di era telegraf.
+
+Seri ini mencoba membayangkan masa depan dengan memulai dari masa lalu. Artikel awal ini menelusuri sejarah mata uang digital sebelum Bitcoin. Hanya dengan memahami kegagalan proyek-proyek sebelumnya, kita dapat memahami apa yang membuat Bitcoin berhasil—dan bagaimana hal itu menyarankan metodologi untuk membangun sistem desentralisasi di masa depan.
+
+Klaim utama dari artikel ini adalah bahwa Bitcoin dapat dianggap sebagai adaptasi dari proyek B-money Dai yang menghilangkan kebebasan untuk menciptakan uang. Hanya beberapa minggu setelah artikel ini pertama kali diterbitkan, email baru muncul di mana Satoshi mengaku tidak terbiasa dengan B-money, namun mengakui bahwa Bitcoin dimulai “tepat dari titik itu.” Mengingat bukti baru ini, kami yakin klaim utama ini, meskipun tidak akurat secara historis, masih merupakan cara yang bermakna dan bermanfaat untuk memikirkan asal usul Bitcoin.
+
+**Bagaimana Satoshi Nakamoto Memikirkan Bitcoin?**
+
+Satoshi memang cerdas, tetapi Bitcoin tidak muncul begitu saja.
+
+Bitcoin mengulangi pekerjaan yang ada di bidang kriptografi, sistem terdistribusi, ekonomi, dan filsafat politik. Konsep _proof-of-work_ sudah ada jauh sebelum digunakan dalam uang dan cypherpunk sebelumnya seperti Nick Szabo, Wei Dai, & Hal Finney mengantisipasi dan memengaruhi desain Bitcoin dengan proyek-proyek seperti bit gold, B-money, dan RPoW. Pertimbangkan bahwa, pada tahun 2008, ketika Satoshi menulis _white paper_ Bitcoin[^2], banyak ide penting Bitcoin telah diusulkan dan/atau diimplementasikan:
+
+*   Mata uang digital harus berupa jaringan P2P
+*   _Proof-of-work_ adalah dasar penciptaan uang
+*   Uang diciptakan melalui lelang
+*   Kunci publik kriptografi digunakan untuk menentukan kepemilikan dan transfer koin
+*   Transaksi dikelompokkan menjadi beberapa blok
+*   Blok dirangkai bersama melalui _proof-of-work_
+*   Semua blok disimpan oleh semua peserta
+
+Bitcoin memanfaatkan semua konsep ini, tetapi Satoshi tidak menciptakan satu pun konsep tersebut. Untuk lebih memahami kontribusi Satoshi, kita harus menentukan prinsip Bitcoin mana yang tidak ada dalam daftar.
+
+Beberapa kandidat yang jelas adalah persediaan Bitcoin yang terbatas, konsensus Nakamoto, dan algoritma penyesuaian kesulitan. Tapi apa yang mendorong Satoshi pada ide ini?
+
+Artikel ini mengeksplorasi sejarah mata uang digital dan menyatakan bahwa fokus Satoshi pada kebijakan moneter yang sehat adalah hal yang menyebabkan Bitcoin mengatasi tantangan yang mengalahkan proyek-proyek sebelumnya seperti bit gold dan B-money.
+
+## Sistem yang Terdesentralisasi Adalah Pasar
+
+Bitcoin sering digambarkan sebagai sistem terdesentralisasi atau terdistribusi. Sayangnya, kata “desentralisasi” dan “terdistribusi” sering kali membingungkan. Ketika diterapkan pada sistem digital, kedua istilah tersebut mengacu pada cara aplikasi monolitik dapat didekomposisi menjadi jaringan bagian-bagian yang berkomunikasi.
+
+![Bitcoin: Centralized and Distributed](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLKfm4LSHUA4xAWyM6EWZY4cJnzld4C67KNQZlFpynsUuM4S9-az9Mi5TJNLj1CXW2_o4sa_iT_vgAHkOIrGnZIe2-WBGhjLpVqruv6Ct-oP843xqV-OPtJpi16FcvUcG65GHjCmLKV0yPrpDmORCw_dxOTvlQ89oirc4T4aFi-feINQEjy-OeUfVYXuw/s1600/MjA1Njc1ODMyMTEzMzc0NjYx.webp)
+
+Untuk tujuan kita, perbedaan utama antara sistem terdesentralisasi dan terdistribusi bukanlah [topologi diagram jaringannya](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274 "Link to: https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274"), namun cara mereka menegakkan aturan. Kami meluangkan waktu di bagian berikut untuk membandingkan sistem terdistribusi dan desentralisasi dan memotivasi gagasan bahwa sistem desentralisasi yang kuat adalah pasar.
+
+### Sistem Terdistribusikan Bergantung pada Otoritas Pusat
+
+Dalam hal ini, kami mengartikan “terdistribusi” sebagai sistem apa pun yang telah dipecah menjadi beberapa bagian (sering disebut sebagai "_node_") yang harus berkomunikasi, biasanya melalui jaringan.
+
+Insinyur perangkat lunak semakin mahir dalam membangun sistem yang terdistribusi secara global. Internet terdiri dari sistem terdistribusi yang secara kolektif berisi miliaran node. Kita masing-masing memiliki simpul di saku kita yang berpartisipasi dan bergantung pada sistem ini.
+
+Namun hampir semua sistem terdistribusi yang kita gunakan saat ini diatur oleh beberapa otoritas pusat, biasanya administrator sistem, perusahaan, atau pemerintah yang saling dipercaya oleh semua node dalam sistem.
+
+Otoritas pusat memastikan semua node mematuhi aturan sistem dan menghapus, memperbaiki, atau menghukum node yang gagal mematuhinya. Mereka dipercaya untuk melakukan koordinasi, menyelesaikan konflik, dan mengalokasikan sumber daya bersama. Seiring waktu, otoritas pusat mengelola perubahan pada sistem, memperbarui atau menambahkan fitur, dan memastikan bahwa node yang berpartisipasi mematuhi perubahan tersebut.
+
+Manfaat yang diperoleh sistem terdistribusi karena mengandalkan otoritas pusat juga disertai dengan biaya. Meskipun sistem ini kuat terhadap kegagalan node-nodenya, kegagalan otoritas pusat dapat menyebabkan sistem berhenti berfungsi secara keseluruhan. Kemampuan otoritas pusat untuk mengambil keputusan secara sepihak berarti menumbangkan atau menghilangkan otoritas pusat sudah cukup untuk mengendalikan atau menghancurkan keseluruhan sistem.
+
+Terlepas dari adanya _trade-off_ ini, jika ada persyaratan bahwa satu partai atau koalisi harus mempertahankan otoritas pusat, atau jika peserta dalam sistem tersebut puas dengan mengandalkan otoritas pusat, maka sistem terdistribusi tradisional adalah solusi terbaik. Tidak diperlukan [blockchain](/2024/07/apa-itu-blockchain.html "Apa itu Blockchain?"), token, atau sistem desentralisasi serupa.
+
+Secara khusus, kasus VC atau mata uang kripto yang didukung oleh pemerintah, dengan persyaratan bahwa satu pihak dapat memantau atau membatasi pembayaran dan membekukan akun, adalah kasus penggunaan yang sempurna untuk sistem terdistribusi tradisional.
+
+### Sistem Desentralisasi Tidak Memiliki Otoritas Pusat
+
+Kami menganggap “desentralisasi” memiliki arti yang lebih kuat daripada “terdistribusi”: sistem desentralisasi adalah bagian dari sistem terdistribusi yang tidak memiliki otoritas pusat. Sinonim yang mirip dengan “desentralisasi” adalah “peer-to-peer” (P2P).
+
+Menghapus otoritas pusat memberikan beberapa keuntungan. Sistem terdesentralisasi:
+
+*   Tumbuh dengan cepat karena tidak ada hambatan untuk masuk—siapa pun dapat mengembangkan sistem hanya dengan menjalankan node baru, dan tidak ada persyaratan untuk registrasi atau persetujuan dari otoritas pusat.
+*   Kuat karena tidak ada otoritas pusat yang kegagalannya dapat membahayakan berfungsinya sistem. Semua node adalah sama, jadi kegagalan bersifat lokal dan jaringan merutekan sekitar kerusakan.
+*   Sulit untuk ditangkap, diatur, dikenakan pajak, atau diawasi karena tidak adanya titik kendali terpusat yang dapat ditumbangkan oleh pemerintah.
+
+Kekuatan inilah yang menjadi alasan Satoshi memilih desain Bitcoin yang terdesentralisasi dan _peer-to-peer_:
+
+> _“Pemerintah pandai memotong… jaringan yang dikendalikan secara terpusat seperti Napster, namun jaringan P2P murni seperti Gnutella dan Tor tampaknya masih mampu bertahan.” - Satoshi Nakamoto, 2008_
+
+Namun kekuatan ini juga disertai dengan kelemahan. Sistem yang terdesentralisasi bisa menjadi kurang efisien karena setiap titik harus memikul tanggung jawab tambahan untuk koordinasi yang sebelumnya diambil alih oleh otoritas pusat.
+
+Sistem yang terdesentralisasi juga sering dilanda perilaku yang bersifat penipuan dan bertentangan. Terlepas dari persetujuan Satoshi terhadap Gnutella, siapa pun yang menggunakan program berbagi file P2P untuk mengunduh file yang ternyata kotor atau berbahaya memahami alasan mengapa berbagi file P2P tidak pernah menjadi model utama untuk transfer data online.
+
+Satoshi tidak menyebutkannya secara eksplisit, namun email adalah sistem terdesentralisasi lainnya yang menghindari kendali pemerintah. Dan email juga terkenal sebagai spam.
+
+### Sistem Desentralisasi diatur Melalui Insentif
+
+Akar masalahnya, dalam semua kasus ini adalah, bahwa perilaku kejahatan (menyebarkan file buruk, mengirim email spam) tidak dihukum, dan perilaku kooperatif (menyebarkan file bagus, hanya mengirim email berguna) tidak dihargai. Sistem desentralisasi yang mengandalkan partisipannya untuk menjadi aktor yang baik gagal untuk berkembang karena sistem tersebut tidak dapat mencegah aktor jahat untuk ikut berpartisipasi.
+
+Tanpa memaksakan otoritas pusat, satu-satunya cara untuk menyelesaikan masalah ini adalah dengan menggunakan insentif ekonomi. Aktor yang baik, menurut definisinya, bermain sesuai aturan karena mereka secara inheren termotivasi untuk melakukannya. Pelaku kejahatan, menurut definisinya, adalah orang yang egois dan licik, namun insentif ekonomi yang tepat dapat mengarahkan perilaku buruk mereka ke arah kebaikan bersama. Sistem yang terdesentralisasi melakukan hal ini dengan memastikan bahwa perilaku kooperatif menguntungkan dan perilaku kejahatan merugikan.
+
+Cara terbaik untuk menerapkan layanan terdesentralisasi yang kuat adalah dengan menciptakan pasar di mana semua pelaku, baik dan buruk, dibayar untuk menyediakan layanan tersebut. Kurangnya hambatan masuk bagi pembeli dan penjual di pasar yang terdesentralisasi mendorong skala dan efisiensi. Jika protokol pasar dapat melindungi partisipan dari penipuan, pencurian, dan penyalahgunaan, maka pelaku kejahatan akan merasa lebih menguntungkan untuk mengikuti aturan atau menyerang sistem lain.
+
+## Pasar yang Terdesentralisasi Membutuhkan Barang yang Terdesentralisasi
+
+Namun pasar itu rumit. Mereka harus memberi pembeli dan penjual kemampuan untuk mengirimkan penawaran dan permintaan serta menemukan, mencocokkan, dan menyelesaikan pesanan. Kebijakan tersebut harus adil, memberikan konsistensi yang kuat, dan menjaga ketersediaan meskipun terjadi masa-masa yang tidak menentu.
+
+Pasar global saat ini sangat mumpuni dan canggih, namun menggunakan barang-barang tradisional dan jaringan pembayaran untuk menerapkan insentif di pasar yang terdesentralisasi bukanlah hal yang baru. Setiap penggabungan antara sistem desentralisasi dan uang fiat, aset tradisional, atau komoditas fisik akan menimbulkan kembali ketergantungan pada otoritas pusat yang mengontrol pemroses pembayaran, bank, dan bursa.
+
+![Barang tradisional - Barang desentralisasi](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirPnZYZV_jvWJgTEEDfAuuZBjnj-HJUXaI0xhMZojo8XYgQW1VpV2Bm3HZBJ4q9tUYW8mVKxQbzFIgLBhrjPPnkHBzH-H4msX3fFBWt3KaATX9B7z_J5xc49QRo-O6FVkMKi0VzUpqKS34es1NW6i_zse0sWt-Is2ko7froNNMSUvRIKRYmG-M7N_F6K0/s1600/MjA1Njc2ODgxNjk2MDA3NjIx.webp)
+
+Sistem terdesentralisasi tidak dapat mentransfer uang tunai, mencari saldo rekening perantara, atau menentukan kepemilikan properti. Barang-barang tradisional sama sekali tidak terbaca dalam sistem desentralisasi. Hal sebaliknya tidak benar—sistem tradisional dapat berinteraksi dengan Bitcoin semudah aktor lainnya (begitu mereka memutuskan ingin melakukannya). Batasan antara sistem tradisional dan desentralisasi bukanlah sebuah tembok yang tidak dapat dilewati, melainkan sebuah membran semi-permeabel.
+
+Ini berarti bahwa sistem yang terdesentralisasi tidak dapat melaksanakan pembayaran dalam mata uang barang tradisional apa pun. Mereka bahkan tidak dapat menentukan saldo rekening yang didominasi fiat atau kepemilikan real estat atau barang fisik. Seluruh perekonomian tradisional sama sekali tidak terbaca dalam sistem desentralisasi.
+
+Menciptakan pasar yang terdesentralisasi membutuhkan perdagangan barang-barang baru yang terdesentralisasi yang dapat dibaca dan ditransfer dalam sistem yang terdesentralisasi.
+
+### Komputasi Adalah Barang Terdesentralisasi yang Pertama
+
+Contoh pertama dari “barang terdesentralisasi” adalah kelas komputasi khusus yang pertama kali diusulkan pada tahun 1993 oleh Cynthia Dwork dan Moni Naor.[^3]
+
+Karena adanya hubungan mendalam antara matematika, fisika, dan ilmu komputer, komputasi ini memerlukan energi dan sumber daya perangkat keras di dunia nyata—hal ini tidak dapat dipalsukan. Karena sumber daya di dunia nyata langka, komputasi ini juga langka.
+
+_input_ untuk komputasi ini dapat berupa data apa pun. Keluaran yang dihasilkan adalah “bukti” digital bahwa pengkomputasian telah dilakukan pada data _input_ yang diberikan. Pembuktian mengandung “kesulitan” tertentu yang merupakan bukti (statistik) dari sejumlah pekerjaan komputasi tertentu. Yang terpenting, hubungan antara data _input_, pembuktian, dan pekerjaan komputasi asli yang dilakukan dapat diverifikasi secara independen tanpa perlu mengajukan banding ke otoritas pusat mana pun.
+
+Gagasan untuk menyebarkan beberapa data _input_ bersama dengan bukti digital sebagai bukti kerja komputasi dunia nyata yang dilakukan pada _input_ tersebut sekarang disebut “_proof-of-work_”.[^4] _Proof-of-work_ adalah, jika menggunakan ungkapan Nick Szabo, “biaya yang tidak dapat ditiru”. Karena _proof-of-work_ dapat diverifikasi oleh siapa pun, maka _proof-of-work_ merupakan sumber daya ekonomi yang dapat dibaca oleh semua peserta dalam sistem desentralisasi. _Proof-of-work_ mengubah penghitungan data menjadi barang yang terdesentralisasi. Dwork & Naor mengusulkan penggunaan komputasi untuk membatasi penyalahgunaan sumber daya bersama dengan memaksa peserta untuk memberikan _proof-of-work_ dengan tingkat kesulitan minimum tertentu sebelum mereka dapat mengakses sumber daya:
+
+> “Dalam makalah ini kami menyarankan pendekatan komputasi untuk memerangi penyebaran surat elektronik. Secara umum, kami telah merancang mekanisme kontrol akses yang dapat digunakan kapan pun diinginkan untuk membatasi, namun tidak melarang, akses ke sumber daya.” - Dwoak & Naor, 1993
+
+Dalam proposal Dwork & Naor, administrator sistem email akan menetapkan tingkat kesulitan bukti kerja minimum untuk mengirimkan email. Pengguna yang ingin mengirim email perlu melakukan sejumlah komputasi yang sesuai dengan email tersebut sebagai data _input_. Bukti yang dihasilkan akan dikirimkan ke server bersamaan dengan permintaan pengiriman email.
+
+Dwork & Naor menyebut kesulitan _proof-of-work_ sebagai “fungsi penetapan harga” karena, dengan menyesuaikan kesulitan tersebut, “otoritas penetapan harga” dapat memastikan bahwa sumber daya bersama tetap murah untuk digunakan bagi pengguna yang jujur dan rata-rata, namun mahal bagi pengguna yang mencari untuk mengeksploitasinya. Di pasar pengiriman email, administrator server adalah otoritas penetapan harga; mereka harus memilih “harga” untuk pengiriman email yang cukup rendah untuk penggunaan normal namun terlalu tinggi untuk spam.
+
+Meskipun Dwork & Naor membingkai _proof-of-work_ sebagai disinsentif ekonomi untuk memerangi penyalahgunaan sumber daya, nomenklatur “fungsi penetapan harga” dan “otoritas penetapan harga” mendukung interpretasi yang berbeda dan berbasis pasar: pengguna membeli akses ke sumber daya dengan imbalan komputasi pada tingkat yang sama. harga yang ditetapkan oleh pengontrol sumber daya.
+
+Dalam interpretasi ini, jaringan pengiriman email sebenarnya adalah pengiriman email perdagangan pasar yang terdesentralisasi untuk komputasi. Kesulitan minimum dari _proof-of-work_ adalah harga yang diminta untuk pengiriman email dalam mata uang komputasi.
+
+### Mata Uang Adalah Barang Terdesentralisasi yang kedua
+
+Namun komputasi bukanlah mata uang yang baik.
+
+Bukti yang digunakan untuk “memperdagangkan” komputasi hanya valid untuk _input_ yang digunakan dalam komputasi tersebut. Hubungan yang tidak dapat dipecahkan antara bukti spesifik dan _input_ tertentu berarti bahwa _proof-of-work_ untuk satu _input_ tidak dapat digunakan kembali untuk _input_ yang berbeda.
+
+![Bukti kerja komputasi email](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLUCWdtqZ5CLxbVk2hrTrkgFzBZQfYh8YTJPkflCAlzZS9kuRMjAlhv3MGZ8lblRjrMGk6OWH6imDxz6qLlOd7KRADl01u7aK45hPmiiR55LtEuYNJthf6S_P1tVp_Ma57JbEdZWZeJgtGQsn49AUeJINXf6NwOdX6rG06frTJigQOxeyMFYxiQCm2czw/s1600/MjA1Njc2OTQ1ODUyMDgxNjA1.webp)
+
+_Proof-of-work_ awalnya diusulkan sebagai mekanisme kontrol akses untuk membatasi email spam. Pengguna diharapkan memberikan bukti kerja bersama email apa pun yang ingin mereka kirim. Mekanisme ini juga dapat dianggap sebagai pasar di mana pengguna membeli pengiriman email dengan komputasi pada harga yang dipilih oleh penyedia layanan email.
+
+Batasan ini berguna – dapat digunakan untuk mencegah pekerjaan yang dilakukan oleh satu pembeli di pasar kemudian dibelanjakan kembali oleh pembeli lain. Misalnya, HashCash, implementasi nyata pertama dari pasar pengiriman email, menyertakan metadata seperti stempel waktu saat ini dan alamat email pengirim dalam data masukan untuk penghitungan bukti kerja. Bukti yang dihasilkan oleh pengguna tertentu untuk email tertentu, tidak dapat digunakan untuk email yang berbeda.
+
+Namun ini juga berarti bahwa komputasi bukti kerja adalah barang yang dipesan lebih dahulu. Dana tersebut tidak dapat dipertukarkan, tidak dapat dibelanjakan kembali,[^5] dan tidak memecahkan masalah kebutuhan yang terjadi secara kebetulan. Properti moneter yang hilang ini mencegah komputasi menjadi mata uang. Terlepas dari namanya, tidak ada insentif bagi penyedia pengiriman email untuk ingin mengakumulasikan HashCash, karena akan ada uang tunai sebenarnya.
+
+Adam Back, penemu HashCash, memahami masalah berikut:
+
+> "Hashcash tidak dapat ditransfer secara langsung karena untuk membuatnya didistribusikan, setiap penyedia layanan hanya menerima pembayaran dalam bentuk tunai yang dibuat untuk mereka. Anda mungkin dapat menyiapkan pencetakan gaya digicash (dengan chaumian ecash) dan meminta bank hanya mencetak uang tunai pada penerimaan tabrakan hash yang ditangani. Namun ini berarti Anda harus mempercayai bank untuk tidak mencetak uang dalam jumlah tak terbatas untuk digunakan sendiri." - Adam Back, 1997
+
+Kita tidak ingin menukar komputasi yang dibuat khusus untuk setiap barang atau jasa yang dijual dalam perekonomian yang terdesentralisasi. Kita menginginkan mata uang digital serba guna yang dapat langsung digunakan untuk mengoordinasikan pertukaran nilai di pasar mana pun.
+
+Membangun mata uang digital yang berfungsi namun tetap terdesentralisasi merupakan tantangan yang signifikan. Mata uang membutuhkan unit yang dapat dipertukarkan dengan nilai yang sama yang dapat ditransfer antar pengguna. Hal ini memerlukan model penerbitan, definisi kriptografi kepemilikan dan transfer, proses penemuan dan penyelesaian transaksi, dan buku besar historis. Infrastruktur ini tidak diperlukan ketika bukti kerja hanya dianggap sebagai “mekanisme kontrol akses”.
+
+Terlebih lagi, sistem desentralisasi adalah pasar, jadi semua fungsi dasar mata uang ini harus disediakan melalui penyedia layanan berbayar… dalam satuan mata uang yang sedang dibuat!
+
+Seperti mengkompilasi _compiler_ pertama, permulaan jaringan listrik yang gelap, atau evolusi kehidupan itu sendiri, pencipta mata uang digital dihadapkan pada masalah bootstrapping: bagaimana mendefinisikan insentif ekonomi yang mendasari mata uang yang berfungsi tanpa memiliki mata uang yang berfungsi di dalamnya yang akan mendenominasikan atau membayar insentif tersebut.
+
+![Komputasi dan mata uang adalah barang pertama dan kedua di pasar yang terdesentralisasi](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGpo4mXR-m5vUg01a9kHxBboaqxu10p_hgAx2U1j05VM1-WU63_qeHdYsWkEMTMOk5jE568ulYxxVAC-F4RDvd4UR8TT1MepKeWU_BFvaj5AhtLCAI-ODKy3bhUNGwb4Hbm0TjOT66t2640H6CJj5VMhyphenhyphenQCA_vaql0WEr7M4dIrNeZRyVMLUXFVcjxNW8/s1600/MjA1Njc2OTk2MzE3OTQ3MzMz.webp)
+
+Komputasi dan mata uang adalah barang pertama dan kedua di pasar yang terdesentralisasi. _Proof-of-work_ sendiri memungkinkan pertukaran komputasi tetapi mata uang yang berfungsi memerlukan lebih banyak infrastruktur. Butuh waktu 15 tahun bagi komunitas cypherpunk untuk mengembangkan infrastruktur tersebut.
+
+### Pasar Terdesentralisasi Pertama harus Memperdagangkan Komputasi untuk Mata Uang
+
+Kemajuan dalam masalah bootstrapping ini berasal dari penyusunan batasan yang tepat.
+
+Sistem yang terdesentralisasi harus menjadi pasar. Pasar terdiri dari pembeli dan penjual yang saling bertukar barang. Pasar terdesentralisasi untuk mata uang digital hanya memiliki dua barang yang dapat dibaca di dalamnya:
+
+1.  Komputasi melalui _proof-of-work_
+2.  Unit mata uang yang kita coba bangun
+
+Oleh karena itu, satu-satunya perdagangan pasar yang memungkinkan adalah antara kedua barang tersebut. Komputasi harus dijual untuk satuan mata uang atau setara dengan satuan mata uang harus dijual untuk komputasi. Menyatakan hal ini sangatlah mudah—bagian tersulitnya adalah menata pasar ini sehingga sekadar menukar mata uang untuk komputasi akan mem-bootstrap semua kemampuan mata uang itu sendiri!
+
+Seluruh sejarah mata uang digital yang berpuncak pada _white paper_ Satoshi tahun 2008 adalah serangkaian upaya yang semakin canggih dalam menata pasar ini. Bagian berikut mengulas proyek-proyek seperti bit gold milik Nick Szabo dan B-money milik Wei Dai. Memahami bagaimana proyek-proyek ini menyusun pasar mereka dan mengapa mereka gagal akan membantu kita memahami mengapa Satoshi dan Bitcoin berhasil.
+
+![Desentralisasi uang harus menukar komputasi dengan unit mata uang](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEij3Ho0h_j7o5wRvmB8NUINXyZ78Q1UHZ2GQpHBByLAsARcTqvAK3kN0GkDjfDAH1q3jHiiS1o_i2QbWWa4j1GwwOV6vl9GUyeJMY-t9cdj_gvmEV-fyu0EzfCV8KWlOi5Zsr5OLnWRL8Gxx24hZobcVSZtY3m802c7EAvtMvuSk3eV7vELxlvAK4h2wlg/s1600/MjA1Njc3MDM5MjY3NjIwMzgx.webp)
+
+## Bagaimana Sistem Desentralisasi Dapat Menentukan Harga Komputasi?
+
+Fungsi utama pasar adalah penemuan harga. Oleh karena itu, komputasi perdagangan pasar untuk mata uang harus menemukan harga komputasi itu sendiri, dalam satuan mata uang tersebut.
+
+Kita biasanya tidak memberikan nilai moneter pada komputasi. Kita biasanya menghargai kapasitas untuk melakukan komputasi karena kita menghargai output dari komputasi, bukan komputasi itu sendiri. Jika keluaran yang sama dapat dilakukan dengan lebih efisien, dengan komputasi yang lebih sedikit, hal ini biasanya disebut “kemajuan”.
+
+_Proof-of-work_ mewakili komputasi spesifik yang keluarannya hanya berupa bukti bahwa komputasi tersebut telah dilakukan. Menghasilkan bukti yang sama dengan melakukan lebih sedikit komputasi dan lebih sedikit pekerjaan tidak akan menghasilkan kemajuan—hal ini akan menjadi _bug_. Oleh karena itu, komputasi yang terkait dengan _Proof-of-work_ merupakan hal yang aneh dan baru untuk dicoba dihargai.
+
+Ketika bukti kerja dianggap sebagai disinsentif terhadap penyalahgunaan sumber daya, maka bukti kerja tidak perlu dinilai secara tepat dan konsisten. Yang terpenting adalah penyedia layanan email menetapkan tingkat kesulitan yang cukup rendah sehingga tidak terlihat oleh pengguna yang sah, namun cukup tinggi sehingga menjadi penghalang bagi pelaku spam. Oleh karena itu, terdapat beragam “harga” yang dapat diterima dan setiap peserta bertindak sebagai otoritas penetapan harga mereka sendiri, dengan menerapkan fungsi penetapan harga lokal.
+
+Namun satuan mata uang dimaksudkan agar dapat dipertukarkan, masing-masing memiliki nilai yang sama. Karena perubahan teknologi dari waktu ke waktu, dua unit mata uang yang dibuat dengan tingkat kesulitan _proof-of-work_ yang sama—yang diukur dengan jumlah komputasi yang sesuai—mungkin memiliki biaya produksi yang sangat berbeda di dunia nyata, yang diukur dengan waktu, energi, dan/atau modal untuk melakukan komputasi tersebut. Ketika komputasi dijual dengan menggunakan mata uang, dan biaya produksi yang mendasarinya bervariasi, bagaimana pasar dapat memastikan harga yang konsisten?
+
+Nick Szabo dengan jelas mengidentifikasi masalah harga ini ketika menjelaskan bit gold:
+
+> "Masalah utamanya...adalah bahwa skema pembuktian kerja bergantung pada arsitektur komputer, bukan hanya matematika abstrak yang didasarkan pada "siklus komputasi" abstrak. ...Jadi, ada kemungkinan untuk menjadi produsen berbiaya sangat rendah (dengan beberapa kali lipat besarnya) dan membanjiri pasar dengan bit gold." - Szabo, 2005
+
+![Volatilitas pasokan komputasi](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc7DyPp_vBc_l9kdeUtheSc7RWjFycatxc9m9m-bHNDuIm3t_FGWPzK1yJq8zyLGK3XntMaf8oX-wX1uSeKUEKQaDqhsxtyaEj6IGwpfBugpclsR5jjBqYB2faGV5wU5zMZI_tbCZ-_wiPTDuZ7C0scsopR95oNphQF_fKATzI8NvgX4ouWCEDdHtasSY/s1600/MjA1Njc3MDc1NTA2NDA2OTQx.webp)
+
+Mata uang terdesentralisasi yang diciptakan melalui _proof-of-work_ akan mengalami kelebihan pasokan dan penurunan pasokan seiring dengan perubahan pasokan komputasi seiring waktu. Untuk mengakomodasi volatilitas ini, jaringan harus belajar menghitung harga secara dinamis.
+
+Mata uang digital awal mencoba memberi harga pada komputasi dengan mencoba mengukur “biaya komputasi” secara kolektif. Wei Dai, misalnya, mengusulkan solusi praktis berikut dalam B-money:
+
+> "Jumlah unit moneter yang diciptakan sama dengan biaya upaya komputasi dalam sekeranjang komoditas standar. Sebagai contoh, jika sebuah masalah memerlukan waktu 100 jam untuk diselesaikan pada komputer yang dapat menyelesaikannya dengan cara yang paling ekonomis, dan diperlukan 3 keranjang standar untuk membeli 100 jam waktu komputasi pada komputer tersebut di pasar terbuka, maka setelah solusi terhadap masalah tersebut disiarkan, setiap orang mengkredit rekening penyiar sebanyak 3 unit." - Dai, 1998
+
+Sayangnya, Dai tidak menjelaskan bagaimana pengguna dalam sistem yang seharusnya terdesentralisasi seharusnya menyetujui definisi “keranjang standar”, komputer mana yang memecahkan masalah tertentu “paling ekonomis”, atau biaya komputasi di “pasar terbuka”. Mencapai konsensus di antara semua pengguna mengenai kumpulan data bersama yang berubah-ubah terhadap waktu adalah masalah penting dalam sistem desentralisasi!
+
+Agar adil bagi Dai, dia menyadari hal ini:
+
+> “Salah satu bagian yang lebih bermasalah dalam protokol B-money adalah penciptaan uang. Bagian dari protokol ini mengharuskan semua \[pengguna\] memutuskan dan menyetujui biaya perhitungan tertentu. Sayangnya karena teknologi komputasi cenderung berkembang pesat dan tidak selalu bersifat publik, informasi ini mungkin tidak tersedia, tidak akurat, atau ketinggalan jaman, yang semuanya akan menyebabkan masalah serius pada protokol." - Dai, 1998
+
+Dai kemudian mengusulkan mekanisme penetapan harga berbasis lelang yang lebih canggih yang kemudian dikatakan Satoshi sebagai titik awal idenya. Kita akan kembali ke skema lelang di bawah ini, tapi pertama-tama mari kita beralih ke bit gold, dan pertimbangkan wawasan Szabo tentang masalahnya.
+
+### Gunakan Pasar Eksternal
+
+Szabo mengklaim bahwa _proof-of-work_ harus “diberi stempel waktu dengan aman”:
+
+> "Bukti kerja diberi stempel waktu yang aman. Ini harus bekerja secara terdistribusi, dengan beberapa layanan stempel waktu berbeda sehingga tidak ada layanan stempel waktu tertentu yang perlu diandalkan secara substansial." - Szabo, 2005
+
+Szabo tertaut ke halaman sumber daya tentang protokol penandaan waktu yang aman tetapi tidak menjelaskan algoritme spesifik apa pun untuk penandaan waktu yang aman. Ungkapan “aman” dan “fesyen terdistribusi” mempunyai pengaruh yang besar di sini, sehingga dapat mengatasi kerumitan dalam mengandalkan satu (atau banyak) layanan “di luar sistem” untuk penandaan waktu.[^6]
+
+![image_title](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtx1YzptuEOyk-YUopyVlhNnQUAYYxvveI4OxduS1_ABk3rI-DZJu8pDio3Ci02OvPL0PxZtP0liS1_hlAOk5SkXk9iSO7YccAhuCf1cYLlBcpbEQmonDVRZ6tXeM2BZu6nZs8T4WlxHSUj8zICdsMHrWcESbFi_fJOxq9ZWpEJ5PA9muKAocVMNo2vKo/s1600/MjA1Njc3MTI5OTk4ODA0NTA5.webp)
+
+Waktu pembuatan unit mata uang digital penting karena menghubungkan komputasi yang dilakukan dengan biaya produksi di dunia nyata.
+
+Terlepas dari ketidakjelasan implementasi, Szabo benar—waktu pembuatan _proof-of-work_ merupakan faktor penting dalam menentukan harga karena terkait dengan biaya komputasi:
+
+> "…Namun, karena bit gold diberi stempel waktu, waktu yang dibuat serta tingkat kesulitan matematis dari pekerjaan tersebut dapat dibuktikan secara otomatis. Dari sini, biasanya dapat disimpulkan berapa biaya produksi selama periode waktu tersebut..." - Szabo, 2005
+
+"Menyimpulkan" biaya produksi adalah hal yang penting karena bit gold tidak memiliki mekanisme untuk membatasi penciptaan uang. Siapapun dapat membuat bit gold dengan melakukan perhitungan yang sesuai. Tanpa kemampuan untuk mengatur penerbitan, bit gold sama dengan barang koleksi:
+
+> "…Tidak seperti atom emas yang dapat dipertukarkan, tetapi seperti halnya barang-barang kolektor, pasokan dalam jumlah besar selama jangka waktu tertentu akan menurunkan nilai barang-barang tersebut. Dalam hal ini, emas kecil bertindak lebih seperti barang-barang kolektor daripada seperti emas..." - Szabo, 2005
+
+Bit gold memerlukan proses eksternal tambahan untuk menciptakan unit mata uang yang sepadan:
+
+> “…\[B\]it Gold tidak dapat dipertukarkan berdasarkan fungsi sederhana, misalnya, panjang tali. Sebaliknya, untuk membuat unit yang dapat dipertukarkan, _dealer_ harus menggabungkan potongan-potongan bit gold dengan nilai berbeda ke dalam satuan yang lebih besar kira-kira dengan nilai yang sama. Hal ini serupa dengan apa yang dilakukan banyak pedagang komoditas saat ini untuk memungkinkan pasar komoditas bekerja. Kepercayaan masih terdistribusi karena perkiraan nilai dari kumpulan tersebut dapat diverifikasi secara independen oleh banyak pihak lain dengan cara yang sebagian besar atau seluruhnya otomatis." - Szabo, 2005
+
+Mengutip Szabo, “untuk menguji nilai… bit gold, _dealer_ memeriksa dan memverifikasi tingkat kesulitan, masukan, dan stempel waktu”. _Dealer_ yang mendefinisikan “unit yang lebih besar dengan nilai yang kira-kira sama” menyediakan fungsi penetapan harga yang serupa dengan “keranjang komoditas standar” Dai. Unit yang dapat dipertukarkan tidak dibuat dalam bentuk bit gold ketika bukti kerja diproduksi, hanya kemudian ketika bukti tersebut digabungkan menjadi “unit yang kira-kira bernilai sama” oleh _dealer_ di pasar di luar jaringan.
+
+![bit gold](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkuB83CH-hLcarYw3bXjUr6mvKflWqsCYCJ9bmnEU2Ps1I7T9tjvOQR7rqRLfm86vKvO4jfHNJsJ32jPirc0q4yNO8QL3UXw3ecI51JQsoJalaKIRrQ8gYrmJqV5Yo-zWNIntBaMWTEOOSqHrHxJMMtZpLgCLCBLNDGfmuc1WNzw740Wfn0-GbaJsfLX8/s1600/MjA1Njc3MTg1MDI4MDcyOTg5.webp)
+
+Yang patut disyukuri, Szabo mengakui kelemahan ini:
+
+> "…Potensi kelebihan pasokan yang awalnya tersembunyi karena inovasi tersembunyi dalam arsitektur mesin adalah potensi kelemahan dalam bit gold, atau setidaknya ketidaksempurnaan yang harus diatasi oleh lelang awal dan pertukaran ex post bit gold." - Szabo, 2005
+
+Sekali lagi, meskipun belum sampai pada (yang sekarang kita kenal sebagai) solusinya, Szabo menunjukkan solusinya: karena biaya komputasi berubah seiring waktu, jaringan harus merespons perubahan pasokan komputasi dengan menyesuaikan harga uang.
+
+### Gunakan Pasar Internal
+
+_Dealer_ Szabo akan menjadi pasar eksternal yang menentukan harga (bundel dari) bit gold setelah penciptaannya. Apakah mungkin menerapkan pasar ini di dalam sistem dan bukan di luar sistem?
+
+Mari kita kembali ke Wei Dai dan B-money. Seperti disebutkan sebelumnya, Dai mengusulkan model alternatif berbasis lelang untuk pembuatan B-money. Desain Satoshi untuk Bitcoin meningkat secara langsung pada model lelang B-money[^7]:
+
+“Jadi saya mengusulkan subprotokol penciptaan uang alternatif, di mana \[pengguna\]… memutuskan dan menyetujui jumlah B-money yang akan dibuat setiap periode, dengan biaya pembuatan uang tersebut ditentukan melalui lelang. Setiap periode pembuatan uang adalah dibagi menjadi empat tahap, sebagai berikut:
+
+**_Planning_**. Para \[pengguna\] menghitung dan bernegosiasi satu sama lain untuk menentukan peningkatan jumlah uang beredar yang optimal untuk periode berikutnya. Apakah \[jaringan\] dapat mencapai konsensus atau tidak, mereka masing-masing menyiarkan kuota penciptaan uang mereka dan komputasi makroekonomi apa pun yang dilakukan untuk mendukung angka tersebut.
+
+**_Bidding_**. Siapapun yang ingin membuat B-money menyiarkan tawaran dalam bentuk dimana x adalah banyaknya B-money yang ingin dibuatnya, dan y adalah soal yang belum terselesaikan dari kelas soal yang telah ditentukan. Setiap masalah di kelas ini harus memiliki biaya nominal (katakanlah dalam MIPS\-years) yang disetujui secara publik.
+
+**_Computation_**. Setelah melihat penawaran, pihak yang mengajukan penawaran pada tahap penawaran sekarang dapat menyelesaikan masalah dalam penawarannya dan menyiarkan solusinya. Penciptaan uang.
+
+**_Money creation_**. Setiap \[pengguna\] menerima tawaran tertinggi (di antara mereka yang benar-benar menyiarkan solusi) dalam hal biaya nominal per unit B-money yang dibuat dan memberikan kredit kepada akun penawar sesuai dengan itu."  
+\- Dai, 1998
+
+B-money membuat kemajuan signifikan menuju struktur pasar yang tepat untuk mata uang digital. Ini berupaya untuk menghilangkan _dealer_ eksternal Szabo dan memungkinkan pengguna untuk terlibat dalam penemuan harga dengan menawar satu sama lain secara langsung.
+
+Namun menerapkan proposal Dai seperti yang tertulis akan menjadi sebuah tantangan:
+
+*   Dalam fase "_Planning_”, pengguna menanggung beban menegosiasikan “peningkatan optimal jumlah uang beredar untuk periode berikutnya”. Bagaimana “optimal” harus didefinisikan, bagaimana pengguna harus bernegosiasi satu sama lain, dan bagaimana hasil negosiasi tersebut dibagikan tidak dijelaskan.
+*   Terlepas dari apa yang direncanakan, fase “_Bidding_” memungkinkan siapa saja untuk mengajukan “tawaran” untuk membuat B-money. Tawaran mencakup jumlah B-money yang akan dibuat serta jumlah bukti kerja yang sesuai sehingga setiap penawaran adalah harga, jumlah perhitungan yang bersedia dilakukan oleh penawar tertentu untuk membeli sejumlah tertentu. dari B-money.
+*   Setelah penawaran diserahkan, fase “_Computation_” terdiri dari peserta lelang yang melakukan _proof-of-work_ yang mereka tawarkan dan menyiarkan solusi. Tidak ada mekanisme untuk mencocokkan penawar dengan solusi yang disediakan. Yang lebih problematis adalah tidak jelasnya bagaimana pengguna dapat mengetahui bahwa semua penawaran telah diajukan – kapan fase “_Bidding_” berakhir dan fase “_Computation_” dimulai?
+*   Masalah-masalah ini berulang dalam fase “_Money creation_”. Karena sifat _proof-of-work_, pengguna dapat memverifikasi bahwa bukti yang mereka terima dalam solusi adalah asli. Namun bagaimana pengguna dapat secara kolektif menyepakati serangkaian “tawaran tertinggi”? Bagaimana jika pengguna yang berbeda memilih set yang berbeda, baik karena preferensi atau latensi jaringan?
+
+Sistem yang terdesentralisasi kesulitan dalam melacak data dan membuat pilihan secara konsisten, namun B-money memerlukan pelacakan tawaran dari banyak pengguna dan membuat pilihan konsensus di antara mereka. Kompleksitas ini menghalangi penerapan B-money.
+
+Akar dari kompleksitas ini adalah keyakinan Dai bahwa tingkat “optimal” penciptaan B-money harus berfluktuasi seiring waktu berdasarkan “perhitungan makroekonomi” penggunanya. Seperti bit gold, B-money tidak memiliki mekanisme untuk membatasi penciptaan uang. Siapapun dapat membuat unit B-money dengan menyiarkan tawaran dan kemudian melakukan _proof-of-work_ yang sesuai.
+
+Baik Szabo maupun Dai mengusulkan penggunaan pasar pertukaran mata uang digital untuk komputasi, namun baik bit gold maupun B-money tidak menentukan kebijakan moneter untuk mengatur pasokan mata uang di pasar ini.
+
+## Tujuan Kebijakan Moneter Satoshi Menghasilkan Bitcoin
+
+Sebaliknya, kebijakan moneter yang sehat adalah salah satu tujuan utama Satoshi dalam proyek Bitcoin. Dalam postingan milis pertama tempat Bitcoin diumumkan, Satoshi menulis:
+
+> “Akar permasalahan mata uang konvensional adalah kepercayaan yang diperlukan agar mata uang tersebut dapat berfungsi. Bank sentral harus dipercaya untuk tidak merendahkan mata uang tersebut, namun sejarah mata uang fiat penuh dengan pelanggaran terhadap kepercayaan tersebut.” - Satoshi, 2009
+
+Satoshi selanjutnya menjelaskan masalah lain dengan mata uang fiat seperti perbankan cadangan fraksional yang berisiko, kurangnya privasi, pencurian & penipuan yang merajalela, dan ketidakmampuan melakukan pembayaran mikro. Namun Satoshi memulai dengan isu penurunan nilai oleh bank sentral—dengan kekhawatiran mengenai kebijakan moneter.
+
+Satoshi ingin Bitcoin pada akhirnya mencapai pasokan sirkulasi terbatas yang tidak dapat terdilusi seiring waktu. Tingkat penciptaan Bitcoin yang “optimal”, bagi Satoshi, pada akhirnya akan menjadi nol.
+
+Tujuan kebijakan moneter ini, lebih dari karakteristik lain yang mereka miliki secara pribadi (atau kolektif!), adalah alasan Satoshi “menemukan” Bitcoin, blockchain, konsensus Nakamoto, dll. —dan bukan orang lain. Ini adalah jawaban singkat atas pertanyaan yang diajukan dalam judul artikel ini: Satoshi memikirkan Bitcoin karena mereka fokus pada penciptaan mata uang digital dengan persediaan terbatas.
+
+Pasokan Bitcoin yang terbatas bukan hanya tujuan kebijakan moneter atau meme bagi para Bitcoiner untuk berkumpul. Penyederhanaan teknis penting inilah yang memungkinkan Satoshi membangun mata uang digital yang berfungsi sementara B-money Dai tetap menjadi postingan web yang menarik.
+
+Bitcoin adalah B-money dengan persyaratan tambahan berupa kebijakan moneter yang telah ditentukan. Seperti banyak penyederhanaan teknis lainnya, pembatasan kebijakan moneter memungkinkan kemajuan dengan mengurangi ruang lingkup. Mari kita lihat bagaimana masing-masing fase pembuatan B-money disederhanakan dengan menerapkan batasan ini.
+
+### Semua Pasokan 21 Juta Bitcoin Sudah Ada
+
+Dalam b-money, setiap “periode penciptaan uang” mencakup fase “Perencanaan”, di mana pengguna diharapkan untuk membagikan “perhitungan makroekonomi” mereka yang membenarkan jumlah b-money yang ingin mereka ciptakan pada saat itu. Tujuan kebijakan moneter Satoshi yaitu pasokan terbatas dan emisi nol tidak sesuai dengan kebebasan yang diberikan b-money kepada pengguna individu untuk menghasilkan uang. Oleh karena itu, langkah pertama dalam perjalanan dari bmoney ke bitcoin adalah menghilangkan kebebasan ini. Pengguna bitcoin perorangan tidak dapat membuat bitcoin. Hanya jaringan bitcoin yang dapat membuat bitcoin, dan hal ini terjadi tepat sekali, pada tahun 2009 ketika Satoshi meluncurkan proyek bitcoin.
+
+Satoshi mampu menggantikan fase “Perencanaan” b-money yang berulang menjadi satu jadwal yang telah ditentukan sebelumnya di mana 21 juta bitcoin yang dibuat pada tahun 2009 akan dilepaskan ke peredaran. Pengguna secara sukarela mendukung kebijakan moneter Satoshi dengan mengunduh dan menjalankan perangkat lunak Bitcoin Core yang kebijakan moneternya dikodekan secara keras.
+
+Hal ini mengubah semantik pasar bitcoin untuk komputasi. Bitcoin yang dibayarkan kepada penambang bukanlah hal baru yang diterbitkan; itu melainkan baru dirilis ke peredaran dari persediaan yang ada.
+
+Pandangan ini sangat berbeda dari klaim naif bahwa “penambang bitcoin menciptakan bitcoin”. Penambang Bitcoin tidak menciptakan bitcoin, mereka membelinya. Bitcoin tidak berharga karena “bitcoin terbuat dari energi”—tetapi nilai bitcoin didemonstrasikan dengan dijual untuk mendapatkan energi.
+
+Mari kita ulangi sekali lagi: bitcoin tidak dibuat melalui _proof-of-work_, bitcoin dibuat melalui konsensus.
+
+![Bitcoin monetary inflation](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4z1UtC-nikmtcw6NpuGNPhVafpFTSzvPOqHDQfnzWXoWP463goySbv5yx3uBVvIi5doedeg5hEsHGq3wbBRYI5WPkzDc6QWk98lDwTFALD92K7Uo9Dno0Ho6VJNI-8SEDmAyfj0yT4rZ27VorNcthJNmDbAwUHypIncrjzz7hmdhnD59TVadLCfaYNqs/s1600/MjA1Njc3NTkzMzE4NDAxNDc3.webp)
+
+Desain Satoshi menghilangkan persyaratan untuk fase “Perencanaan” yang berkelanjutan dari b-money dengan melakukan semua perencanaan terlebih dahulu. Hal ini memungkinkan Satoshi untuk membuat kebijakan moneter yang sehat namun juga menyederhanakan penerapan bitcoin.
+
+### Bitcoin dihargai Melalui Konsensus
+
+Kebebasan yang diberikan kepada pengguna untuk menghasilkan uang menimbulkan beban yang sesuai bagi jaringan bmoney. Selama fase “Penawaran” jaringan b-money harus mengumpulkan dan membagikan “tawaran” pembuatan uang dari banyak pengguna yang berbeda.
+
+Menghilangkan kebebasan untuk menghasilkan uang akan meringankan beban jaringan bitcoin. Karena seluruh 21 juta bitcoin sudah ada, jaringan tidak perlu mengumpulkan tawaran dari pengguna untuk menghasilkan uang, jaringan hanya perlu menjual bitcoin sesuai jadwal Satoshi yang telah ditentukan.
+
+Jaringan bitcoin dengan demikian menawarkan konsensus harga permintaan untuk bitcoin yang dijualnya di setiap blok. Harga tunggal ini dihitung oleh setiap node secara independen menggunakan salinan blockchainnya. Jika node memiliki konsensus pada blockchain yang sama (poin yang akan kita bahas nanti) mereka semua akan menawarkan harga permintaan yang sama di setiap blok.[^8]
+
+Bagian pertama kalkulasi harga konsensus menentukan berapa banyak bitcoin yang akan dijual. Hal ini diperbaiki oleh jadwal rilis Satoshi yang telah ditentukan sebelumnya. Semua node bitcoin di jaringan menghitung jumlah yang sama untuk blok tertentu:
+
+`$ bitcoin-cli getblockstats <block\_height> {... "subsidy": 6250000000, ... } # 6.25 BTC`
+
+Bagian kedua dari harga yang diminta secara konsensus adalah jumlah komputasi yang akan menjual subsidi saat ini. Sekali lagi, semua node bitcoin di jaringan menghitung nilai yang sama (kita akan meninjau kembali kalkulasi tingkat kesulitan ini di bagian berikutnya):
+
+`$ bitcoin-cli getdifficulty {... "result": 55621444139429.57, ... }`
+
+Bersama-sama, subsidi dan kesulitan jaringan menentukan permintaan bitcoin saat ini sebagai mata uang komputasi. Karena blockchain berada dalam konsensus, harga ini adalah harga konsensus.
+
+Pengguna b-money juga dianggap memiliki konsensus “blockchain” yang berisi riwayat semua transaksi. Namun Dai tidak pernah memikirkan solusi sederhana berupa konsensus tunggal yang meminta harga untuk pembuatan b-money baru, yang hanya ditentukan oleh data di blockchain tersebut.
+
+Sebaliknya, Dai berasumsi bahwa penciptaan uang harus berlangsung selamanya. Oleh karena itu, pengguna individu perlu diberdayakan untuk mempengaruhi kebijakan moneter – seperti halnya mata uang fiat. Persyaratan yang dirasakan ini membuat Dai merancang sistem penawaran yang mencegah penerapan b-money.
+
+Kompleksitas tambahan ini dihilangkan dengan persyaratan Satoshi mengenai kebijakan moneter yang telah ditentukan sebelumnya.
+
+### Waktu Menutup Semua Penyebaran
+
+Dalam fase “Komputasi” b-money, pengguna individu akan melakukan komputasi yang telah mereka lakukan dalam penawaran sebelumnya. Dalam bitcoin, seluruh jaringan adalah penjual – tetapi siapa pembelinya?
+
+Di pasar pengiriman email, pembelinya adalah individu yang ingin mengirim email. Otoritas penetapan harga, penyedia layanan email, akan menetapkan harga yang dianggap murah bagi individu namun mahal bagi pelaku spam. Namun jika jumlah pengguna yang sah bertambah, harganya masih bisa tetap sama karena kekuatan komputasi masing-masing pengguna akan tetap sama.
+
+Di b-money, setiap pengguna yang menyumbangkan tawaran untuk pembuatan uang selanjutnya harus melakukan sendiri jumlah komputasi yang sesuai. Setiap pengguna bertindak sebagai otoritas penetapan harga berdasarkan pengetahuan mereka tentang kemampuan komputasi mereka sendiri.
+
+Jaringan bitcoin menawarkan satu harga yang diminta dalam komputasi subsidi bitcoin saat ini. Namun tidak ada penambang individu yang menemukan blok yang melakukan komputasi sebanyak ini.[^9] Blok pemenang penambang individu adalah bukti bahwa semua penambang secara kolektif melakukan jumlah komputasi yang diperlukan. Pembeli bitcoin dengan demikian adalah industri penambangan bitcoin global.
+
+Setelah mencapai konsensus harga yang diminta, jaringan bitcoin tidak akan mengubah harga tersebut sampai lebih banyak blok diproduksi. Blok-blok ini harus berisi _proof-of-work_ dengan harga yang diminta saat ini. Oleh karena itu, industri pertambangan tidak punya pilihan jika ingin “melakukan perdagangan” selain membayar harga yang diminta saat ini dalam komputasi.
+
+Satu-satunya variabel yang dapat dikontrol oleh industri pertambangan adalah berapa lama waktu yang dibutuhkan untuk memproduksi blok berikutnya. Sama seperti jaringan bitcoin yang menawarkan satu harga yang diminta, industri pertambangan juga menawarkan satu penawaran—waktu yang diperlukan untuk menghasilkan blok berikutnya yang memenuhi harga yang diminta jaringan saat ini.
+
+> Untuk mengimbangi peningkatan kecepatan perangkat keras dan minat yang berbeda-beda dalam menjalankan node dari waktu ke waktu, kesulitan _proof-of-work_ ditentukan oleh rata-rata bergerak yang menargetkan jumlah rata-rata blok per jam. Jika dihasilkan terlalu cepat, kesulitannya akan meningkat. - Nakamoto, 2008
+
+Satoshi dengan sederhana menjelaskan algoritma penyesuaian kesulitan, yang sering disebut sebagai salah satu ide paling orisinal dalam implementasi bitcoin. Hal ini benar, namun alih-alih berfokus pada daya cipta solusi, mari kita fokus pada mengapa penyelesaian masalah sangat penting bagi Satoshi.
+
+Proyek-proyek seperti bit gold dan b-money tidak perlu membatasi nilai tukar pada saat penciptaan uang karena mereka tidak memiliki pasokan tetap atau kebijakan moneter yang telah ditentukan sebelumnya. Periode penciptaan uang yang lebih cepat atau lebih lambat dapat dikompensasikan melalui cara lain, misalnya melalui pajak. _Dealer_ eksternal memasukkan token bit gold ke dalam _bundler_ yang lebih besar atau lebih kecil atau pengguna b-money mengubah tawaran mereka.
+
+Namun tujuan kebijakan moneter Satoshi mengharuskan bitcoin memiliki tingkat pelepasan bitcoin yang telah ditentukan untuk diedarkan. Membatasi laju (statistik) produksi blok dari waktu ke waktu adalah hal yang wajar dalam bitcoin karena laju produksi blok adalah laju penjualan pasokan awal bitcoin. Menjual 21 juta bitcoin selama 140 tahun adalah proposisi yang berbeda dibandingkan membiarkannya dijual dalam 3 bulan.
+
+Selain itu, bitcoin sebenarnya dapat menerapkan batasan ini karena blockchain adalah “protokol cap waktu aman” milik Szabo. Satoshi menggambarkan bitcoin sebagai yang pertama dan terutama sebagai “server stempel waktu terdistribusi secara peer-to-peer,” dan implementasi awal kode sumber bitcoin menggunakan “rantai waktu” dunia, bukan “blockchain” untuk menggambarkan struktur data bersama yang mengimplementasikan pasar _proof-of-work_ bitcoin.[^10]
+
+![Perubahan pasokan komputasi Bitcoin](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfLPG-6xt2blK77ONwanB8472hPCNbdH4pO5RHwU3h0_fw178y6XQv3G1kqS_5G9l8QlL_a0EjjI466NveU14DoXSVKKQdsyz6LrphSLu-pQ00G8wuDpxMCO-fhX1Yr_Zz7V3BPG3EwxhIW6wnd6HiM835xPDOHnQ7XhITZKAJyyITH2aeGnTvgCPRmqk/s1600/MjA1Njc3Njg4MDc2MTE3NDQ1.webp)
+
+Tidak seperti bit gold atau b-money, token dalam bitcoin tidak mengalami kelebihan pasokan. Jaringan bitcoin menggunakan penyesuaian kesulitan untuk mengubah harga uang sebagai respons terhadap perubahan pasokan komputasi.
+
+Algoritme penyesuaian ulang kesulitan Bitcoin memanfaatkan kemampuan ini. Blockchain konsensus digunakan oleh peserta untuk menghitung penawaran historis yang dibuat oleh industri pertambangan dan menyesuaikan kembali kesulitan agar bisa mendekati waktu blok target.
+
+### Pesanan Terunggul Menciptakan Konsensus
+
+Rantai penyederhanaan yang disebabkan oleh tuntutan kebijakan moneter yang kuat meluas ke fase “penciptaan uang” dari b-money.
+
+Tawaran yang diajukan pengguna di b-money mengalami masalah “tidak ada yang dipertaruhkan”. Tidak ada mekanisme untuk mencegah pengguna mengajukan tawaran dengan sejumlah besar b-money untuk pekerjaan yang sangat sedikit. Hal ini mengharuskan jaringan untuk melacak tawaran mana yang telah diselesaikan dan hanya menerima “tawaran tertinggi…dalam hal biaya nominal per unit b-money yang dibuat” untuk menghindari tawaran yang mengganggu tersebut. Setiap peserta b-money harus melacak seluruh tawaran senilai buku pesanan, mencocokkan tawaran dengan perhitungan selanjutnya, dan hanya menyelesaikan pesanan yang telah selesai dengan harga tertinggi.
+
+Masalah ini merupakan contoh dari masalah konsensus yang lebih umum dalam sistem desentralisasi, yang juga dikenal sebagai “_Byzantine generals_” atau terkadang masalah “pembelanjaan ganda” dalam konteks mata uang digital. Berbagi urutan data yang identik di antara semua peserta merupakan suatu tantangan dalam jaringan yang saling bermusuhan dan terdesentralisasi. Solusi yang ada untuk masalah ini – yang disebut “algoritma konsensus _Byzantine-fault tolerant_ (BFT)” – memerlukan koordinasi sebelumnya di antara peserta atau mayoritas (>67%) peserta agar tidak berperilaku bermusuhan.
+
+Bitcoin tidak harus mengelola buku pesanan dalam jumlah besar karena jaringan bitcoin menawarkan harga permintaan konsensus tunggal. Ini berarti node bitcoin dapat menerima blok pertama (valid) yang mereka lihat yang memenuhi harga yang diminta jaringan saat ini—tawaran gangguan dapat dengan mudah diabaikan dan merupakan pemborosan sumber daya penambang.
+
+Komputasi harga berdasarkan konsensus memungkinkan pencocokan pesanan beli/jual dalam bitcoin dilakukan secara antusias, dengan sistem siapa cepat dia dapat. Berbeda dengan b-money, pencocokan pesanan yang cepat ini berarti bahwa pasar bitcoin tidak memiliki fase—pasar ini beroperasi terus-menerus, dengan harga konsensus baru dihitung setelah setiap pesanan dicocokkan (blok ditemukan). Untuk menghindari percabangan yang disebabkan oleh latensi jaringan atau perilaku bertentangan, node juga harus mengikuti aturan rantai terberat. Aturan penyelesaian pesanan yang serakah ini memastikan bahwa hanya tawaran tertinggi yang diterima oleh jaringan.
+
+Kombinasi algoritma yang antusias dan serakah ini, dimana node menerima blok valid pertama yang mereka lihat dan juga mengikuti rantai terberat, adalah algoritma BFT baru yang dengan cepat menyatu pada konsensus tentang urutan blok. Satoshi menghabiskan 25% dari _white paper_ bitcoin untuk mendemonstrasikan klaim ini.[^11]
+
+Kita telah menetapkan di bagian sebelumnya bahwa harga permintaan konsensus bitcoin itu sendiri bergantung pada konsensus blockchain. Namun ternyata keberadaan harga permintaan konsensus tunggal inilah yang memungkinkan perhitungan pasar untuk mencocokkan pesanan dengan penuh semangat, dan itulah yang pertama-tama mengarah pada konsensus!
+
+Terlebih lagi, “konsensus Nakamoto” yang baru ini hanya mengharuskan 50% peserta untuk tidak bertentangan, sebuah kemajuan yang signifikan dibandingkan dengan kondisi sebelumnya. Seorang cypherpunk seperti Satoshi membuat terobosan ilmu komputer teoretis ini, dibandingkan dengan akademisi tradisional atau peneliti industri, karena fokus mereka yang sempit pada penerapan uang yang sehat, dibandingkan algoritma konsensus umum untuk komputasi terdistribusi.
+
+## Kesimpulan
+
+B-money adalah kerangka kerja yang kuat untuk membangun mata uang digital tetapi tidak lengkap karena tidak memiliki kebijakan moneter. Membatasi b-money dengan jadwal rilis yang telah ditentukan untuk bitcoin mengurangi cakupan dan menyederhanakan implementasi dengan menghilangkan persyaratan untuk melacak dan memilih di antara tawaran pembuatan uang yang diajukan pengguna. Mempertahankan kecepatan sementara dari jadwal rilis Satoshi menghasilkan algoritma penyesuaian kesulitan dan memungkinkan konsensus Nakamoto, yang secara luas diakui sebagai salah satu aspek paling inovatif dalam implementasi bitcoin.
+
+Ada lebih banyak hal dalam desain bitcoin daripada aspek yang dibahas sejauh ini. Kita memfokuskan artikel ini pada pasar “utama” dalam bitcoin, pasar yang mendistribusikan pasokan awal bitcoin ke dalam sirkulasi.
+
+Artikel berikutnya dalam seri ini akan mengeksplorasi pasar penyelesaian transaksi bitcoin dan kaitannya dengan pasar pendistribusian pasokan bitcoin. Hubungan ini akan menyarankan metodologi bagaimana membangun pasar masa depan untuk layanan terdesentralisasi selain bitcoin.
+
+Sumber artikel: _HOW DID SATOSHI THINK OF BITCOIN?_ [https://bitcoinmagazine.com/technical/how-did-satoshi-think-of-bitcoin](https://bitcoinmagazine.com/technical/how-did-satoshi-think-of-bitcoin)
+
+Diterjemahkan oleh: Abengkris
+
+[^1]: Judul seri ini diambil dari pesan telegraf pertama dalam sejarah, yang dikirimkan oleh Samuel Morse pada tahun 1844: _“What hath God wrought?”_.
+
+[^2]: Bitcoin: Sistem Uang Elektronik _Peer-to-Peer_, tersedia di: [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)
+
+[^3]: _Pricing via Processing or Combatting Junk Mail_ oleh Dwork dan Naor. tersedia di:  
+[https://www.wisdom.weizmann.ac.il/../../pvp.pdf](https://www.wisdom.weizmann.ac.il/~naor/PAPERS/pvp.pdf)
+
+[^4]: Meskipun merupakan pencetus ide tersebut, Dwork & Naor tidak menciptakan “_proof-of-work_”—julukan tersebut kemudian diberikan pada tahun 1999 oleh Markus Jakobsson dan Ari Juels.
+
+[^5]: Proyek RPoW Hal Finney adalah upaya untuk menciptakan _proof-of-work_ yang dapat ditransfer, tetapi bitcoin tidak menggunakan konsep ini karena tidak memperlakukan komputasi sebagai mata uang. Seperti yang akan kita lihat nanti ketika kita memeriksa bit gold dan b-money, komputasi tidak dapat berupa mata uang karena nilai komputasi berubah seiring waktu sementara unit mata uang harus memiliki nilai yang sama. Bitcoin bukanlah komputasi, bitcoin adalah mata uang yang dijual untuk komputasi.
+
+[^6]: Pada saat ini, beberapa pembaca mungkin percaya bahwa saya meremehkan kontribusi Dai atau Szabo karena kontribusi mereka tidak jelas atau tidak jelas dalam beberapa hal. Perasaan saya justru sebaliknya: Dai dan Szabo pada dasarnya benar dan fakta bahwa mereka tidak mengartikulasikan setiap detail seperti yang dilakukan Satoshi tidak mengurangi kontribusi mereka. Sebaliknya, hal ini seharusnya meningkatkan apresiasi kita terhadap hal tersebut, karena hal ini menunjukkan betapa menantangnya munculnya mata uang digital, bahkan bagi para praktisi terbaiknya.
+
+[^7]: Postingan b-money Dai adalah referensi pertama dalam _white paper_ Satoshi, tersedia di: [http://www.weidai.com/bmoney.txt](http://www.weidai.com/bmoney.txt)
+
+[^8]: Ada dua penyederhanaan yang dilakukan di sini: 1. Jumlah bitcoin yang dijual di setiap blok juga dipengaruhi oleh biaya transaksi pasar, yang berada di luar cakupan artikel ini, namun tetap menunggu pekerjaan selanjutnya. 2.  Kesulitan yang dilaporkan oleh bitcoin bukanlah jumlah perhitungan yang diharapkan; seseorang harus mengalikannya dengan faktor proporsionalitas.
+
+[^9]: Setidaknya sejak masa lalu yang buruk ketika Satoshi adalah satu-satunya penambang di jaringan.
+
+[^10]: _Bitcoin is Time_ klasik dari Gigi adalah pengenalan yang bagus tentang hubungan mendalam antara bitcoin dan waktu, tersedia di: [https://dergigi.com/2021/01/14/bitcoin-is-time/](https://dergigi.com/2021/01/14/bitcoin-is-time/)
+
+[^11]: Satoshi melakukan kesalahan baik dalam analisis mereka di buku putih maupun implementasi awal bitcoin berikutnya dengan menggunakan aturan “rantai terpanjang” dan bukan aturan “rantai terberat”.
