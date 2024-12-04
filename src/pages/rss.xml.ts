@@ -1,19 +1,19 @@
-import rss from '@astrojs/rss'
-import { SITE } from '@/consts'
-import type { APIContext } from 'astro'
-import { getCollection } from 'astro:content'
+import rss from '@astrojs/rss';
+import { SITE } from '@/consts';
+import type { APIContext } from 'astro';
+import { getCollection } from 'astro:content';
 
 export async function GET(context: APIContext) {
   try {
     const blog = (await getCollection('blog')).filter(
       (post) => !post.data.draft,
-    )
+    );
 
     // Sort posts by date
     const items = [...blog].sort(
       (a, b) =>
         new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
-    )
+    );
 
     // Return RSS feed
     return rss({
@@ -26,9 +26,9 @@ export async function GET(context: APIContext) {
         pubDate: item.data.date,
         link: `/${item.collection}/${item.slug}/`,
       })),
-    })
+    });
   } catch (error) {
-    console.error('Error generating RSS feed:', error)
-    return new Response('Error generating RSS feed', { status: 500 })
+    console.error('Error generating RSS feed:', error);
+    return new Response('Error generating RSS feed', { status: 500 });
   }
 }

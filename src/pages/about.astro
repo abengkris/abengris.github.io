@@ -1,12 +1,12 @@
 ---
-import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Container from '@/components/Container.astro'
-import ProjectCard from '@/components/ProjectCard.astro'
-import { SITE } from '@/consts'
-import Layout from '@/layouts/Layout.astro'
-import { getCollection } from 'astro:content'
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Container from '@/components/Container.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import { SITE } from '@/consts';
+import Layout from '@/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-const projects = await getCollection('projects')
+const projects = await getCollection('projects');
 ---
 
 <Layout title="About" description={SITE.DESCRIPTION}>

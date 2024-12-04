@@ -1755,5 +1755,5 @@ declare module 'virtual:astro-icon' {
     | 'lucide:x-octagon'
     | 'lucide:x-square'
     | 'nostr'
-    | 'ostrich'
+    | 'ostrich';
 }

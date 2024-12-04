@@ -1,31 +1,31 @@
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { NAV_LINKS } from '@/consts'
-import { Menu } from 'lucide-react'
+} from '@/components/ui/dropdown-menu';
+import { NAV_LINKS } from '@/consts';
+import { Menu } from 'lucide-react';
 
 const MobileMenu = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleViewTransitionStart = () => {
-      setIsOpen(false)
-    }
+      setIsOpen(false);
+    };
 
-    document.addEventListener('astro:before-swap', handleViewTransitionStart)
+    document.addEventListener('astro:before-swap', handleViewTransitionStart);
 
     return () => {
       document.removeEventListener(
         'astro:before-swap',
         handleViewTransitionStart,
-      )
-    }
-  }, [])
+      );
+    };
+  }, []);
 
   return (
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen} modal={false}>
@@ -54,7 +54,7 @@ const MobileMenu = () => {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  )
-}
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;

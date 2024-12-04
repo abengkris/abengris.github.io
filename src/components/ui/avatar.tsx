@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils'
-import * as AvatarPrimitive from '@radix-ui/react-avatar'
-import * as React from 'react'
+import { cn } from '@/lib/utils';
+import * as AvatarPrimitive from '@radix-ui/react-avatar';
+import * as React from 'react';
 
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
@@ -14,8 +14,8 @@ const Avatar = React.forwardRef<
     )}
     {...props}
   />
-))
-Avatar.displayName = AvatarPrimitive.Root.displayName
+));
+Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
@@ -26,8 +26,8 @@ const AvatarImage = React.forwardRef<
     className={cn('aspect-square size-full', className)}
     {...props}
   />
-))
-AvatarImage.displayName = AvatarPrimitive.Image.displayName
+));
+AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
 const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>,
@@ -41,14 +41,14 @@ const AvatarFallback = React.forwardRef<
     )}
     {...props}
   />
-))
-AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName
+));
+AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
 interface AvatarComponentProps {
-  src?: string
-  alt?: string
-  fallback?: string
-  className?: string
+  src?: string;
+  alt?: string;
+  fallback?: string;
+  className?: string;
 }
 
 const AvatarComponent: React.FC<AvatarComponentProps> = ({
@@ -62,7 +62,7 @@ const AvatarComponent: React.FC<AvatarComponentProps> = ({
       <AvatarImage src={src} alt={alt} />
       <AvatarFallback>{fallback}</AvatarFallback>
     </Avatar>
-  )
-}
+  );
+};
 
-export default AvatarComponent
+export default AvatarComponent;

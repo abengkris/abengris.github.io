@@ -1,13 +1,13 @@
 ---
-import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Container from '@/components/Container.astro'
-import Link from '@/components/Link.astro'
-import { SITE } from '@/consts'
-import Layout from '@/layouts/Layout.astro'
-import { getImage } from 'astro:assets'
-import barcodeLightning from '../../public/abeng@blink.sv.png'
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Container from '@/components/Container.astro';
+import Link from '@/components/Link.astro';
+import { SITE } from '@/consts';
+import Layout from '@/layouts/Layout.astro';
+import { getImage } from 'astro:assets';
+import barcodeLightning from '../../public/abeng@blink.sv.png';
 
-const barcodeLn = await getImage({ src: barcodeLightning, width: 300 })
+const barcodeLn = await getImage({ src: barcodeLightning, width: 300 });
 ---
 
 <Layout title="Support" description={SITE.DESCRIPTION}>

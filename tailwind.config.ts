@@ -1,5 +1,5 @@
-import type { Config } from 'tailwindcss'
-import defaultTheme from 'tailwindcss/defaultTheme'
+import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   darkMode: ['selector'],
@@ -43,6 +43,6 @@ const config: Config = {
     },
   },
   plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],
-}
+};
 
-export default config
+export default config;

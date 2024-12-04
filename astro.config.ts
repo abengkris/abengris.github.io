@@ -1,24 +1,24 @@
-import { rehypeHeadingIds } from '@astrojs/markdown-remark'
-import mdx from '@astrojs/mdx'
-import react from '@astrojs/react'
-import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
-import { transformerCopyButton } from '@rehype-pretty/transformers'
+import { rehypeHeadingIds } from '@astrojs/markdown-remark';
+import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import { transformerCopyButton } from '@rehype-pretty/transformers';
 import {
   transformerMetaHighlight,
   transformerNotationDiff,
-} from '@shikijs/transformers'
-import { defineConfig, passthroughImageService } from 'astro/config'
-import rehypeKatex from 'rehype-katex'
-import rehypeExternalLinks from 'rehype-external-links'
-import rehypePrettyCode from 'rehype-pretty-code'
-import remarkEmoji from 'remark-emoji'
-import remarkMath from 'remark-math'
-import remarkToc from 'remark-toc'
-import sectionize from '@hbsnow/rehype-sectionize'
-import icon from 'astro-icon'
+} from '@shikijs/transformers';
+import { defineConfig, passthroughImageService } from 'astro/config';
+import rehypeKatex from 'rehype-katex';
+import rehypeExternalLinks from 'rehype-external-links';
+import rehypePrettyCode from 'rehype-pretty-code';
+import remarkEmoji from 'remark-emoji';
+import remarkMath from 'remark-math';
+import remarkToc from 'remark-toc';
+import sectionize from '@hbsnow/rehype-sectionize';
+import icon from 'astro-icon';
 
-import vercel from '@astrojs/vercel/serverless'
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
@@ -83,4 +83,4 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
-})
+});

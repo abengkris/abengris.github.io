@@ -1,56 +1,56 @@
 ---
-import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Link from '@/components/Link.astro'
-import PostNavigation from '@/components/PostNavigation.astro'
-import TableOfContents from '@/components/TableOfContents.astro'
-import { badgeVariants } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
-import Layout from '@/layouts/Layout.astro'
-import { formatDate, parseAuthors, readingTime } from '@/lib/utils'
-import { Icon } from 'astro-icon/components'
-import { Image } from 'astro:assets'
-import { type CollectionEntry, getCollection } from 'astro:content'
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Link from '@/components/Link.astro';
+import PostNavigation from '@/components/PostNavigation.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import { badgeVariants } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import Layout from '@/layouts/Layout.astro';
+import { formatDate, parseAuthors, readingTime } from '@/lib/utils';
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import { type CollectionEntry, getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog'))
     .filter((post) => !post.data.draft)
-    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
-  }))
+  }));
 }
-type Props = CollectionEntry<'blog'>
+type Props = CollectionEntry<'blog'>;
 
 const posts = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 function getPostIndex(slug: string): number {
-  return posts.findIndex((post) => post.slug === slug)
+  return posts.findIndex((post) => post.slug === slug);
 }
 
 function getPrevPost(slug: string): Props | null {
-  const postIndex = getPostIndex(slug)
+  const postIndex = getPostIndex(slug);
   return postIndex !== -1 && postIndex < posts.length - 1
     ? posts[postIndex + 1]
-    : null
+    : null;
 }
 
 function getNextPost(slug: string): Props | null {
-  const postIndex = getPostIndex(slug)
-  return postIndex > 0 ? posts[postIndex - 1] : null
+  const postIndex = getPostIndex(slug);
+  return postIndex > 0 ? posts[postIndex - 1] : null;
 }
 
-const currentPostSlug = Astro.params.slug
-const nextPost = getNextPost(currentPostSlug)
-const prevPost = getPrevPost(currentPostSlug)
+const currentPostSlug = Astro.params.slug;
+const nextPost = getNextPost(currentPostSlug);
+const prevPost = getPrevPost(currentPostSlug);
 
-const post = Astro.props
-const { Content, headings } = await post.render()
+const post = Astro.props;
+const { Content, headings } = await post.render();
 
-const authors = await parseAuthors(post.data.authors ?? [])
+const authors = await parseAuthors(post.data.authors ?? []);
 ---
 
 <Layout
@@ -197,24 +197,24 @@ const authors = await parseAuthors(post.data.authors ?? [])
 
   <script>
     document.addEventListener('astro:page-load', () => {
-      const scrollToTopButton = document.getElementById('scroll-to-top')
-      const footer = document.querySelector('footer')
+      const scrollToTopButton = document.getElementById('scroll-to-top');
+      const footer = document.querySelector('footer');
 
       if (scrollToTopButton && footer) {
         scrollToTopButton.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' })
-        })
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         window.addEventListener('scroll', () => {
-          const footerRect = footer.getBoundingClientRect()
-          const isFooterVisible = footerRect.top <= window.innerHeight
+          const footerRect = footer.getBoundingClientRect();
+          const isFooterVisible = footerRect.top <= window.innerHeight;
 
           scrollToTopButton.classList.toggle(
             'hidden',
             window.scrollY <= 300 || isFooterVisible,
-          )
-        })
+          );
+        });
       }
-    })
+    });
   </script>
 </Layout>

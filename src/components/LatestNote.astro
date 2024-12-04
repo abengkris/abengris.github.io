@@ -1,43 +1,45 @@
 ---
-export const prerender = false
-import Link from '@/components/Link.astro'
-import { Button } from '@/components/ui/button'
+export const prerender = false;
+import Link from '@/components/Link.astro';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import type { NostrEvent } from '@/lib/utils'
-import { getNevent } from '@/lib/utils'
-import { Icon } from 'astro-icon/components'
+} from '@/components/ui/card';
+import type { NostrEvent } from '@/lib/utils';
+import { getNevent } from '@/lib/utils';
+import { Icon } from 'astro-icon/components';
 
-const prodBaseUrl = 'https://abeng.xyz'
-const localBaseUrl = 'http://localhost:1234'
+const prodBaseUrl = 'https://abeng.xyz';
+const localBaseUrl = 'http://localhost:1234';
 
 const baseUrl =
-  process.env.NODE_ENV === 'production' ? prodBaseUrl : localBaseUrl
+  process.env.NODE_ENV === 'production' ? prodBaseUrl : localBaseUrl;
 // console.log('Current NODE_ENV:', process.env.NODE_ENV)
 
-let latestNote: NostrEvent | null = null
-let errorMessage: string | null = null
-let formatDate: string | null = null
+let latestNote: NostrEvent | null = null;
+let errorMessage: string | null = null;
+let formatDate: string | null = null;
 const pubkey =
-  '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6'
+  '07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6';
 
 try {
-  const response = await fetch(`${baseUrl}/api/latest-note?hexpubkey=${pubkey}`)
+  const response = await fetch(
+    `${baseUrl}/api/latest-note?hexpubkey=${pubkey}`,
+  );
   if (response.ok) {
-    const data = await response.json()
+    const data = await response.json();
     // console.log('Data:', data)
-    latestNote = data.latestNote
-    formatDate = data.formattedDate
+    latestNote = data.latestNote;
+    formatDate = data.formattedDate;
   } else {
-    errorMessage = 'Failed to fetch the latest note. API returned an error.'
+    errorMessage = 'Failed to fetch the latest note. API returned an error.';
   }
 } catch (error) {
-  errorMessage = 'Failed to fetch the latest note. Please try again later.'
+  errorMessage = 'Failed to fetch the latest note. Please try again later.';
 }
 ---
 
@@ -52,8 +54,8 @@ try {
         </CardHeader>
         <CardContent>
           {latestNote?.content.split('\n').map((line, index) => {
-            const urlRegex = /(https?:\/\/[^\s]+)/g // Regex untuk mendeteksi URL
-            const allowedTags = ['bitcoin', 'nostr'] // Hashtag yang diizinkan
+            const urlRegex = /(https?:\/\/[^\s]+)/g; // Regex untuk mendeteksi URL
+            const allowedTags = ['bitcoin', 'nostr']; // Hashtag yang diizinkan
 
             return (
               <Fragment key={index}>
@@ -61,7 +63,7 @@ try {
                   if (urlRegex.test(part)) {
                     // Deteksi URL
                     const shortenedUrl =
-                      part.length > 30 ? `${part.slice(0, 30)}...` : part
+                      part.length > 30 ? `${part.slice(0, 30)}...` : part;
 
                     if (part.match(/\.(jpg|jpeg|png|gif)$/i)) {
                       // Jika URL adalah gambar
@@ -71,7 +73,7 @@ try {
                           alt="Embedded Image from nostr"
                           class="my-2 w-full rounded-md"
                         />
-                      )
+                      );
                     }
 
                     // Jika URL bukan gambar
@@ -84,14 +86,14 @@ try {
                       >
                         {shortenedUrl}
                       </a>
-                    )
+                    );
                   }
 
                   // Deteksi Hashtag
                   if (part.includes('#')) {
                     return part.split(/(#\w+)/g).map((subPart, j) => {
                       if (subPart.startsWith('#')) {
-                        const tag = subPart.slice(1).toLowerCase() // Ambil tag tanpa '#'
+                        const tag = subPart.slice(1).toLowerCase(); // Ambil tag tanpa '#'
                         if (allowedTags.includes(tag)) {
                           // Jika tag termasuk yang diizinkan
                           return (
@@ -101,20 +103,20 @@ try {
                             >
                               {subPart}
                             </a>
-                          )
+                          );
                         }
                       }
 
                       // Tampilkan teks biasa jika bukan hashtag yang diizinkan
-                      return <span>{subPart}</span>
-                    })
+                      return <span>{subPart}</span>;
+                    });
                   }
 
                   // Teks biasa jika tidak ada URL atau hashtag
-                  return <span>{part}</span>
+                  return <span>{part}</span>;
                 })}
               </Fragment>
-            )
+            );
           })}
         </CardContent>
         <CardFooter>

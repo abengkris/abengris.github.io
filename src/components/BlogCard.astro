@@ -1,23 +1,23 @@
 ---
-import AvatarComponent from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
-import { formatDate, parseAuthors, readingTime } from '@/lib/utils'
-import { Image } from 'astro:assets'
-import type { CollectionEntry } from 'astro:content'
-import Link from './Link.astro'
+import AvatarComponent from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
+import { formatDate, parseAuthors, readingTime } from '@/lib/utils';
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import Link from './Link.astro';
 
 type Props = {
-  entry: CollectionEntry<'blog'>
-}
+  entry: CollectionEntry<'blog'>;
+};
 
 const { entry } = Astro.props as {
-  entry: CollectionEntry<'blog'>
-}
+  entry: CollectionEntry<'blog'>;
+};
 
-const formattedDate = formatDate(entry.data.date)
-const readTime = readingTime(entry.body)
-const authors = await parseAuthors(entry.data.authors ?? [])
+const formattedDate = formatDate(entry.data.date);
+const readTime = readingTime(entry.body);
+const authors = await parseAuthors(entry.data.authors ?? []);
 ---
 
 <div
