@@ -14,8 +14,7 @@ export type Link = {
 
 export const SITE: Site = {
   TITLE: 'abeng.xyz',
-  DESCRIPTION:
-    'author, blogger, bitcoiner.',
+  DESCRIPTION: 'author, blogger, bitcoiner.',
   EMAIL: 'abengkris@proton.me',
   NUM_POSTS_ON_HOMEPAGE: 2,
   POSTS_PER_PAGE: 3,
@@ -30,7 +29,10 @@ export const NAV_LINKS: Link[] = [
 ]
 
 export const SOCIAL_LINKS: Link[] = [
-  { href: 'https://nostrudel.ninja/#/u/npub1q7g8dyxw8lkrp7eq38445cwpga2gcfzt4ptqtecn67v3e48qzhmqwgk6wr', label: 'Nostr' },
+  {
+    href: 'https://nostrudel.ninja/#/u/npub1q7g8dyxw8lkrp7eq38445cwpga2gcfzt4ptqtecn67v3e48qzhmqwgk6wr',
+    label: 'Nostr',
+  },
   { href: 'https://github.com/abengkris', label: 'GitHub' },
   { href: 'https://twitter.com/abengkriss', label: 'Twitter' },
   { href: 'abengkris@proton.me', label: 'Email' },

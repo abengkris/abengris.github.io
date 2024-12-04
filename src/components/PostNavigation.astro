@@ -24,7 +24,9 @@ const { prevPost, nextPost } = Astro.props
       />
     </div>
     <div class="flex flex-col items-start overflow-hidden">
-      <span class="text-left text-xs text-muted-foreground">Postingan selanjutnya</span>
+      <span class="text-left text-xs text-muted-foreground"
+        >Postingan selanjutnya</span
+      >
       <span class="w-full truncate text-left text-sm"
         >{nextPost?.data.title || 'Postingan terbaru!'}</span
       >
@@ -40,7 +42,8 @@ const { prevPost, nextPost } = Astro.props
     aria-disabled={!prevPost}
   >
     <div class="flex flex-col items-end overflow-hidden">
-      <span class="text-right text-xs text-muted-foreground">Postingan sebelumnya</span
+      <span class="text-right text-xs text-muted-foreground"
+        >Postingan sebelumnya</span
       >
       <span class="w-full truncate text-right text-sm"
         >{prevPost?.data.title || 'Postingan terakhir!'}</span

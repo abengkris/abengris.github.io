@@ -1,13 +1,13 @@
 ---
-export const prerender = false;
+export const prerender = false
 import BlogCard from '@/components/BlogCard.astro'
 import Container from '@/components/Container.astro'
+import LatestNote from '@/components/LatestNote.astro'
 import Link from '@/components/Link.astro'
 import { buttonVariants } from '@/components/ui/button'
 import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import LatestNote from '@/components/LatestNote.astro';
 
 const blog = (await getCollection('blog'))
   .filter((post) => !post.data.draft)

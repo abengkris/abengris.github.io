@@ -18,7 +18,7 @@ import remarkToc from 'remark-toc'
 import sectionize from '@hbsnow/rehype-sectionize'
 import icon from 'astro-icon'
 
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
@@ -79,8 +79,8 @@ export default defineConfig({
 
   output: 'hybrid',
   adapter: vercel(),
-  
+
   image: {
-    service: passthroughImageService()
+    service: passthroughImageService(),
   },
 })
