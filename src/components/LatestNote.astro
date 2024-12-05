@@ -54,8 +54,9 @@ try {
         </CardHeader>
         <CardContent>
           {latestNote?.content.split('\n').map((line, index) => {
-            const urlRegex = /(https?:\/\/[^\s]+)/g; // Regex untuk mendeteksi URL
-            const allowedTags = ['bitcoin', 'nostr']; // Hashtag yang diizinkan
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            const allowedTags = ['bitcoin', 'nostr'];
+            const nostrRegex = /(nostr:[^\s]+)/g;
 
             return (
               <Fragment key={index}>
@@ -82,9 +83,27 @@ try {
                         href={part}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-blue-600 underline"
+                        class="text-green-600 underline"
                       >
                         {shortenedUrl}
+                      </a>
+                    );
+                  }
+                  
+                  if (nostrRegex.test(part)) {
+                    // Deteksi nostr URL
+                    const uiUrl = `https://nostrapp.link/${part.replace('nostr:', '')}`;
+                    const nostrUrl =
+                      uiUrl.length > 30 ? `${uiUrl.slice(0, 30)}...` : uiUrl;
+                      
+                    return (
+                      <a
+                        href={uiUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-green-600 underline"
+                      >
+                        {nostrUrl}
                       </a>
                     );
                   }
@@ -99,7 +118,7 @@ try {
                           return (
                             <a
                               href={`/tags/${tag}`}
-                              class="text-blue-600 underline"
+                              class="text-green-600 underline"
                             >
                               {subPart}
                             </a>
@@ -128,7 +147,7 @@ try {
             <Button variant="ghost">&#x26A1; Zap</Button>
           </Link>
           <Link
-            href={`https://nostr.band/${getNevent(latestNote.id)}`}
+            href={`https://nostrapp.link/${getNevent(latestNote.id)}`}
             external
           >
             <Button variant="ghost">Open&#10139;</Button>
