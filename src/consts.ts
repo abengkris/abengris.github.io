@@ -13,7 +13,7 @@ export type Link = {
 };
 
 export const SITE: Site = {
-  TITLE: 'abeng.xyz',
+  TITLE: 'Abeng',
   DESCRIPTION: 'author, blogger, bitcoiner.',
   EMAIL: 'abengkris@proton.me',
   NUM_POSTS_ON_HOMEPAGE: 2,

@@ -48,8 +48,15 @@ try {
     latestNote ? (
       <Card>
         <CardHeader>
-          <CardTitle className="font-bold flex flex-wrap items-center -mb-4 -mt-3">
-            <Icon name="nostr" class="-ml-5 size-16" /> Latest nostr note:
+          <CardTitle className="font-semibold flex flex-wrap items-center -mb-4 -mt-3">
+            <Icon name="nostr" class="-ml-5 size-16" />{' '}
+            <a
+              href="/api/latest-note?hexpubkey=07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6"
+              class="text-green-600"
+              rel="_self"
+            >
+              /latest-nostr-note ( kind 1 )
+            </a>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -83,25 +90,25 @@ try {
                         href={part}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-green-600 underline"
+                        class="text-green-600"
                       >
                         {shortenedUrl}
                       </a>
                     );
                   }
-                  
+
                   if (nostrRegex.test(part)) {
                     // Deteksi nostr URL
                     const uiUrl = `https://nostrapp.link/${part.replace('nostr:', '')}`;
                     const nostrUrl =
                       uiUrl.length > 30 ? `${uiUrl.slice(0, 30)}...` : uiUrl;
-                      
+
                     return (
                       <a
                         href={uiUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-green-600 underline"
+                        class="text-green-600"
                       >
                         {nostrUrl}
                       </a>
@@ -116,10 +123,7 @@ try {
                         if (allowedTags.includes(tag)) {
                           // Jika tag termasuk yang diizinkan
                           return (
-                            <a
-                              href={`/tags/${tag}`}
-                              class="text-green-600 underline"
-                            >
+                            <a href={`/tags/${tag}`} class="text-green-600">
                               {subPart}
                             </a>
                           );
@@ -132,7 +136,7 @@ try {
                   }
 
                   // Teks biasa jika tidak ada URL atau hashtag
-                  return <span>{part}</span>;
+                  return <p>{part}</p>;
                 })}
               </Fragment>
             );
@@ -150,7 +154,14 @@ try {
             href={`https://nostrapp.link/${getNevent(latestNote.id)}`}
             external
           >
-            <Button variant="ghost">Open&#10139;</Button>
+            <Button variant="ghost">
+              <Icon
+                name="lucide:square-arrow-out-up-right"
+                size="15"
+                class="mr-1"
+              />
+              Buka
+            </Button>
           </Link>
         </CardFooter>
       </Card>
