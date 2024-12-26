@@ -86,10 +86,10 @@ export function formatDateNostr(
   const diffInSeconds = Math.floor(now - timestamp);
 
   if (diffInSeconds < 60) return 'just now';
-  if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)}m`;
-  if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)}h`;
-  if (diffInSeconds < 604800) return `${Math.floor(diffInSeconds / 86400)}d`;
-  if (diffInSeconds < 31536000) return `${Math.floor(diffInSeconds / 604800)}w`;
+  if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)} minute ago`;
+  if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)} hour ago`;
+  if (diffInSeconds < 604800) return `${Math.floor(diffInSeconds / 86400)} day ago`;
+  if (diffInSeconds < 31536000) return `${Math.floor(diffInSeconds / 604800)} week ago`;
 
   const date = new Date(timestamp * 1000);
   const options: Intl.DateTimeFormatOptions = {
