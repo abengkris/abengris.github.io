@@ -25,6 +25,15 @@ export function formatDateNostr(
     return 'Invalid date';
   }
 
+  const now = Date.now() / 1000;
+  const diffInSeconds = Math.floor(now - timestamp);
+
+  if (diffInSeconds < 60) return 'just now';
+  if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)}m`;
+  if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)}h`;
+  if (diffInSeconds < 604800) return `${Math.floor(diffInSeconds / 86400)}d`;
+  if (diffInSeconds < 31536000) return `${Math.floor(diffInSeconds / 604800)}w`;
+
   const date = new Date(timestamp * 1000);
   const options: Intl.DateTimeFormatOptions = {
     timeZone,
