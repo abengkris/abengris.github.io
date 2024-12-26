@@ -73,11 +73,23 @@ function getNevent(eventId: string): string {
 }
 
 // Helper function to format timestamps
-function formatDateNostr(timestamp: number, timeZone = 'Asia/Jakarta'): string {
+export function formatDateNostr(
+  timestamp: number,
+  timeZone = 'Asia/Jakarta',
+): string {
   if (!timestamp || isNaN(timestamp)) {
     console.error('Invalid timestamp provided:', timestamp);
     return 'Invalid date';
   }
+
+  const now = Date.now() / 1000;
+  const diffInSeconds = Math.floor(now - timestamp);
+
+  if (diffInSeconds < 60) return 'just now';
+  if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)}m`;
+  if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)}h`;
+  if (diffInSeconds < 604800) return `${Math.floor(diffInSeconds / 86400)}d`;
+  if (diffInSeconds < 31536000) return `${Math.floor(diffInSeconds / 604800)}w`;
 
   const date = new Date(timestamp * 1000);
   const options: Intl.DateTimeFormatOptions = {
@@ -87,7 +99,7 @@ function formatDateNostr(timestamp: number, timeZone = 'Asia/Jakarta'): string {
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    hour12: false,
+    hour12: true,
   };
 
   return date.toLocaleString('id-ID', options);
