@@ -85,11 +85,15 @@ export function formatDateNostr(
   const now = Date.now() / 1000;
   const diffInSeconds = Math.floor(now - timestamp);
 
-  if (diffInSeconds < 60) return 'just now';
-  if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)} minute ago`;
-  if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)} hour ago`;
-  if (diffInSeconds < 604800) return `${Math.floor(diffInSeconds / 86400)} day ago`;
-  if (diffInSeconds < 31536000) return `${Math.floor(diffInSeconds / 604800)} week ago`;
+  if (diffInSeconds < 60) return 'Baru saja';
+  if (diffInSeconds < 3600)
+    return `${Math.floor(diffInSeconds / 60)} menit lalu`;
+  if (diffInSeconds < 86400)
+    return `${Math.floor(diffInSeconds / 3600)} jam lalu`;
+  if (diffInSeconds < 604800)
+    return `${Math.floor(diffInSeconds / 86400)} hari lalu`;
+  if (diffInSeconds < 31536000)
+    return `${Math.floor(diffInSeconds / 604800)} minggu lalu`;
 
   const date = new Date(timestamp * 1000);
   const options: Intl.DateTimeFormatOptions = {

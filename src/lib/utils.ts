@@ -3,6 +3,8 @@ import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { Relay } from 'nostr-tools/relay';
 import * as nip19 from 'nostr-tools/nip19';
+import { bech32 } from 'bech32';
+import * as bip39 from 'bip39';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -148,3 +150,43 @@ export function formatContent(content: string): string {
     })
     .join('');
 }
+
+/**
+ * Converts an `nsec1` private key to its hexadecimal representation.
+ * @param nsecKey - The Bech32-encoded Nostr private key (nsec1 format).
+ * @returns The hexadecimal private key, or `null` if decoding fails.
+ */
+export const decodeNsecToHex = (nsecKey: string): string | null => {
+  try {
+    // Decode the Bech32 key
+    const decoded = bech32.decode(nsecKey);
+    // Convert Bech32 words to a byte array and then to a hexadecimal string
+    const hexPrivateKey = Buffer.from(bech32.fromWords(decoded.words)).toString(
+      'hex',
+    );
+    return hexPrivateKey;
+  } catch (error) {
+    console.error('Error decoding nsec key:', error);
+    return null;
+  }
+};
+
+/**
+ * Converts a private key to a secret phrase (mnemonic).
+ * @param privateKey - The private key in hexadecimal format.
+ * @returns The secret phrase (mnemonic), or `null` if conversion fails.
+ */
+export const privateKeyToSecretPhrase = (privateKey: string): string | null => {
+  try {
+    // Convert private key (hex) to a binary buffer
+    const entropy = Buffer.from(privateKey, 'hex');
+
+    // Generate a mnemonic (secret phrase) from the entropy
+    const mnemonic = bip39.entropyToMnemonic(entropy);
+
+    return mnemonic;
+  } catch (error) {
+    console.error('Error generating secret phrase:', error);
+    return null;
+  }
+};

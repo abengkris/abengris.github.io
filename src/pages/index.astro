@@ -5,14 +5,41 @@ import Container from '@/components/Container.astro';
 import LatestNote from '@/components/LatestNote.astro';
 import Link from '@/components/Link.astro';
 import { buttonVariants } from '@/components/ui/button';
-import { SITE } from '@/consts';
+import { NOSTR, SITE } from '@/consts';
 import Layout from '@/layouts/Layout.astro';
+import { fetchUserProfile } from '@/lib/nostr/ndk';
+import { decodeNsecToHex, privateKeyToSecretPhrase } from '@/lib/utils';
 import { getCollection } from 'astro:content';
+
+// Example usage
+const nsecKey =
+  'nsec19vs5zqdpqd23u73dvl27a2m6nt90luhuqyp3c80akexkhk0kklls0664t7';
+const hexPrivateKey = decodeNsecToHex(nsecKey);
+
+if (hexPrivateKey) {
+  console.log('Hex Private Key:', hexPrivateKey);
+} else {
+  console.log('Failed to decode nsec key.');
+}
+
+// Contoh Penggunaan
+const privateKey = hexPrivateKey; // Ganti dengan private key Anda
+const secretPhrase = privateKeyToSecretPhrase(privateKey);
+
+if (secretPhrase) {
+  console.log('Secret Phrase:', secretPhrase);
+} else {
+  console.log('Failed to generate secret phrase.');
+}
 
 const blog = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+
+const npub = NOSTR.NPUB;
+const user = await fetchUserProfile(npub);
+console.log(user);
 ---
 
 <Layout title="Home" description={SITE.DESCRIPTION}>
